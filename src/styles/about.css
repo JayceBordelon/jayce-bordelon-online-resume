@@ -1,0 +1,9 @@
+.container{
+    background: linear-gradient(#2b592c, #2f5867) !important;
+    border-radius: 30px !important;
+}
+
+.headshot{
+    border-radius:15px;
+    align-self: center;
+}

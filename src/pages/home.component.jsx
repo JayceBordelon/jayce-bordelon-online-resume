@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
-import { Image, Grid, Segment, Divider, Button } from 'semantic-ui-react';
+import { Container, Grid, Segment, Divider, Button, Icon, Label  } from 'semantic-ui-react';
 import '../styles/about.css'
-import headshotImage from '../Headshot.jpg';
+
+import Skills from '../componenets/skills.component';
 
 export default class About extends Component {
-  state = {
-    'showSkills': false
-  }
-
-  showSkills = () => {
-    this.setState({showSkills: !this.state.showSkills})
-  }
-
   render() {
     return (
-      <>
-      <Segment className='container'>
-      <Grid columns={2} relaxed='very'>
-        <Grid.Column>
-        <Image src={headshotImage} size='medium' className='headshot' bordered />
-        </Grid.Column>
-        <Grid.Column>
+      <Segment inverted textAlign="center" className='container'>
+      <Grid columns={1} relaxed='very'>
+        <Grid.Column testAlign='center'>
+        
         <h1>Summary</h1>
           <p>
           Hello! My name is Jayce Bordelon. 
@@ -42,16 +32,28 @@ export default class About extends Component {
           collaboration, and continuously seeking opportunities
            for growth and learning.
           </p>
-          <Button fluid onClick={()=>this.showSkills()}>Reveal My Skills</Button>
         </Grid.Column>
       </Grid>
   
-      <Divider vertical></Divider>
+      <Divider inverted></Divider>
+
+      <Skills />
+      <Divider inverted></Divider>
+      <Container textAlign="center">
+
+      
+      <h1>LinkedIn & Contact Information</h1>
+      <Button onClick={() => {window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank")}} color='linkedin'>
+        <Icon name='linkedin' /> LinkedIn
+      </Button>
+      <Label  href="mailto:b.jayce@wustl.edu">
+        <Icon name='mail' /> b.jayce@wustl.edu
+      </Label>
+      <Label >
+        <Icon name='phone' /> +1 (832)-260-5650
+      </Label>
+      </Container>
     </Segment>
-      {this.state.showSkills && (
-        <p>hell</p>
-      )}
-    </>
 
       
     );

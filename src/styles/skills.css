@@ -1,0 +1,13 @@
+h2 {
+    color: white;
+}
+
+.skills{
+    padding: 20px !important;
+    margin: 20px !important;
+}
+
+.skill {
+    background-color: rgba(255, 253, 253, 0.2) !important;
+
+}

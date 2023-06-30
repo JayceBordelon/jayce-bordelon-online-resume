@@ -1,11 +1,11 @@
 
 import './styles/App.css';
-import About from './components/home.component';
-import Work from './components/work.component';
-import Education from './components/education.component';
-import Interests from './components/interests.component';
+import About from './pages/home.component';
+import Work from './pages/work.component';
+import Education from './pages/education.component';
+import Interests from './pages/interests.component';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import NavBar from './components/navbar.component';
+import NavBar from './pages/navbar.component';
 
 function App() {
   return (

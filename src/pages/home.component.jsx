@@ -42,7 +42,7 @@ export default class About extends Component {
       <Container textAlign="center">
 
       
-      <h1>LinkedIn & Contact Information</h1>
+      <h2>Contact Me!</h2>
       <Button onClick={() => {window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank")}} color='linkedin'>
         <Icon name='linkedin' /> LinkedIn
       </Button>

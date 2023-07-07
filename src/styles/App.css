@@ -2,35 +2,32 @@
 html, body {
   width: 100%;
   height:100%;
-  font-family:Arial, Helvetica, sans-serif;
-  color:white;
+  font-family: Ubuntu system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:green;
 }
 
 body {
-    background: linear-gradient(-45deg, #ff9474, #60cc63, #73daff);
-    background-size: 400% 400%;
-    animation: gradient 25s ease infinite;
+    background: black;
+    background-size: 100%, 800%;
 }
 
 p {
-    color: white;
+    color: green;
     font-size: large;
 }
 
 a {
-    color: azure;
+    color: rgb(217, 217, 217);
     font-weight: bold;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+h1 {
+    font-size: 400%;
+    font-family: 'Lucida Sans';
 }
+
+.App{
+    padding-top: 45px;
+}
+
 

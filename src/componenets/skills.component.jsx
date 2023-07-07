@@ -11,33 +11,28 @@ import {GiArtificialHive} from 'react-icons/gi'
 
 
 
-
-//Styles
-import '../styles/skills.css'
-
-
 export default class Skills extends Component {
 
 
     languages = [
-      {name: 'CSS', comp: <DiCss3 size={70}/>},
-      {name: 'Node.JS', comp: <DiNodejs size={70}/>},
-      {name: 'Python', comp: <DiPython size={70}/>},
-      {name: 'React', comp: <DiReact size={70}/>},
-      {name: 'Ruby on Rails', comp: <DiRuby size={70}/>},
-      {name: 'HTML', comp: <DiHtml5 size={70}/>},
-      {name: 'Python Django', comp: <DiDjango size={70}/>},
-      {name: 'Java', comp: <DiJava size={70}/>},
-      {name: 'JavaScript', comp: <DiJavascript1 size={70}/>},
-      {name: 'C++', comp: <TbBrandCpp size={70}/>},
-      {name: 'AVR Assembly', comp: <SiAssemblyscript size={70}/>},
-      {name: 'Bootstrap', comp: <FaBootstrap size={70}/>},
-      {name: 'Linux', comp: <FaLinux size={70}/>},
-      {name: 'AWS Lambda', comp: <SiAwslambda size={70}/>},
-      {name: 'Kubernetes', comp: <SiKubernetes size={70}/>},
-      {name: 'Docker', comp: <SiDocker size={70}/>},
-      {name: 'APi Development', comp: <TbApi size={70}/>},
-      {name: 'OCR Technology', comp: <GiArtificialHive size={70}/>},
+      {name: 'CSS', comp: <DiCss3 size={30}/>},
+      {name: 'Node.JS', comp: <DiNodejs size={30}/>},
+      {name: 'Python', comp: <DiPython size={30}/>},
+      {name: 'React', comp: <DiReact size={30}/>},
+      {name: 'Ruby on Rails', comp: <DiRuby size={30}/>},
+      {name: 'HTML', comp: <DiHtml5 size={30}/>},
+      {name: 'Python Django', comp: <DiDjango size={30}/>},
+      {name: 'Java', comp: <DiJava size={30}/>},
+      {name: 'JavaScript', comp: <DiJavascript1 size={30}/>},
+      {name: 'C++', comp: <TbBrandCpp size={30}/>},
+      {name: 'AVR Assembly', comp: <SiAssemblyscript size={30}/>},
+      {name: 'Bootstrap', comp: <FaBootstrap size={30}/>},
+      {name: 'Linux', comp: <FaLinux size={30}/>},
+      {name: 'AWS Lambda', comp: <SiAwslambda size={30}/>},
+      {name: 'Kubernetes', comp: <SiKubernetes size={30}/>},
+      {name: 'Docker', comp: <SiDocker size={30}/>},
+      {name: 'APi Development', comp: <TbApi size={30}/>},
+      {name: 'OCR Technology', comp: <GiArtificialHive size={30}/>},
       
 
 
@@ -53,20 +48,17 @@ export default class Skills extends Component {
       
       return (
 
-        <Container textAlign="center" className='container'>
-          <h2>Technologies I Have Worked In</h2>
-          <Container textAlign='center' className="skills">
+          
+          <Container textAlign='center'>
+          <h1>Technologies I Have Worked In</h1>
           {this.languages.map(lang => 
-          <Label className='skills skill'>
+          <Label >
             <span>{this.toComponent(lang)}</span> {lang.name}
           </Label>
             
           )}
           </Container>
-
-
     
-        </Container>
       )
     }
   }

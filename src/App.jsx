@@ -1,26 +1,26 @@
 
 import './styles/App.css';
-import About from './pages/home.component';
-import Work from './pages/work.component';
-import Education from './pages/education.component';
-import Interests from './pages/interests.component';
-import { Divider } from 'semantic-ui-react';
-import Contact from './componenets/contact.component';
-import Skills from './componenets/skills.component';
+import About from './componenets/home.component';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Container } from 'semantic-ui-react';
+import Education from './componenets/education.component';
+import Interests from './componenets/interests.component';
+import Wrapper from './wrapper.component';
+import Work from './componenets/work.component';
 
 function App() {
   return (
-    <>
-    <About />
-    <Skills />
-    <Divider />
-    <Work />
-    <Divider />
-    <Education />
-    <Divider />
-    <Interests />
-    <Contact/>
-    </>
+    <Router>
+          <Routes>
+            <Route exact path="/" element={<Wrapper />} />
+            <Route path="/education" element={<Education/>} />
+            <Route path="/interests" element={<Interests/>} />
+            <Route path="/education" element={<Education/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/work" element={<Work/>} />
+            
+          </Routes>
+  </Router>
   );
 }
 

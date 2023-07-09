@@ -64,18 +64,7 @@ export default class Work extends Component {
   
       return (
         <>
-        <Container textAlign="center">
-        <h1>Work Experience</h1>
-          <Container className="padded" >
-          {this.experiences.map(exp => 
-
-            <Image className="image" src={exp.src} wrapped/>
-
-            
-            
-          )}
-          </Container>
-        </Container>
+        Work
         </>
       )
     }

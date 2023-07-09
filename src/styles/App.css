@@ -1,33 +1,3 @@
 
-html, body {
-  width: 100%;
-  height:100%;
-  font-family: Ubuntu system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:green;
-}
-
-body {
-    background: black;
-    background-size: 100%, 800%;
-}
-
-p {
-    color: green;
-    font-size: large;
-}
-
-a {
-    color: rgb(217, 217, 217);
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 400%;
-    font-family: 'Lucida Sans';
-}
-
-.App{
-    padding-top: 45px;
-}
 
 

@@ -6,7 +6,7 @@ export default class Education extends Component {
     render() {
   
       return (
-        <></>
+        <>education</>
       )
     }
   }

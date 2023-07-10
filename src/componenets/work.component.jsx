@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Container, Card, Divider, Modal, Button, Image, List } from 'semantic-ui-react'
 import Logo from '../styles/logo_dark_trans.svg'
-import '../styles/work.css'
 
 export default class Work extends Component {
   // accomplishments left
@@ -64,7 +63,7 @@ export default class Work extends Component {
   
       return (
         <>
-        Work
+        work
         </>
       )
     }

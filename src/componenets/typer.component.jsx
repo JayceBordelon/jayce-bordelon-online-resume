@@ -1,39 +1,44 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import { Container } from 'semantic-ui-react';
 
 const Typer = () => {
+  const [done, setDone] = useState(false);
   return (
-    <Container textAlign="center"  className="text-container">
     <strong>
     <Typewriter
-        className="typer"
         options={{
         autoStart: true,
         cursor: '[]',
-        deleteSpeed: 20,
+        deleteSpeed: 5,
         }}
         onInit={(typewriter) => {
             typewriter
-            .pasteString('Jayce-Dev$ ')
-            .typeString('I am Jayce')
+            .typeString('Hello, I am Jayce Bordelon.')
             .pauseFor(1000)
-            .deleteChars(5)
-            .typeString('a student')
+            .deleteAll(5)
+            .typeString('I am a student of Washington University in St. Louis.')
             .pauseFor(1000)
-            .deleteChars(7)
-            .typeString('developer')
+            .deleteAll(5)
+            .typeString('I am an aspiring developer with three summers of experience.')
             .pauseFor(1000)
-            .deleteChars(16)
-            .typeString('Click below!')
-            .callFunction(() => {
-                
-            })
+            .deleteAll(5)
+            .typeString('Welcome to my page! I hope you enjoy!')
+            .pauseFor(1000)
+            .deleteAll(5)
+            .pasteString('Jayce-Dev@Ubuntu:~$ ')
+            .typeString('mv ./online-resume/profile.txt    .')
+            .pauseFor(500)
+            .deleteAll(0)
+            .pasteString('Jayce-Dev@Ubuntu:~$ ')
+            .typeString('cat profile.txt')
+            .pauseFor(500)
+            .deleteAll(0)
+            .callFunction(() => setDone(!done))
             .start();
         }}
    />
    </strong>
-   </Container>
   );
 };
 

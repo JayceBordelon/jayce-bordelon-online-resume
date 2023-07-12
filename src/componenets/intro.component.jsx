@@ -13,7 +13,7 @@ export default class Intro extends Component {
         <Grid.Column width={3}>
         <Image src={Picture}/>
       </Grid.Column>
-      <Grid.Column textAlign='left' width={13}>
+      <Grid.Column textAlign='center' width={13}>
         <h1 className="typer-text"><Typer /> </h1>
       </Grid.Column>
       </Grid>

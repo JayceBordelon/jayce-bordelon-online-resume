@@ -10,6 +10,8 @@ const Typer = () => {
         options={{
         autoStart: true,
         cursor: '[]',
+        delay: 0,
+        loop: true,
         deleteSpeed: 5,
         }}
         onInit={(typewriter) => {
@@ -23,18 +25,16 @@ const Typer = () => {
             .typeString('I am an aspiring developer with three summers of experience.')
             .pauseFor(1000)
             .deleteAll(5)
-            .typeString('Welcome to my page! I hope you enjoy!')
-            .pauseFor(1000)
+            .typeString(`I got my development background in Ruby on Rails, but have since exposed myself to 
+            a plethora of devleopment and deployment technologies.`)
+            .pauseFor(3000)
             .deleteAll(5)
-            .pasteString('Jayce-Dev@Ubuntu:~$ ')
-            .typeString('mv ./online-resume/profile.txt    .')
-            .pauseFor(500)
-            .deleteAll(0)
-            .pasteString('Jayce-Dev@Ubuntu:~$ ')
-            .typeString('cat profile.txt')
-            .pauseFor(500)
-            .deleteAll(0)
-            .callFunction(() => setDone(!done))
+            .typeString(`I am ultimately dedicatecd to maximizing my contribution in the software world as I learn and develop both in character and ability.`)
+            .pauseFor(3000)
+            .deleteAll(5)
+            .typeString('If my work is of interest to you, do not hesitate to reach out! I am always open to new opportunities and experiences. Thank you!')
+            .pauseFor(3000)
+            .deleteAll(5)
             .start();
         }}
    />

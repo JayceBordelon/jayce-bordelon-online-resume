@@ -10,29 +10,32 @@ import {FaBootstrap, FaLinux} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 
 
+//Style
+import '../styles/skills.css'
+
 
 export default class Skills extends Component {
 
 
     languages = [
-      {name: 'CSS', comp: <DiCss3 size={30}/>},
-      {name: 'Node.JS', comp: <DiNodejs size={30}/>},
-      {name: 'Python', comp: <DiPython size={30}/>},
-      {name: 'React', comp: <DiReact size={30}/>},
-      {name: 'Ruby on Rails', comp: <DiRuby size={30}/>},
-      {name: 'HTML', comp: <DiHtml5 size={30}/>},
-      {name: 'Python Django', comp: <DiDjango size={30}/>},
-      {name: 'Java', comp: <DiJava size={30}/>},
-      {name: 'JavaScript', comp: <DiJavascript1 size={30}/>},
-      {name: 'C++', comp: <TbBrandCpp size={30}/>},
-      {name: 'AVR Assembly', comp: <SiAssemblyscript size={30}/>},
-      {name: 'Bootstrap', comp: <FaBootstrap size={30}/>},
-      {name: 'Linux', comp: <FaLinux size={30}/>},
-      {name: 'AWS Lambda', comp: <SiAwslambda size={30}/>},
-      {name: 'Kubernetes', comp: <SiKubernetes size={30}/>},
-      {name: 'Docker', comp: <SiDocker size={30}/>},
-      {name: 'APi Development', comp: <TbApi size={30}/>},
-      {name: 'OCR Technology', comp: <GiArtificialHive size={30}/>},
+      {name: 'CSS', comp: <DiCss3 size={200}/>},
+      {name: 'Node.JS', comp: <DiNodejs size={200}/>},
+      {name: 'Python', comp: <DiPython size={200}/>},
+      {name: 'React', comp: <DiReact size={200}/>},
+      {name: 'Ruby on Rails', comp: <DiRuby size={170}/>},
+      {name: 'HTML', comp: <DiHtml5 size={200}/>},
+      {name: 'Python Django', comp: <DiDjango size={200}/>},
+      {name: 'Java', comp: <DiJava size={200}/>},
+      {name: 'JavaScript', comp: <DiJavascript1 size={200}/>},
+      {name: 'C++', comp: <TbBrandCpp size={200}/>},
+      {name: 'AVR Assembly', comp: <SiAssemblyscript size={160}/>},
+      {name: 'Bootstrap', comp: <FaBootstrap size={200}/>},
+      {name: 'Linux', comp: <FaLinux size={200}/>},
+      {name: 'AWS Lambda', comp: <SiAwslambda size={200}/>},
+      {name: 'Kubernetes', comp: <SiKubernetes size={200}/>},
+      {name: 'Docker', comp: <SiDocker size={200}/>},
+      {name: 'APi Development', comp: <TbApi size={200}/>},
+      {name: 'OCR Technology', comp: <GiArtificialHive size={200}/>},
       
 
 
@@ -40,35 +43,24 @@ export default class Skills extends Component {
     ]
 
     toComponent = (lang) => {
-      
       return lang.comp;
+    }
+
+    handleClick = () => {
+
     }
 
     render() {
       
       return (
           
-          <Container wrapped textAlign='center'>
+          <Container textAlign='center' className="flexy">
           <h1>Technologies I Have Worked In</h1>
           {this.languages.map(lang => 
-          <Card>
-            <Image src={this.toComponent(lang)} wrapped ui={true} />
-            <Card.Content>
-              <Card.Header>Matthew</Card.Header>
-              <Card.Meta>
-                <span className='date'>Joined in 2015</span>
-              </Card.Meta>
-              <Card.Description>
-                Matthew is a musician living in Nashville.
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-              <a>
-                <Icon name='briefcase' />
-                22 Friends
-              </a>
-            </Card.Content>
-          </Card>
+            <span className="icon" onClick={this.handleClick}>
+            {this.toComponent(lang)}
+            <h2>{lang.name}</h2>
+            </span>
             
           )}
           </Container>

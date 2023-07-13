@@ -24,7 +24,7 @@ export default class Wrapper extends Component {
         <div className="skeleton">
        <div class="overlay"></div>
         <Container textAlign="center" className="super-container">
-        <Segment inverted>
+        <Segment inverted className="trans">
 
           <Intro />
 

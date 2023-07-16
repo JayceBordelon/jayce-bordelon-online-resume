@@ -27,11 +27,7 @@ export default class Wrapper extends Component {
         <Segment inverted className="trans">
 
           <Intro />
-
-          <Divider inverted> </Divider>
-          <Grid columns={2}>
-            <Grid.Column inverted className="left-col">
-              <Menu fluid vertical tabular inverted>
+          <Menu fluid tabular inverted widths={5} className="trans">
                 <Menu.Item
                   name='About me'
                   onClick={() => this.handlePath(<About/>)}
@@ -55,13 +51,9 @@ export default class Wrapper extends Component {
                   onClick={() => this.handlePath(<Projects/>)}
                 />
             </Menu>
-            </Grid.Column>
-              
-            <Grid.Column inverted className="right-col">
-              {this.state.active_component}
-            </Grid.Column>
 
-          </Grid>
+          <Divider inverted> </Divider>
+              {this.state.active_component}
           </Segment>
         </Container>
         </div>

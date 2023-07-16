@@ -26,10 +26,10 @@ const Typer = () => {
             .pauseFor(1000)
             .deleteAll(5)
             .typeString(`I got my development background in Ruby on Rails, but have since exposed myself to 
-            a plethora of devleopment and deployment technologies.`)
+            a plethora of development and deployment technologies.`)
             .pauseFor(3000)
             .deleteAll(5)
-            .typeString(`I am ultimately dedicatecd to maximizing my contribution in the software world as I learn and develop both in character and ability.`)
+            .typeString(`I am ultimately dedicated to maximizing my contribution in the software world as I learn and develop both in character and ability.`)
             .pauseFor(3000)
             .deleteAll(5)
             .typeString('If my work is of interest to you, do not hesitate to reach out! I am always open to new opportunities and experiences. Thank you!')

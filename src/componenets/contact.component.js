@@ -10,6 +10,7 @@ export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      awaitingReq: false,
       emailRes: '',
       emailText:'',
       firstText:'',
@@ -52,6 +53,7 @@ export default class Contact extends Component {
 
 
   handleSubmit = (event) =>{
+    this.setState({awaitingReq: true})
       const { REACT_APP_EMAIL_SERVICE_ID, REACT_APP_EMAIL_TEMPLATE_ID, REACT_APP_EMAIL_USER_ID } = process.env;
       const templateParams = {
         sender: event.firstText + ' ' + event.lastText,
@@ -78,17 +80,17 @@ export default class Contact extends Component {
           .then((response) => {
             console.log('Email sent successfully:', response);
             this.setState({emailRes : SUCCESS})
+            this.setState({awaitingReq: false})
           })
           .catch((error) => {
             console.error('Error sending email:', error);
             this.setState({emailRes : FAIL})
+            this.setState({awaitingReq: false})
           });
 
       else {
-        this.setState({emailRes : NSI})
+        this.setState({emailRes : NSI, awaitingReq: false})
       }
-
-      
     }
     getLinked = () =>{
       window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank");
@@ -104,7 +106,7 @@ export default class Contact extends Component {
           <Form.Group widths='equal'>
             <Form.Input 
             fluid 
-            label={(<p>First Name</p>)} 
+            label={(<h3>First Name</h3>)} 
             placeholder="First" 
             className="fancy-input"
             value={this.state.firstText} 
@@ -112,7 +114,7 @@ export default class Contact extends Component {
             />
             <Form.Input 
             fluid 
-            label={(<p>Last Name</p>)} 
+            label={(<h3>Last Name</h3>)} 
             placeholder="Last" 
             className="fancy-input"
             value={this.state.lastText} 
@@ -137,17 +139,22 @@ export default class Contact extends Component {
           </Form.Group>
           <Form.TextArea 
           fluid 
-          label={(<p>Message</p>)} 
-          placeholder='Feel free to send me a message...' 
+          label={(<h3>Message</h3>)} 
+          placeholder='Say hi :)' 
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
           />
+              {this.state.awaitingReq ? (<Button lodaing className="cool-button">
+              <p>
               
-              <Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
+              </p>
+              </Button>) : 
+              (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
               <p>
               <Icon name="send" size="large"></Icon>Email me!
               </p>
-              </Button>
+              </Button>)
+              }
               <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
                 <Icon name='linkedin' size="large"></Icon> linkedin

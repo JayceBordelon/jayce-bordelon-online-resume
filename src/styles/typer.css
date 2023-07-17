@@ -5,8 +5,10 @@
   }
   
   .profile-pic {
-    background: linear-gradient(45deg, #fdbb2d, #b21f1f, #1a2a6c);
-    background-size: 150% 150%;
+    background-color:#99dbff;
+    background-image:
+    linear-gradient(-45deg, hsla(86,60%,0%,1), #99dbff, black);
+    background-size: 110% 110%;
     background-position: 50% 50%;
     border: 8px solid transparent;
     padding: 2px;

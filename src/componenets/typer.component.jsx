@@ -5,7 +5,6 @@ import Education from '../componenets/education.component';
 import Projects from './projects.component';
 import Skills from '../componenets/skills.component'
 import Work from '../componenets/work.component';
-import Null from './null.component';
 
 const Typer = (props) => {
   var done = false;
@@ -48,7 +47,7 @@ const Typer = (props) => {
             })
             .pauseFor(4000)
             .deleteAll(5)
-            .typeString('I strive to perpetually expand my skills and character.')
+            .typeString('I strive to develop my technical and personable ability.')
             .callFunction(() => {
               if (!done) {
               props.handlePath(<Projects/>)
@@ -65,13 +64,14 @@ const Typer = (props) => {
             .typeString('Thank you for your time!')
             .callFunction(() => {
               if (!done) {
-                props.handlePath(<Null/>)
+                props.handlePath(<Work/>)
               }
             })
             .pauseFor(1000)
             .deleteAll(0)
             .callFunction(() => {
               done = true;
+              props.handleNav()
             })
             .start();
         }}

@@ -7,33 +7,34 @@ body, html {
   }
 
   body {
-    /* background-image: linear-gradient( 358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% ); */
-    background: #1a2a6c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left,  #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    background-color:#99dbff;
+    background-image:
+    radial-gradient(at 59% 90%, hsla(86,60%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 1% 8%, hsla(280,63%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 60% 25%, hsla(82,71%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 41%, hsla(81,89%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 16% 1%, hsla(278,64%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 56% 84%, hsla(189,90%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 76% 49%, hsla(296,92%,0%,1) 0px, transparent 50%);
+    background-size: 100% 400%;
+    
   }
   
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
   .inverted-animation{
-    background: linear-gradient(-45deg, #b21f1f, #1a2a6c) !important;  /* fallback for old browsers */
+    background: linear-gradient(-45deg, hsla(86,60%,0%,1), #99dbff) !important;
   }
 
 
   .skeleton {
     background: transparent !important;
+    margin-bottom: 10px;
+  }
+  .footer-text{
+    font-size: small;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
   }
   
 
@@ -45,6 +46,7 @@ body, html {
     max-height: 100% !important;
     min-width: 100% !important;
 }
+
 
 .trans{
   background-color: transparent !important;

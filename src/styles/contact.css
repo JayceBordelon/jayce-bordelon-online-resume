@@ -4,7 +4,15 @@
     border-radius: 15px;
     padding: 10px;
     display: flex;
-    background: linear-gradient(-45deg, #b21f1f, #1a2a6c) !important;
+    background-color:#99dbff;
+    background-image:
+    radial-gradient(at 59% 90%, hsla(86,60%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 1% 8%, hsla(280,63%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 60% 25%, hsla(82,71%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 41%, hsla(81,89%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 16% 1%, hsla(278,64%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 56% 84%, hsla(189,90%,0%,1) 0px, transparent 50%),
+    radial-gradient(at 76% 49%, hsla(296,92%,0%,1) 0px, transparent 50%);
     justify-content: center;
 }
 
@@ -26,11 +34,11 @@
     padding: 10px 20px !important;
     text-align: center;
     text-decoration: none !important;
-    background: linear-gradient(-45deg, #fdbb2d, #b21f1f, #1a2a6c) !important;
+    background: linear-gradient(-45deg, hsla(86,60%,0%,1), #99dbff) !important;
     background-size: 200% 200% !important;
     border-radius: 5px !important;
     border: none !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 2px 4px #99dbff !important;
     outline:none;
     transition: opacity 0.3s ease;
     margin: 10px;

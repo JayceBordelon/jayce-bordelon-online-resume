@@ -1,3 +1,38 @@
 .footer{
-    padding-bottom: 30px;
+    margin-bottom: 10% !important;
+    box-shadow: 5px 10px 10px #b21f1f;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
+
+.fancy-input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent;
+}
+
+.fancy-input:focus {
+  outline: none;
+}
+
+.cool-button {
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    text-align: center;
+    text-decoration: none !important;
+    background: linear-gradient(-45deg, #fdbb2d, #b21f1f, #1a2a6c) !important;
+    background-size: 200% 200% !important;
+    border-radius: 5px !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  .cool-button:hover {
+    transform: translateY(-5px);
+  }

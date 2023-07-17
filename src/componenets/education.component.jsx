@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Divider } from 'semantic-ui-react';
 
 
 export default class Education extends Component {
@@ -6,7 +7,10 @@ export default class Education extends Component {
     render() {
   
       return (
-        <>education</>
+        <>
+        <Divider inverted> </Divider>
+        education
+        </>
       )
     }
   }

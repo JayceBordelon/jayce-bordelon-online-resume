@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Container, Card, Divider, Modal, Button, Image, List } from 'semantic-ui-react'
+import {Divider} from 'semantic-ui-react'
 import Logo from '../styles/logo_dark_trans.svg'
 
 export default class Work extends Component {
@@ -63,6 +63,7 @@ export default class Work extends Component {
   
       return (
         <>
+        <Divider inverted> </Divider>
         work
         </>
       )

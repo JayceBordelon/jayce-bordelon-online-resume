@@ -1,6 +1,6 @@
 //Dependencies
 import React, { Component } from 'react';
-import { Container, Label, Icon, Card, Image } from 'semantic-ui-react';
+import { Container, Divider} from 'semantic-ui-react';
 
 //Icons
 import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiDjango, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
@@ -55,6 +55,7 @@ export default class Skills extends Component {
       return (
           
           <Container textAlign='center' className="flexy">
+          <Divider inverted> </Divider>
           <h1>Technologies I Have Worked In</h1>
           {this.languages.map(lang => 
             <span className="icon" onClick={this.handleClick}>

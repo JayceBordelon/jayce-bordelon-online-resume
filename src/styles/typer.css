@@ -1,5 +1,25 @@
-.typer-text{
-    font-size: 300%;
+.typer-text {
+    font-size: 200%;
     padding-top: 5%;
     align-self: center;
-}
+  }
+  
+  .profile-pic {
+    background: linear-gradient(45deg, #fdbb2d, #b21f1f, #1a2a6c);
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+    border: 8px solid transparent;
+    padding: 2px;
+    border-radius: 50%;
+    width: 200px; /* Adjust this value as needed */
+    height: 200px; /* Adjust this value as needed */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 40px;
+  }
+  
+  .intro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    min-width: 100%;
+  }

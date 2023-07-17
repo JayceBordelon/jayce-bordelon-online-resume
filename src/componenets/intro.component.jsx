@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {  Container, Grid, Image  } from 'semantic-ui-react';
-import Picture from '../styles/profile_pic.jpg'
+import {  Container, Image  } from 'semantic-ui-react';
+import Picture from '../styles/headshot.JPG'
 import Typer from './typer.component';
 
 import '../styles/typer.css'
@@ -9,9 +9,9 @@ import '../styles/typer.css'
 export default class Intro extends Component {
   render() {
     return (
-      <Container textAlign='center'>
-        <Image src={Picture}/>
-        <h1 className="typer-text"><Typer /> </h1>
+      <Container textAlign='center' className="intro-wrapper">
+        <Image src={Picture} className="profile-pic"/>
+        <h1 className="typer-text"><Typer handlePath={this.props.handlePath}/> </h1>
       </Container>
       
     );

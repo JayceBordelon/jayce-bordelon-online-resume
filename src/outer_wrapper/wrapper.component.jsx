@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Menu, Grid, Divider, Segment } from 'semantic-ui-react';
+import { Container, Menu, Divider, Segment } from 'semantic-ui-react';
 import Education from '../componenets/education.component';
 import Projects from '../componenets/projects.component';
 import Skills from '../componenets/skills.component'
 import Work from '../componenets/work.component';
-import About from '../componenets/home.component';
 import Intro from '../componenets/intro.component';
+import Null from '../componenets/null.component';
 import "./wrapper.css"
+import Contact from '../componenets/contact.component';
 
 
 export default class Wrapper extends Component {
   state = {
-    active_component: <About/>
+    active_component: <Null />
   }
 
   handlePath = (component) => {
@@ -24,14 +25,7 @@ export default class Wrapper extends Component {
         <div className="skeleton">
        <div class="overlay"></div>
         <Container textAlign="center" className="super-container">
-        <Segment inverted className="trans">
-
-          <Intro />
-          <Menu fluid tabular inverted widths={5} className="trans">
-                <Menu.Item
-                  name='About me'
-                  onClick={() => this.handlePath(<About/>)}
-                />
+        <Menu fluid tabular inverted widths={4} className="nav inverted-animation">
                 <Menu.Item
                   name='Work Experience'
                   onClick={() => this.handlePath(<Work/>)}
@@ -51,10 +45,12 @@ export default class Wrapper extends Component {
                   onClick={() => this.handlePath(<Projects/>)}
                 />
             </Menu>
-
-          <Divider inverted> </Divider>
+        <Segment inverted className="trans">
+          <Intro handlePath={this.handlePath}/>
               {this.state.active_component}
           </Segment>
+          <Divider inverted> </Divider>
+          <Contact/>
         </Container>
         </div>
       )

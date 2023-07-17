@@ -1,9 +1,10 @@
 .footer{
-    margin-bottom: 10% !important;
-    box-shadow: 5px 10px 10px #b21f1f;
+    margin-bottom: 40px !important;
+    box-shadow: 5px 10px 10px black;
     border-radius: 15px;
     padding: 10px;
     display: flex;
+    background: linear-gradient(-45deg, #b21f1f, #1a2a6c) !important;
     justify-content: center;
 }
 
@@ -30,9 +31,12 @@
     border-radius: 5px !important;
     border: none !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-    transition: transform 0.3s ease !important;
+    outline:none;
+    transition: opacity 0.3s ease;
+    margin: 10px;
   }
   
   .cool-button:hover {
-    transform: translateY(-5px);
+    opacity: 80%;
   }
+

@@ -25,7 +25,7 @@ export default class Wrapper extends Component {
   }
 
   getPages = () =>{
-    window.open("https://pages.github.com/", "_blank");
+    window.open("https://www.netlify.com/", "_blank");
   }
   
     render() {
@@ -34,11 +34,10 @@ export default class Wrapper extends Component {
         <div className="skeleton">
        <div class="overlay"></div>
         <Container textAlign="center" className="super-container">
-        {this.state.showNav ? (<Menu fluid tabular inverted widths={4} className="nav inverted-animation">
+          <Menu fluid tabular inverted widths={4} className="nav inverted-animation">
                 <Menu.Item
                   name='Work Experience'
                   onClick={() => this.handlePath(<Work/>)}
-
                 />
                 <Menu.Item
                   name='Skills'
@@ -54,22 +53,16 @@ export default class Wrapper extends Component {
                   onClick={() => this.handlePath(<Projects/>)}
                 />
             </Menu>
-
-              
-            ): (<Null/>)}
             <Segment inverted className="trans">
-          <Intro handlePath={this.handlePath} handleNav={this.handleNav}/>
+          <Intro />
               {this.state.active_component}
           </Segment>
-        {this.state.showNav ? (
-          <><Divider inverted> </Divider>
+          <Divider inverted> </Divider>
           <Contact/>
           <Container textAlign="center" className="footer-text">
-          <a onClick={this.getPages} href=""> <p>Note: while deployments are handled through <strong>GitHub Pages</strong>, this website and its contents belong entirely to Jayce Bordelon.</p> </a>
+          <a onClick={this.getPages} href=""> <p>Note: while deployments are handled through <strong>Netlify</strong>, this website and its contents belong entirely to Jayce Bordelon.</p> </a>
         
-        </Container></>): 
-
-          (<Null/>)}
+        </Container>
         
         </Container>
         </div>

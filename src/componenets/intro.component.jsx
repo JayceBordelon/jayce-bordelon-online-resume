@@ -11,7 +11,7 @@ export default class Intro extends Component {
     return (
       <Container textAlign='center' className="intro-wrapper">
         <Image src={Picture} className="profile-pic"/>
-        <h1 className="typer-text"><Typer handlePath={this.props.handlePath} handleNav={this.props.handleNav}/> </h1>
+        <h1 className="typer-text"><Typer/> </h1>
       </Container>
       
     );

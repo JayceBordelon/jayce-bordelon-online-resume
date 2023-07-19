@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import {Container, Divider, Image} from 'semantic-ui-react'
-
+import {Container, Divider, Image, Modal, Button, Icon, List} from 'semantic-ui-react'
+import Null from './null.component'
+import '../outer_wrapper/wrapper.css'
 import '../styles/work.css'
 
 export default class Work extends Component {
@@ -92,6 +93,16 @@ export default class Work extends Component {
     render() {
   
       return (
+        <>
+        {this.state.showModal ? (
+        <Modal className="mod" open={true}>
+        <Image className="logo" src={this.state.currentExp.src}></Image>
+          <Button onClick={()=>this.setState({showModal: false})} className="cool-button">
+              <p>
+                <Icon name='check circle outline' size="large"></Icon> Cool!
+              </p>
+          </Button>
+          </Modal>) : (<Null />)}
         <Container className="work-wrap" textAlign="center">
         <Divider inverted> </Divider>
           {this.experiences.map(exp=>
@@ -103,6 +114,7 @@ export default class Work extends Component {
           )}
 
         </Container>
+        </>
       )
     }
   }

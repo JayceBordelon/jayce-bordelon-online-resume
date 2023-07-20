@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Container, Image, Modal, Button, Icon} from 'semantic-ui-react'
+import {Container, Image, Modal, Button, Icon, Card} from 'semantic-ui-react'
 import Null from './null.component'
 import '../styles/wrapper.css'
 
@@ -13,12 +13,13 @@ export default class Work extends Component {
   handleModal = (exp) => {
     this.setState({showModal: !this.state.showModal})
     this.setState({currentExp: exp})
-    console.log(exp.title)
+    console.log(exp.long)
   }
 
     experiences = [
       {when: 'June 2023 - Present', 
       title: 'IT Intern', 
+      long: "Information Technology Intern",
       accomplishments: [
         'Updated and maintained multiple internal web applications in a fast-paced development environment.',
         'Collaborated with international team through GitLab to develop novel features in the company.',
@@ -29,6 +30,7 @@ export default class Work extends Component {
 
       {when: 'July 2022 - Present', 
       title: `CS TA`, 
+      long: "Computer Science Lead Teacher's Assistant",
       accomplishments: [
         'Streamlining learning process of Object Oriented Programming for students.',
         'Grading student code and exams.',
@@ -39,6 +41,7 @@ export default class Work extends Component {
 
       {when: 'January 2023 - May 2023', 
       title: 'Software Architect', 
+      long: "Software Architecture & Development Lead",
       accomplishments: [
         'Led development and software architecture of a skills based & AI powered job matching application.',
         'Gained exposure & experience in working with a dynamic start up',
@@ -49,6 +52,7 @@ export default class Work extends Component {
 
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
+      long: "Full Stack Software Development Intern",
       accomplishments: [
         'Developed and updated Ruby on Rails application for accounting in the trucking industry.',
         'Consulted with 18 customers to develop novel features according to their desire.',
@@ -60,6 +64,7 @@ export default class Work extends Component {
 
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
+      long: "Backend Software Development Intern",
       accomplishments: [
         'Developed API integration with an OCR to streamline data entry process.',
         'Automated accounting process for 26 company specific ticket types.',
@@ -71,6 +76,7 @@ export default class Work extends Component {
 
       {when: 'May 2019 - August 2019', 
       title: 'Data Entry Intern', 
+      long: "Data Entry Intern",
       accomplishments: [
         'Collaborated with International data entry team.',
         'Handled data degradation on over 1,764 entries.',
@@ -81,6 +87,7 @@ export default class Work extends Component {
 
       {when: 'May 2019 - August 2021', 
       title: 'Calculus Tutor', 
+      long: "High School Calculus Tutor",
       accomplishments: [
         'Developed website to advertize and schedule tutoring sessions',
         'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher',
@@ -95,12 +102,20 @@ export default class Work extends Component {
         <>
         {this.state.showModal ? (
           <Modal className="work-modal" open={true}>
-            <Image className="work-image" src={this.state.currentExp.src} />
-            <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
-              <p>
-                <Icon name='check circle outline' size="large" /> Cool!
-              </p>
-            </Button>
+
+
+          <Image className="work-image" src={this.state.currentExp.src} />
+          <h1>{this.state.currentExp.long}</h1>
+
+              <p>{this.state.currentExp.when}</p>
+
+
+
+              <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
+                  <p>
+                    <Icon name='check circle outline' size="large" /> Cool!
+                  </p>
+                </Button>
           </Modal>
         ) : (
           <Null />

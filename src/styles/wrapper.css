@@ -1,6 +1,6 @@
 /*global vars/themes */
 :root {
-  --secondary: #483e9b;
+  --secondary: #002D62;
   --primary: rgba(0, 0, 0, 0.444);
 }
 /* wrapper styles */
@@ -183,7 +183,19 @@ outline: none;
 }
 
 .work-modal{
+  position: fixed; /* or 'absolute' if you want to position it relative to a parent element */
+  top: 50%;
+  left: 50%;
+  min-width: justify;
+  transform: translate(-50%, -50%);
+}
+
+.work-modal-card{
+  padding: 20px;
+}
+
+.trans-back-force {
   background: transparent !important;
-  padding: 10px;
+  outline: none;
 }
 

@@ -7,23 +7,14 @@ body, html {
   }
 
   body {
-    background-color:#99dbff;
-    background-image:
-    radial-gradient(at 59% 90%, hsla(86,60%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 1% 8%, hsla(280,63%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 60% 25%, hsla(82,71%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 74% 41%, hsla(81,89%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 16% 1%, hsla(278,64%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 56% 84%, hsla(189,90%,0%,1) 0px, transparent 50%),
-    radial-gradient(at 76% 49%, hsla(296,92%,0%,1) 0px, transparent 50%);
-    background-size: 100% 400%;
-    
+    background-color: #000000;
+    opacity: 0.8;
+    background-image:  radial-gradient(#483e9b 0.5px, transparent 0.5px), radial-gradient(#483e9b 0.5px, #000000 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
   }
   
 
-  .inverted-animation{
-    background: linear-gradient(-45deg, hsla(86,60%,0%,1), #99dbff) !important;
-  }
 
 
   .skeleton {
@@ -54,8 +45,11 @@ body, html {
 
 .nav{
   position: fixed;
+  background:  #1a17367c !important;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+  color: white;
 }
+

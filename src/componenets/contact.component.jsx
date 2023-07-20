@@ -4,6 +4,7 @@ import Null from './null.component'
 import axios from 'axios';
 
 import '../styles/contact.css'
+import '../outer_wrapper/wrapper.css'
 
 
 export default class Contact extends Component {
@@ -139,7 +140,7 @@ export default class Contact extends Component {
           </Form.Group>
           <Form.TextArea 
           fluid 
-          label={(<h3>Message</h3>)} 
+          label={(<Icon name="pencil alternate" inverted size="large"/>)} 
           placeholder='Say hi :)' 
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
@@ -157,7 +158,7 @@ export default class Contact extends Component {
               }
               <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
-                <Icon name='linkedin' size="large"></Icon> linkedin
+                <Icon name='linkedin' className="ignore-trans-icon" size="large"></Icon> linkedin
                 </p>
               </Button>
           </Form>
@@ -169,14 +170,14 @@ export default class Contact extends Component {
     >
       <Header icon>
         <Icon name='inbox' />
-        <h2>Email status</h2>
+        <h2 className="mod">Email status</h2>
       </Header>
       <Modal.Content>
-      <h3>{this.state.emailRes}</h3>
+      <h3 className="mod">{this.state.emailRes}</h3>
       </Modal.Content>
       <Modal.Actions>
         <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
-          <p><Icon name='checkmark' size='large'/> OK! </p>
+          <p><Icon loading name='spinner' size='large'/> OK! </p>
         </Button>
       </Modal.Actions>
     </Modal>)

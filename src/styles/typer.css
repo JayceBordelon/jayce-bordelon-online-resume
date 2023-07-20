@@ -1,13 +1,14 @@
 .typer-text {
     font-size: 200%;
-    padding-top: 5%;
+    margin-top: 10px;
+    border-radius: 20px;
+
     align-self: center;
   }
+
   
   .profile-pic {
-    background-color:#99dbff;
-    background-image:
-    linear-gradient(-45deg, hsla(86,60%,0%,1), #99dbff, black);
+    background-image:linear-gradient(-45deg, #483e9b , #000000 );
     background-size: 110% 110%;
     background-position: 50% 50%;
     border: 8px solid transparent;

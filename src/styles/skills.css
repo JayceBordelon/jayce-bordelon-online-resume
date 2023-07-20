@@ -1,9 +1,10 @@
 .flexy {
+    min-width:100%;
     flex-wrap: wrap;
     display: flex;
-    
+    margin-top:20px;
      margin-bottom: 20px;
-     justify-content: space-between;
+     justify-content: space-evenly !important;
 
 }
 

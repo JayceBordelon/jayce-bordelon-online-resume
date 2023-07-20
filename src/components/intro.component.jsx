@@ -1,17 +1,21 @@
+//dependencies
 import React, { Component } from 'react';
 import {  Container, Image  } from 'semantic-ui-react';
-import Picture from '../styles/headshot.JPG'
+
+//components
 import Typer from './typer.component';
 
-import '../styles/typer.css'
+//styles
+import '../styles/wrapper.css'
+import Picture from '../styles/headshot.JPG'
 
 
 export default class Intro extends Component {
   render() {
     return (
       <Container textAlign='center' className="intro-wrapper">
-        <Image src={Picture} className="profile-pic"/>
-        <span><h1 className="typer-text"><Typer/> </h1></span>
+        <Image src={Picture} className="intro-profile-pic"/>
+        <span><h1 className="intro-typer-text"><Typer/> </h1></span>
       </Container>
       
     );

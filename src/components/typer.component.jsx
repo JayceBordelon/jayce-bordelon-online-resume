@@ -1,12 +1,11 @@
-
+//Dependencies
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import "../styles/typer.css"
+
 
 const Typer = () => {
   return (
       <Typewriter
-      className="typer-direct"
         options={{
         autoStart: true,
         cursor: '[]',

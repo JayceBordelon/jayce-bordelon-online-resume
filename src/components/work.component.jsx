@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
-import {Container, Image, Modal, Button, Icon, List} from 'semantic-ui-react'
+import {Container, Image, Modal, Button, Icon} from 'semantic-ui-react'
 import Null from './null.component'
-import '../outer_wrapper/wrapper.css'
-import '../styles/work.css'
+import '../styles/wrapper.css'
 
 export default class Work extends Component {
   // accomplishments left
@@ -95,25 +94,27 @@ export default class Work extends Component {
       return (
         <>
         {this.state.showModal ? (
-        <Modal className="mod" open={true}>
-        <Image className="logo" src={this.state.currentExp.src}></Image>
-        <Button onClick={()=>this.setState({showModal: false})} className="cool-button">
-            <p>
-              <Icon name='check circle outline' size="large"></Icon> Cool!
-            </p>
-        </Button>
-        </Modal>) : (<Null />)}
+          <Modal className="work-modal" open={true}>
+            <Image className="work-image" src={this.state.currentExp.src} />
+            <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
+              <p>
+                <Icon name='check circle outline' size="large" /> Cool!
+              </p>
+            </Button>
+          </Modal>
+        ) : (
+          <Null />
+        )}
+
         <Container className="work-wrap" textAlign="center">
-          {this.experiences.map(exp=>
-          <span className="elem" onClick={()=>this.handleModal(exp)}>
-          <Image className="logo" src={exp.src}></Image>
-          <h2>{exp.title}</h2>
-
-          </span>
-          )}
-
+          {this.experiences.map(exp => (
+            <span className="work-exp" onClick={() => this.handleModal(exp)} key={exp.title}>
+              <Image className="work-image" src={exp.src} />
+              <h2>{exp.title}</h2>
+            </span>
+          ))}
         </Container>
-        </>
+      </>
       )
     }
   }

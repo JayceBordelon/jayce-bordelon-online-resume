@@ -19,7 +19,7 @@ p {
 
 h1, h2, h3, h4, h5 {
   font-weight:bolder;
-  background: linear-gradient(45deg, var(--secondary), white);
+  background: linear-gradient(45deg,white, rgb(0, 155, 0), white);
   -webkit-background-clip: text; /* For Safari and older versions of Chrome */
   background-clip: text;
   color: transparent;
@@ -61,10 +61,6 @@ h1, h2, h3, h4, h5 {
   border-right: 1px solid black !important; /* Add a black dividing line to the right of each nav item */
   padding-right: 10px; /* Add some right padding to separate the dividing line from the text */
   font-weight:bolder !important;
-  background: linear-gradient(to right, var(--secondary), white) !important;
-  -webkit-background-clip: text !important; /* For Safari and older versions of Chrome */
-  background-clip: text !important;
-  color: transparent !important;
 }
 
 /* Style the last nav item to remove the dividing line */
@@ -127,11 +123,11 @@ border-radius: 5px;
 padding: 10px;
 font-size: 16px;
 color: #333;
-background-color: transparent;
 }
 
 .contact-fancy-input:focus {
 outline: none;
+background-color: black !important;
 }
 
 
@@ -200,12 +196,6 @@ outline: none;
   transform: translateY(-10px);
 }
 
-/* .work-image{
-  height:280px !important;
-  width: 280px !important;
-  border-radius: 15px;
-} */
-
 .work-modal{
   background: black !important;
   background-image: linear-gradient(to bottom, var(--secondary),var(--primary),var(--primary),var(--primary),var(--primary),var(--primary)) !important;
@@ -235,4 +225,45 @@ outline: none;
   background: transparent !important;
   outline: none;
 }
+
+/* education styles */
+.edu-outer{
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px var(--secondary);
+}
+.edu-wrap {
+  margin-top: 20px !important;
+  border-radius: 15px;
+}
+
+.edu-elem{
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+  color: white !important;
+}
+
+
+
+.washu-logo {
+  position: relative; /* Make sure the container is positioned */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the image */
+}
+
+/* Project Styles */
+.proj-wrap{
+  margin-top: 20px !important;
+}
+
+.proj-elem{
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
+
+
+
 

@@ -194,7 +194,7 @@ outline: none;
   background: black !important;
   background-image: linear-gradient(to bottom, var(--secondary),var(--primary),var(--primary),var(--primary),var(--primary),var(--primary)) !important;
   border-radius: 15px !important;
-  padding: 15px;
+  padding: 25px;
 }
 
 .work-modal-icon{

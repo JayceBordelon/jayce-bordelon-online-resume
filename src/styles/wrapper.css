@@ -1,0 +1,222 @@
+/*global vars/themes */
+:root {
+  --secondary: rgb(0, 60, 0);
+  --primary: #000000;
+}
+
+
+html, body {
+  background-color: var(--primary);
+  background-image: radial-gradient(var(--secondary) 0.5px, var(--primary) 0.5px);
+  background-size: 10px 10px;
+
+}
+
+p {
+  color: white;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-weight:bolder;
+  background: linear-gradient(45deg, var(--secondary), white);
+  -webkit-background-clip: text; /* For Safari and older versions of Chrome */
+  background-clip: text;
+  color: transparent;
+}
+  
+
+  .footer-text{
+    font-size: small;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+  
+
+
+.super-container{
+    border-radius: 15px !important;
+    color: white;
+    margin: 10px;
+    max-height: 100% !important;
+}
+
+
+.trans{
+  background-color: transparent !important;
+}
+/*navbar*/
+.nav{
+  position: fixed;
+  background: linear-gradient(to bottom, var(--secondary), var(--primary)) !important;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  color: white;
+}
+
+/* New styles for the nav-item class */
+.nav-item {
+  border-right: 1px solid black !important; /* Add a black dividing line to the right of each nav item */
+  padding-right: 10px; /* Add some right padding to separate the dividing line from the text */
+  font-weight:bolder !important;
+  background: linear-gradient(to right, var(--secondary), white) !important;
+  -webkit-background-clip: text !important; /* For Safari and older versions of Chrome */
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Style the last nav item to remove the dividing line */
+.nav-item:last-child {
+  border-right: none;
+}
+/*universal button*/
+.cool-button {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  text-align: center;
+  text-decoration: none !important;
+  background: linear-gradient(-45deg, var(--primary) , var(--secondary), var(--primary) ) !important;
+  background-size: 200% 200% !important;
+  border-radius: 5px !important;
+  border: none !important;
+  box-shadow: 0 2px 4px var(--secondary) !important;
+  outline:none;
+  transition: opacity 0.3s ease;
+  margin: 20px !important;
+}
+
+.cool-button:hover {
+  opacity: 80%;
+}
+
+/* skills style */
+.skills-wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top:20px;
+   margin-bottom: 20px;
+   justify-content: space-evenly !important;
+
+}
+
+.skills-icon {
+  margin: 10px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-icon:hover{
+  transform: translateY(-10px);
+}
+
+/* contact style */
+.contact-wrapper{
+  margin-bottom: 40px !important;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+}
+
+.contact-fancy-input {
+border: none;
+border-radius: 5px;
+padding: 10px;
+font-size: 16px;
+color: #333;
+background-color: transparent;
+}
+
+.contact-fancy-input:focus {
+outline: none;
+}
+
+
+/* intro styles */
+.intro-typer-text {
+  font-size: 200%;
+  margin-top: 10px;
+  border-radius: 20px;
+
+  align-self: center;
+}
+
+
+.intro-profile-pic {
+  background-image:linear-gradient(-45deg,  var(--primary), var(--secondary) );
+  background-size: 110% 110%;
+  background-position: 50% 50%;
+  border: 8px solid transparent;
+  padding: 2px;
+  border-radius: 50%;
+  width: 200px; /* Adjust this value as needed */
+  height: 200px; /* Adjust this value as needed */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 40px;
+}
+
+.intro-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+/* work styles */
+
+.work-wrap{
+  margin-top:20px;
+  flex-wrap: wrap !important;
+  display: flex !important;
+  justify-content: space-evenly;
+}
+
+
+.work-exp {
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.work-exp:hover {
+  transform: translateY(-10px);
+}
+
+/* .work-image{
+  height:280px !important;
+  width: 280px !important;
+  border-radius: 15px;
+} */
+
+.work-modal{
+  background: black !important;
+  background-image: linear-gradient(to bottom, var(--secondary),var(--primary),var(--primary),var(--primary),var(--primary),var(--primary)) !important;
+  border-radius: 15px !important;
+  padding: 15px;
+}
+
+.work-modal-icon{
+  color: white;
+  position: relative;
+}
+
+.work-modal-learnings{
+  display: flex;
+  flex-wrap: wrap; /* This should be 'wrap', not 'flex-wrap' */
+  justify-content: flex-start; /* Adjust this property as needed */
+  align-items: flex-start; /* Adjust this property as needed */
+}
+.work-modal-learning{
+  background-color: rgba(0, 60, 0, 0.423);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.trans-back-force {
+  background: transparent !important;
+  outline: none;
+}
+

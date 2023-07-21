@@ -1,9 +1,13 @@
+//dependencies
 import React, { Component } from 'react';
 import { Button, Container, Form, Icon, Modal, Header } from 'semantic-ui-react';
-import Null from './null.component'
 import axios from 'axios';
 
-import '../styles/contact.css'
+//components
+import Null from './null.component'
+
+//styles
+import '../styles/wrapper.css'
 
 
 export default class Contact extends Component {
@@ -95,20 +99,23 @@ export default class Contact extends Component {
     getLinked = () =>{
       window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank");
     }
+    getGit = () =>{
+      window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");
+    }
 
   
     render() {
   
       return (
-        <Container className="footer">
+        <Container className="contact-wrapper">
         <h1>Get In Touch!</h1>
-          <Form className= "formy-form">
+          <Form>
           <Form.Group widths='equal'>
             <Form.Input 
             fluid 
             label={(<h3>First Name</h3>)} 
             placeholder="First" 
-            className="fancy-input"
+            className="contact-fancy-input"
             value={this.state.firstText} 
             onChange={this.handleChangeFirst}
             />
@@ -116,7 +123,7 @@ export default class Contact extends Component {
             fluid 
             label={(<h3>Last Name</h3>)} 
             placeholder="Last" 
-            className="fancy-input"
+            className="contact-fancy-input"
             value={this.state.lastText} 
             onChange={this.handleChangeLast}
             />
@@ -125,21 +132,21 @@ export default class Contact extends Component {
             <Form.Input 
             label={(<Icon name="mail" inverted size="large"/>)} 
             placeholder="b.jayce@wustl.edu" 
-            className="fancy-input"
+            className="contact-fancy-input"
             value={this.state.emailText} 
             onChange={this.handleChangeEmail}
             />
             <Form.Input 
             label={(<Icon name="phone" inverted size="large"/>)} 
             placeholder="832-260-5650" 
-            className="fancy-input"
+            className="contact-fancy-input"
             value={this.state.phoneText} 
             onChange={this.handleChangePhone}
             />
           </Form.Group>
           <Form.TextArea 
           fluid 
-          label={(<h3>Message</h3>)} 
+          label={(<Icon name="pencil alternate" inverted size="large"/>)} 
           placeholder='Say hi :)' 
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
@@ -151,13 +158,18 @@ export default class Contact extends Component {
               </Button>) : 
               (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
               <p>
-              <Icon name="send" size="large"></Icon>Email me!
+              <Icon name="send" size="large"></Icon>Send Mail
               </p>
               </Button>)
               }
               <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
                 <Icon name='linkedin' size="large"></Icon> linkedin
+                </p>
+              </Button>
+              <Button className='cool-button' onClick={() => this.getGit()}>
+              <p>
+                <Icon name='github' size="large"></Icon> Github Repo
                 </p>
               </Button>
           </Form>
@@ -169,14 +181,14 @@ export default class Contact extends Component {
     >
       <Header icon>
         <Icon name='inbox' />
-        <h2>Email status</h2>
+        <h2 className="mod">Email status</h2>
       </Header>
       <Modal.Content>
-      <h3>{this.state.emailRes}</h3>
+      <h3 className="mod">{this.state.emailRes}</h3>
       </Modal.Content>
       <Modal.Actions>
         <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
-          <p><Icon name='checkmark' size='large'/> OK! </p>
+          <p><Icon loading name='spinner' size='large'/> OK! </p>
         </Button>
       </Modal.Actions>
     </Modal>)

@@ -1,10 +1,10 @@
-
+//Dependencies
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
+
 const Typer = () => {
   return (
-    <strong>
       <Typewriter
         options={{
         autoStart: true,
@@ -22,11 +22,11 @@ const Typer = () => {
 
             .pauseFor(3000)
             .deleteAll(5)
-            .typeString('I am an aspiring developer with three pertinent software experiences.')
+            .typeString('I am an aspiring developer with a variety of pertinent software experiences.')
 
             .pauseFor(3000)
             .deleteAll(5)
-            .typeString(`I have experience in a plethora of technologies.`)
+            .typeString(`Those experiences have equipped me with skills in a plethora of technologies.`)
 
             .pauseFor(4000)
             .deleteAll(5)
@@ -44,8 +44,6 @@ const Typer = () => {
             .start();
         }}
    />
-    
-   </strong>
   );
 };
 

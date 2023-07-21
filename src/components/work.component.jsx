@@ -1,5 +1,12 @@
 import React, {Component} from 'react'
-import {Container, Image, Modal, Button, Icon, Card} from 'semantic-ui-react'
+import {Container, Image, Modal, Button, Icon, List} from 'semantic-ui-react'
+
+import {} from 'react-icons/di' // from devicons
+import {} from 'react-icons/tb'
+import {} from 'react-icons/si'
+import { } from 'react-icons/fa'
+import {} from 'react-icons/gi'
+import {VscTerminalCmd} from 'react-icons/vsc'
 import Null from './null.component'
 import '../styles/wrapper.css'
 
@@ -8,6 +15,10 @@ export default class Work extends Component {
   state = {
     'showModal': false,
     'currentExp': {}
+  }
+
+  toComponent = (lang) => {
+    return lang.comp;
   }
 
   handleModal = (exp) => {
@@ -26,7 +37,7 @@ export default class Work extends Component {
         'Built, wrapped in a container, and deployed Django application via an existing kubernetes cluster'
       ], 
       company: 'Synopsys Inc.', 
-      src:'https://media.licdn.com/dms/image/C4E0BAQEq7MVORIs3MA/company-logo_200_200/0/1519855929274?e=2147483647&v=beta&t=JTxU5EoX6Nr7jTo1cp1hk8NyCecz7HZIsi6m3PhlMTo'},
+      src: <VscTerminalCmd size={300}/>},
 
       {when: 'July 2022 - Present', 
       title: `CS TA`, 
@@ -102,20 +113,27 @@ export default class Work extends Component {
         <>
         {this.state.showModal ? (
           <Modal className="work-modal" open={true}>
-
-
-          <Image className="work-image" src={this.state.currentExp.src} />
+          <div className="work-modal-left" textAlign="left">
+          {this.state.currentExp.src}
+          </div>
+          <div className="work-modal-right" textAlign="left">
           <h1>{this.state.currentExp.long}</h1>
-
-              <p>{this.state.currentExp.when}</p>
-
-
-
-              <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
+          <h2>{this.state.currentExp.when}</h2>
+            <List>
+            {this.state.currentExp.accomplishments.map(accomplish=> (
+              <List.Item
+                icon='chess pawn inverted'
+                content={<h3>{accomplish}</h3>}
+              />
+        ))}
+            </List>
+            <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
                   <p>
                     <Icon name='check circle outline' size="large" /> Cool!
                   </p>
                 </Button>
+                
+          </div>
           </Modal>
         ) : (
           <Null />
@@ -124,7 +142,7 @@ export default class Work extends Component {
         <Container className="work-wrap" textAlign="center">
           {this.experiences.map(exp => (
             <span className="work-exp" onClick={() => this.handleModal(exp)} key={exp.title}>
-              <Image className="work-image" src={exp.src} />
+              {exp.src}
               <h2>{exp.title}</h2>
             </span>
           ))}

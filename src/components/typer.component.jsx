@@ -16,13 +16,14 @@ const Typer = () => {
         onInit={(typewriter) => {
             typewriter
             .typeString('Hello, I am Jayce Bordelon.')
+
             .pauseFor(2000)
             .deleteAll(5)
             .typeString('I am a student of Washington University in St. Louis.')
 
             .pauseFor(3000)
-            .deleteAll(5)
-            .typeString('I am an aspiring developer with a variety of pertinent software experiences.')
+            .deleteChars(49)
+            .typeString(' an aspiring developer with a variety of pertinent software experiences.')
 
             .pauseFor(3000)
             .deleteAll(5)
@@ -30,16 +31,25 @@ const Typer = () => {
 
             .pauseFor(4000)
             .deleteAll(5)
+            .typeString('But most importantly...')
+            .pauseFor(1000)
+            .typeString(' I hold a passion for scalable, efficient, and reliable software.')
+
+            .pauseFor(4000)
+            .deleteAll(5)
             .typeString('I am searching for opportunities to grow, learn, and contibute.')
+
+
 
             .pauseFor(4000)
             .deleteAll(5)
             .typeString('If my experience is of interest to you, reach out!')
+
             .pauseFor(3000)
             .deleteAll(5)
-            .typeString('Thank you for your time!')
+            .typeString('Thank you for your time! :)')
 
-            .pauseFor(1000)
+            .pauseFor(3000)
             .deleteAll(0)
             .start();
         }}

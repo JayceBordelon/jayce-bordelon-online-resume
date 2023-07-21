@@ -142,7 +142,7 @@ export default class Work extends Component {
             </List>
             <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
                   <p>
-                    <Icon name='check circle outline' size="large" /> Cool!
+                  <Icon name='checkmark' size="large" /> Close
                   </p>
                 </Button>
                 

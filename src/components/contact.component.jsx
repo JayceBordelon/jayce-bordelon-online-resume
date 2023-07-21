@@ -57,6 +57,8 @@ export default class Contact extends Component {
 
 
   handleSubmit = (event) =>{
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
     this.setState({awaitingReq: true})
       const { REACT_APP_EMAIL_SERVICE_ID, REACT_APP_EMAIL_TEMPLATE_ID, REACT_APP_EMAIL_USER_ID } = process.env;
       const templateParams = {
@@ -72,6 +74,11 @@ export default class Contact extends Component {
       const FAIL=`Sorry ${templateParams.sender}! something went wrong sending your email. Please try again.`
       const NSI=`Your email request seems to be missing field(s). Please ensure every box is filled with something.
       If you do not want to include certain information, please leave it as 'N/A'. Thank you!`
+
+      if (!emailRegex.test(templateParams.email)) {
+        this.setState({ emailRes: 'Invalid email format. Please provide a valid email address.', awaitingReq: false });
+        return;
+      }
 
       if (Object.values(templateParams).every((field) => field !== '')) 
         axios
@@ -109,6 +116,7 @@ export default class Contact extends Component {
       return (
         <Container className="contact-wrapper">
         <h1>Get In Touch!</h1>
+        <h5>If you would like to get in contact with me, please fill out this form and I will get back to you!</h5>
           <Form>
           <Form.Group widths='equal'>
             <Form.Input 
@@ -147,7 +155,7 @@ export default class Contact extends Component {
           <Form.TextArea 
           fluid 
           label={(<Icon name="pencil alternate" inverted size="large"/>)} 
-          placeholder='Say hi :)' 
+          placeholder='Please leave me a message' 
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
           />
@@ -188,7 +196,7 @@ export default class Contact extends Component {
       </Modal.Content>
       <Modal.Actions>
         <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
-          <p><Icon loading name='spinner' size='large'/> OK! </p>
+          <p><Icon name='checkmark' size='large'/> OK </p>
         </Button>
       </Modal.Actions>
     </Modal>)

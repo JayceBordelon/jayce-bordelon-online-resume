@@ -1,6 +1,6 @@
 //dependencies
 import React, { Component } from 'react';
-import {  Container, Image  } from 'semantic-ui-react';
+import {  Container, Image, Popup  } from 'semantic-ui-react';
 
 //components
 import Typer from './typer.component';
@@ -14,7 +14,7 @@ export default class Intro extends Component {
   render() {
     return (
       <Container textAlign='center' className="intro-wrapper">
-        <Image src={Picture} className="intro-profile-pic"/>
+      <Image src={Picture} onClick={this.props.scrollToBottom} className="intro-profile-pic"/>
         <span><h1 className="intro-typer-text"><Typer/> </h1></span>
       </Container>
       

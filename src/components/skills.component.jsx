@@ -90,7 +90,7 @@ export default class Skills extends Component {
               <h4>I have been working with this technology for {this.state.currentExp.yrs}</h4>
               <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
                 <p>
-                  <Icon name='check circle outline' size="large" /> Cool!
+                  <Icon name='checkmark' size="large" /> Close
                 </p>
               </Button>
             </Modal>

@@ -15,6 +15,15 @@ import Contact from '../components/contact.component';
 import '../styles/wrapper.css';
 
 export default class Wrapper extends Component {
+  bottomElementRef = React.createRef();
+
+  scrollToBottom = () => {
+    // Scroll the bottomElementRef into view
+    if (this.bottomElementRef.current) {
+      this.bottomElementRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   state = {
     active_component: <Null />,
     showNav: false,
@@ -42,10 +51,11 @@ export default class Wrapper extends Component {
         <Menu.Item name="Projects" onClick={() => this.handlePath(<Projects />)} className="nav-item" />
         </Menu>
         <Segment inverted className="trans">
-          <Intro />
+          <Intro scrollToBottom={this.scrollToBottom} />
           {this.state.active_component}
         </Segment>
         <Contact />
+        <div ref={this.bottomElementRef}></div>
         <Container textAlign="center" className="footer-text">
           <a onClick={this.getPages} href="">
             {' '}

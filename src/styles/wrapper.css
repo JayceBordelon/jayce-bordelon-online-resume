@@ -156,12 +156,28 @@ outline: none;
   height: 200px; /* Adjust this value as needed */
   margin: 0 auto; /* Center horizontally */
   margin-top: 40px;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.intro-profile-pic:hover {
+  transform: translateY(-10px)
+
 }
 
 .intro-wrapper {
   display: flex;
   justify-content: center;
   align-items: center !important;
+}
+
+.custom-pop-up{
+  background: var(--primary) !important;
+  background-color: var(--primary) !important;
+  background-image: var(--primary) !important;
+  outline: none !important;
+  border: none !important;
+
 }
 
 /* work styles */

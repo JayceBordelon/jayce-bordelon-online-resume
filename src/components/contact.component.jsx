@@ -117,11 +117,11 @@ export default class Contact extends Component {
         <Container className="contact-wrapper">
         <h1>Get In Touch!</h1>
         <h5>If you would like to get in contact with me, please fill out this form and I will get back to you!</h5>
-          <Form>
+          <Form >
           <Form.Group widths='equal'>
             <Form.Input 
             fluid 
-            label={(<h3>First Name</h3>)} 
+            label={(<h2>First Name</h2>)} 
             placeholder="First" 
             className="contact-fancy-input"
             value={this.state.firstText} 
@@ -129,7 +129,7 @@ export default class Contact extends Component {
             />
             <Form.Input 
             fluid 
-            label={(<h3>Last Name</h3>)} 
+            label={(<h2>Last Name</h2>)} 
             placeholder="Last" 
             className="contact-fancy-input"
             value={this.state.lastText} 

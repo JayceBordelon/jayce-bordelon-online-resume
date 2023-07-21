@@ -40,7 +40,7 @@ export default class Work extends Component {
         'Built, dockerized, and deployed a Django authentication application on an existing kubernetes cluster.'
       ], 
       company: 'Synopsys Inc.', 
-      learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH',
+      learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
       src: <GiServerRack size={300}/>},
 
       {when: 'July 2022 - Present', 
@@ -64,7 +64,7 @@ export default class Work extends Component {
         'Successfully built out and presented MVP on the MERN stack.'
       ], 
       company: 'Magnifi', 
-      learned: 'MERN Stack|HTML/CSS|React|Netlify|Heroku|Software Architecture|Node/Express|MongoDB',
+      learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
       src:<SiBlueprint size={300} />},
 
       {when: 'May 2022 - August 2022', 
@@ -77,7 +77,7 @@ export default class Work extends Component {
         'Collaborated through GitHub for large application updates.'
       ], 
       company: 'Command Alkon', 
-      learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML',
+      learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML|CSS',
       src:<SiRubyonrails size={300} />},
 
       {when: 'May 2021 - August 2021', 
@@ -102,7 +102,7 @@ export default class Work extends Component {
         'Exposed myself to PSQL while validating financially sensetive information'
       ], 
       company: 'Command Alkon', 
-      learned: 'PostgreSQL|Data Validation',
+      learned: 'PostgreSQL|Data Validation|Data Analysis',
       src:<BsDatabaseUp size={300}/>},
 
       {when: 'May 2019 - August 2021', 
@@ -114,7 +114,7 @@ export default class Work extends Component {
         'Expanded my service to include Geometry, Advanced Algebra, and Trigonometry.'
       ], 
       company: 'Self Employed', 
-      learned: 'Calculus|Advanced Algebra|Geometry|Teaching|Basic Web Dev Concepts',
+      learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',
       src: <TbMathFunction size={300}/>}
     ]
     render() {

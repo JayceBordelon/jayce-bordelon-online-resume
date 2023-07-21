@@ -36,10 +36,10 @@ export default class Wrapper extends Component {
     return (
       <Container textAlign="center" className="super-container">
         <Menu fluid tabular inverted widths={4} className="nav nav-background">
-          <Menu.Item name="Work Experience" onClick={() => this.handlePath(<Work />)} />
-          <Menu.Item name="Skills" onClick={() => this.handlePath(<Skills />)} />
-          <Menu.Item name="Education" onClick={() => this.handlePath(<Education />)} />
-          <Menu.Item name="Projects" onClick={() => this.handlePath(<Projects />)} />
+        <Menu.Item name="Work" onClick={() => this.handlePath(<Work />)} className="nav-item" />
+        <Menu.Item name="Skills" onClick={() => this.handlePath(<Skills />)} className="nav-item" />
+        <Menu.Item name="Education" onClick={() => this.handlePath(<Education />)} className="nav-item" />
+        <Menu.Item name="Projects" onClick={() => this.handlePath(<Projects />)} className="nav-item" />
         </Menu>
         <Segment inverted className="trans">
           <Intro />

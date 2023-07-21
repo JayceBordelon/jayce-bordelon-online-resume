@@ -1,25 +1,25 @@
 /*global vars/themes */
 :root {
-  --secondary: rgb(132, 130, 238);
-  --primary: rgba(0, 0, 0, 0.444);
+  --secondary: rgb(0, 60, 0);
+  --primary: #000000;
 }
 
 
 html, body {
-  background-color: #000000;
-  background-image: radial-gradient(var(--secondary) 0.5px, #000000 0.5px);
+  background-color: var(--primary);
+  background-image: radial-gradient(var(--secondary) 0.5px, var(--primary) 0.5px);
   background-size: 10px 10px;
 
 }
 
-p, h4, h5 {
+p {
   color: white;
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   font-weight:bolder;
-  background: linear-gradient(45deg, white,var(--secondary));
+  background: linear-gradient(45deg, var(--secondary), white);
   -webkit-background-clip: text; /* For Safari and older versions of Chrome */
   background-clip: text;
   color: transparent;
@@ -40,30 +40,44 @@ h1, h2, h3 {
     color: white;
     margin: 10px;
     max-height: 100% !important;
-    min-width: 100% !important;
 }
 
 
 .trans{
   background-color: transparent !important;
 }
-
+/*navbar*/
 .nav{
   position: fixed;
-  background: linear-gradient(-45deg, #000000 , var(--secondary), #000000 , var(--secondary),  #000000, var(--secondary), #000000, var(--secondary), #000000 ) !important;
+  background: linear-gradient(to bottom, var(--secondary), var(--primary)) !important;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 999;
   color: white;
 }
 
+/* New styles for the nav-item class */
+.nav-item {
+  border-right: 1px solid black !important; /* Add a black dividing line to the right of each nav item */
+  padding-right: 10px; /* Add some right padding to separate the dividing line from the text */
+  font-weight:bolder !important;
+  background: linear-gradient(to right, var(--secondary), white) !important;
+  -webkit-background-clip: text !important; /* For Safari and older versions of Chrome */
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Style the last nav item to remove the dividing line */
+.nav-item:last-child {
+  border-right: none;
+}
+/*universal button*/
 .cool-button {
   display: inline-block !important;
   padding: 10px 20px !important;
   text-align: center;
   text-decoration: none !important;
-  background: linear-gradient(-45deg, #000000 , var(--secondary), #000000 ) !important;
+  background: linear-gradient(-45deg, var(--primary) , var(--secondary), var(--primary) ) !important;
   background-size: 200% 200% !important;
   border-radius: 5px !important;
   border: none !important;
@@ -79,7 +93,6 @@ h1, h2, h3 {
 
 /* skills style */
 .skills-wrapper {
-  min-width:100%;
   flex-wrap: wrap;
   display: flex;
   margin-top:20px;
@@ -133,7 +146,7 @@ outline: none;
 
 
 .intro-profile-pic {
-  background-image:linear-gradient(-45deg, var(--secondary) , #000000 );
+  background-image:linear-gradient(-45deg,  var(--primary), var(--secondary) );
   background-size: 110% 110%;
   background-position: 50% 50%;
   border: 8px solid transparent;
@@ -149,13 +162,11 @@ outline: none;
   display: flex;
   justify-content: center;
   align-items: center !important;
-  min-width: 100%;
 }
 
 /* work styles */
 
 .work-wrap{
-  min-width:100%;
   margin-top:20px;
   flex-wrap: wrap !important;
   display: flex !important;
@@ -173,41 +184,35 @@ outline: none;
   transform: translateY(-10px);
 }
 
-.work-image{
+/* .work-image{
   height:280px !important;
   width: 280px !important;
   border-radius: 15px;
-}
+} */
 
 .work-modal{
-  position: fixed; /* or 'absolute' if you want to position it relative to a parent element */
-  top: 50%;
-  left: 50%;
-  min-width: justify;
-  transform: translate(-50%, -50%);
-  box-shadow: none;
-  background: transparent !important;
+  background: black !important;
+  background-image: linear-gradient(to bottom, var(--secondary),var(--primary),var(--primary),var(--primary),var(--primary),var(--primary)) !important;
+  border-radius: 15px !important;
+  padding: 15px;
 }
 
-.work-modal-left{
-  max-width: 50%;
-  float: left;
+.work-modal-icon{
   color: white;
+  position: relative;
 }
 
-.image-modal{
-  position: absolute;
-  top: 50%;
-  left: 5%;
+.work-modal-learnings{
+  display: flex;
+  flex-wrap: wrap; /* This should be 'wrap', not 'flex-wrap' */
+  justify-content: flex-start; /* Adjust this property as needed */
+  align-items: flex-start; /* Adjust this property as needed */
 }
-
-.work-modal-right{
-  max-width: 50%;
-  float: right;
-}
-
-.work-modal-card{
-  padding: 20px;
+.work-modal-learning{
+  background-color: rgba(0, 60, 0, 0.423);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .trans-back-force {

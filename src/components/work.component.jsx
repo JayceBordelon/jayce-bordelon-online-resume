@@ -1,14 +1,13 @@
 import React, {Component} from 'react'
-import {Container, Image, Modal, Button, Icon, List} from 'semantic-ui-react'
+import {Container, Modal, Button, Icon, List} from 'semantic-ui-react'
 
-import {} from 'react-icons/di' // from devicons
-import {} from 'react-icons/tb'
-import {} from 'react-icons/si'
-import { } from 'react-icons/fa'
-import {} from 'react-icons/gi'
-import {VscTerminalCmd} from 'react-icons/vsc'
+import { BsDatabaseUp } from 'react-icons/bs' // from devicons
+import { TbMathFunction } from 'react-icons/tb'
+import {SiBlueprint,  SiRubyonrails} from 'react-icons/si'
+import { GiServerRack, GiTeacher} from 'react-icons/gi'
 import Null from './null.component'
 import '../styles/wrapper.css'
+import { DiRuby } from 'react-icons/di'
 
 export default class Work extends Component {
   // accomplishments left
@@ -19,6 +18,10 @@ export default class Work extends Component {
 
   toComponent = (lang) => {
     return lang.comp;
+  }
+
+  toSingleLearning = (learnings) => {
+    return learnings.split("|");
   }
 
   handleModal = (exp) => {
@@ -32,15 +35,16 @@ export default class Work extends Component {
       title: 'IT Intern', 
       long: "Information Technology Intern",
       accomplishments: [
-        'Updated and maintained multiple internal web applications in a fast-paced development environment.',
+        'Updated and maintained a widely used Ruby on Rails application with a React frontend.',
         'Collaborated with international team through GitLab to develop novel features in the company.',
-        'Built, wrapped in a container, and deployed Django application via an existing kubernetes cluster'
+        'Built, dockerized, and deployed a Django authentication application on an existing kubernetes cluster.'
       ], 
       company: 'Synopsys Inc.', 
-      src: <VscTerminalCmd size={300}/>},
+      learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH',
+      src: <GiServerRack size={300}/>},
 
       {when: 'July 2022 - Present', 
-      title: `CS TA`, 
+      title: `Teacher's Assistant`, 
       long: "Computer Science Lead Teacher's Assistant",
       accomplishments: [
         'Streamlining learning process of Object Oriented Programming for students.',
@@ -48,7 +52,8 @@ export default class Work extends Component {
         'Hosting and managing other Teacher Assistants to create student led instruction sessions.'
       ], 
       company: 'Washington University in St. Louis', 
-      src:'https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/WashU_St._Louis_seal.svg/1200px-WashU_St._Louis_seal.svg.png'},
+      learned: 'Java|Object Oriented Programming|Teaching|Managing',
+      src:<GiTeacher size={300} />},
 
       {when: 'January 2023 - May 2023', 
       title: 'Software Architect', 
@@ -59,7 +64,8 @@ export default class Work extends Component {
         'Successfully built out and presented MVP on the MERN stack.'
       ], 
       company: 'Magnifi', 
-      src:'https://media.licdn.com/dms/image/C560BAQGb6D24Acz-QA/company-logo_200_200/0/1677903909076?e=2147483647&v=beta&t=ly-GV7VqALlOFO6O2jMFT-cDxz4dpB1PbcYtrgp6uiM'},
+      learned: 'MERN Stack|HTML/CSS|React|Netlify|Heroku|Software Architecture|Node/Express|MongoDB',
+      src:<SiBlueprint size={300} />},
 
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
@@ -71,7 +77,8 @@ export default class Work extends Component {
         'Collaborated through GitHub for large application updates.'
       ], 
       company: 'Command Alkon', 
-      src:'https://www.supplychainquarterly.com/ext/resources/images/industry_pressroom/uploaded/ca_special_2c_rgb_rgb_600_527.jpg?t=1584337380&width=600'},
+      learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML',
+      src:<SiRubyonrails size={300} />},
 
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
@@ -83,7 +90,8 @@ export default class Work extends Component {
 
       ], 
       company: 'Command Alkon', 
-      src:'https://www.supplychainquarterly.com/ext/resources/images/industry_pressroom/uploaded/ca_special_2c_rgb_rgb_600_527.jpg?t=1584337380&width=600'},
+      learned: 'Ruby on Rails|PostgreSQL',
+      src:<DiRuby size={300} />},
 
       {when: 'May 2019 - August 2019', 
       title: 'Data Entry Intern', 
@@ -91,21 +99,23 @@ export default class Work extends Component {
       accomplishments: [
         'Collaborated with International data entry team.',
         'Handled data degradation on over 1,764 entries.',
-        'Exposed myself to PSQL'
+        'Exposed myself to PSQL while validating financially sensetive information'
       ], 
       company: 'Command Alkon', 
-      src:'https://www.supplychainquarterly.com/ext/resources/images/industry_pressroom/uploaded/ca_special_2c_rgb_rgb_600_527.jpg?t=1584337380&width=600'},
+      learned: 'PostgreSQL|Data Validation',
+      src:<BsDatabaseUp size={300}/>},
 
       {when: 'May 2019 - August 2021', 
       title: 'Calculus Tutor', 
       long: "High School Calculus Tutor",
       accomplishments: [
-        'Developed website to advertize and schedule tutoring sessions',
-        'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher',
-        'Expanded my service to include Geometry, Advanced Algebra, and Trigonometry'
+        'Developed website to advertize and schedule tutoring sessions.',
+        'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher.',
+        'Expanded my service to include Geometry, Advanced Algebra, and Trigonometry.'
       ], 
       company: 'Self Employed', 
-      src:'https://chitowntutoring.com/wp-content/uploads/calculus.jpg'}
+      learned: 'Calculus|Advanced Algebra|Geometry|Teaching|Basic Web Dev Concepts',
+      src: <TbMathFunction size={300}/>}
     ]
     render() {
   
@@ -113,19 +123,22 @@ export default class Work extends Component {
         <>
         {this.state.showModal ? (
           <Modal className="work-modal" open={true}>
-          <div className="work-modal-left" textAlign="left">
-          {this.state.currentExp.src}
-          </div>
-          <div className="work-modal-right" textAlign="left">
-          <h1>{this.state.currentExp.long}</h1>
+          <span className="work-modal-icon">{this.state.currentExp.src}</span>
+          <h1>{this.state.currentExp.company} - {this.state.currentExp.long}</h1>
           <h2>{this.state.currentExp.when}</h2>
             <List>
             {this.state.currentExp.accomplishments.map(accomplish=> (
               <List.Item
-                icon='chess pawn inverted'
+                icon='code branch inverted green'
                 content={<h3>{accomplish}</h3>}
               />
         ))}
+              <List.Item
+                content={<h2>What I Learned</h2>}
+              /> 
+              <div className= "work-modal-learnings">
+              {this.toSingleLearning(this.state.currentExp.learned).map(learning=> (<span className="work-modal-learning"><h4>{learning} </h4></span>))}
+              </div>
             </List>
             <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
                   <p>
@@ -133,7 +146,6 @@ export default class Work extends Component {
                   </p>
                 </Button>
                 
-          </div>
           </Modal>
         ) : (
           <Null />

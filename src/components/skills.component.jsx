@@ -5,7 +5,7 @@ import { Container} from 'semantic-ui-react';
 //Components (Icons)
 import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
-import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb} from 'react-icons/si'
+import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte} from 'react-icons/si'
 import {FaLinux, FaGit} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 
@@ -29,10 +29,11 @@ export default class Skills extends Component {
       {name: 'AVR Assembly', comp: <SiAssemblyscript size={160}/>},
       {name: 'Kubernetes (conceptual)', comp: <SiKubernetes size={200}/>},
       {name: 'Docker (conceptual)', comp: <SiDocker size={200}/>},
+      {name: 'Svelte (conceptual)', comp: <SiSvelte size={200}/>},
     ]
     web_frameworks = [
       {name: 'Ruby on Rails', comp: <DiRuby size={170}/>},
-      {name: 'MERN', comp: <SiMongodb size={200}/>},
+      {name: 'MERN stack', comp: <SiMongodb size={200}/>},
       {name: 'Python Django', comp: <TbBrandDjango size={200}/>},
     ]
     db_and_other = [
@@ -40,6 +41,7 @@ export default class Skills extends Component {
       {name: 'APi Development', comp: <TbApi size={200}/>},
       {name: 'OCR Technology', comp: <GiArtificialHive size={200}/>},
       {name: 'Linux (WSL)', comp: <FaLinux size={200}/>},
+      {name: 'PostgreSQL (PSQL)', comp: <SiPostgresql size={200}/>},
       {name: 'AWS Lambda', comp: <SiAwslambda size={200}/>},
     ]
 

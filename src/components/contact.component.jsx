@@ -99,6 +99,9 @@ export default class Contact extends Component {
     getLinked = () =>{
       window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank");
     }
+    getGit = () =>{
+      window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");
+    }
 
   
     render() {
@@ -155,13 +158,18 @@ export default class Contact extends Component {
               </Button>) : 
               (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
               <p>
-              <Icon name="send" size="large"></Icon>Email me!
+              <Icon name="send" size="large"></Icon>Send Mail
               </p>
               </Button>)
               }
               <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
                 <Icon name='linkedin' size="large"></Icon> linkedin
+                </p>
+              </Button>
+              <Button className='cool-button' onClick={() => this.getGit()}>
+              <p>
+                <Icon name='github' size="large"></Icon> Github Repo
                 </p>
               </Button>
           </Form>

@@ -57,13 +57,9 @@ export default class Wrapper extends Component {
         <Contact />
         <div ref={this.bottomElementRef}></div>
         <Container textAlign="center" className="footer-text">
-          <a onClick={this.getPages} href="">
-            {' '}
-            <p>
-              Note: while deployments are handled through <strong>Netlify</strong>, this website and its contents
-              belong entirely to Jayce Bordelon.
-            </p>{' '}
-          </a>
+        <p>
+          Note: while deployments are handled through <strong>Netlify</strong>, this website and its contents belong entirely to Jayce Bordelon.
+        </p>
         </Container>
       </Container>
     );

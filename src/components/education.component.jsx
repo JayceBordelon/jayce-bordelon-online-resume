@@ -6,17 +6,16 @@ export default class Education extends Component {
 
   washu = {
     schoolName: 'Washington University in St. Louis',
-    focus: `I am currently persuing a Bachelor's of Science with a Computer Science & 
-    Finance double major with a minor in Human Computer Interaction. 
-    Cocurrent to my education, I work as a Teacher's Assistant for both an entry level Java Course,
-    & an advanced C++ course.`,
-    accomplishments: [`Hack WashU - Winner of 'most creative use of Twilio API (see 'projects').`, 
+    focus: `
+    Currently pursuing a Bachelor's of Science in Computer Science & Finance with a minor in Human-Computer Interaction. I work as a Teacher's Assistant for entry-level Java and advanced C++ courses.`,
+    accomplishments: [`Hack WashU - Winner for most creative use of Twilio API (see 'projects').`, 
     `Dean's List - FL2021 & SP2023.`,
     ],
-    otherInterests: [`Software Architecture - Lead Software Architecture & development for 'Magnifi'(see 'work').`, 
-    `Bodybuilding - I spend my free time sharpening my physical being.`,
-    `Stock/Options Trading - Reserching and trading on various stocks.`,
-    `Self Taught Pianist - Classically tained to persue my interest in music composition and theory.`,
+    otherInterests: [`Software Architecture - 
+    Led software architect for 'Magnifi' project.(see 'Work').`, 
+    `Bodybuilding - Passionate about bodybuilding, strength, and health.`,
+    `Stock/Options Trading - Active trader, researching and trading various stocks.`,
+    `Self Taught Pianist - Exploring music composition and theory.`,
     `Chess player - I taught myself chess and play often.`],
     src: 'https://marcomm.wustl.edu/app/uploads/2015/07/3lineposRGB1000-01-1fuxmn8-e1517349537248-300x246.png'
   };

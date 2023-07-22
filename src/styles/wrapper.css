@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5 {
 .trans{
   background-color: transparent !important;
 }
+
 /*navbar*/
 .nav{
   position: fixed;
@@ -140,11 +141,14 @@ background-color: black !important;
 
 /* intro styles */
 .intro-typer-text {
-  font-size: 200%;
   margin-top: 10px;
   border-radius: 20px;
-
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+  overflow: auto;
   align-self: center;
+  min-height: 150px;
 }
 
 

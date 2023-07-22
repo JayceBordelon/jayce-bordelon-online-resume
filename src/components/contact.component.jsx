@@ -81,6 +81,7 @@ export default class Contact extends Component {
       }
 
       if (Object.values(templateParams).every((field) => field !== '')) 
+
         axios
           .post(`https://api.emailjs.com/api/v1.0/email/send`, {
             service_id: REACT_APP_EMAIL_SERVICE_ID,

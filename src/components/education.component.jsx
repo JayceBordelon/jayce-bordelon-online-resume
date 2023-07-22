@@ -53,9 +53,9 @@ export default class Education extends Component {
         <List.Item 
           content={<h1>Accomplishments</h1>}
           />
-          <List.Item content={<h3>{this.washu.accomplishments[0]}</h3>} icon="fork green large" />
-          <List.Item content={<h3>{this.washu.accomplishments[1]}</h3>} icon="book green large" />
-          <List.Item content={<h3>{this.washu.otherInterests[0]}</h3>} icon="react green large" />
+          <List.Item content={<h3>{this.washu.accomplishments[0]}</h3>} icon="fork blue large" />
+          <List.Item content={<h3>{this.washu.accomplishments[1]}</h3>} icon="book blue large" />
+          <List.Item content={<h3>{this.washu.otherInterests[0]}</h3>} icon="react blue large" />
         </List>
     </Segment>
     </Grid.Column>
@@ -65,10 +65,10 @@ export default class Education extends Component {
         <List.Item 
           content={<h1>Hobbies/Interests</h1>}
           />
-          <List.Item content={<h3>{this.washu.otherInterests[1]}</h3>} icon="male green large" />
-          <List.Item content={<h3>{this.washu.otherInterests[2]}</h3>} icon="line graph green large" />
-          <List.Item content={<h3>{this.washu.otherInterests[3]}</h3>} icon="music green large" />
-          <List.Item content={<h3>{this.washu.otherInterests[4]}</h3>} icon="chess green large" />
+          <List.Item content={<h3>{this.washu.otherInterests[1]}</h3>} icon="male blue large" />
+          <List.Item content={<h3>{this.washu.otherInterests[2]}</h3>} icon="line graph blue large" />
+          <List.Item content={<h3>{this.washu.otherInterests[3]}</h3>} icon="music blue large" />
+          <List.Item content={<h3>{this.washu.otherInterests[4]}</h3>} icon="chess blue large" />
         </List>
     </Segment>
     </Grid.Column>

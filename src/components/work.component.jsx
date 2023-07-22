@@ -129,7 +129,7 @@ export default class Work extends Component {
             <List>
             {this.state.currentExp.accomplishments.map(accomplish=> (
               <List.Item
-                icon='code branch inverted green'
+                icon='code branch inverted blue'
                 content={<h3>{accomplish}</h3>}
               />
         ))}

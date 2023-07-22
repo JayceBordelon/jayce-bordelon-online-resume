@@ -1,7 +1,8 @@
 /*global vars/themes */
 :root {
-  --secondary: rgb(0, 60, 0);
-  --primary: #000000;
+  --secondary: #003b59;
+  --secondary-light: #0facfa;
+  --primary: black;
 }
 
 
@@ -19,7 +20,7 @@ p {
 
 h1, h2, h3, h4, h5 {
   font-weight:bolder;
-  background: linear-gradient(45deg,white, rgb(0, 155, 0), white);
+  background: linear-gradient(45deg,white, var(--secondary-light), white);
   -webkit-background-clip: text; /* For Safari and older versions of Chrome */
   background-clip: text;
   color: transparent;

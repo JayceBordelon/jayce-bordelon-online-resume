@@ -34,7 +34,8 @@ export default class Education extends Component {
       <Segment className="edu-elem" textAlign="left">
         <List >
           <List.Item 
-          content={<h1>Overview</h1>}
+          icon='graduation large blue'
+          content={<h1>Class of 2025</h1>}
           />
           <List.Item
           content={<h2>{this.washu.focus}</h2>}

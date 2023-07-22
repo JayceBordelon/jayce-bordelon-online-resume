@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Image, List, Grid, Segment } from 'semantic-ui-react';
-import Null from './null.component';
 import '../styles/wrapper.css';
 
 export default class Education extends Component {

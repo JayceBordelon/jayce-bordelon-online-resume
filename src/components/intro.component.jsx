@@ -1,6 +1,6 @@
 //dependencies
 import React, { Component } from 'react';
-import {  Container, Image, Popup  } from 'semantic-ui-react';
+import {  Container, Image  } from 'semantic-ui-react';
 
 //components
 import Typer from './typer.component';

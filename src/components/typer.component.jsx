@@ -31,7 +31,7 @@ const Typer = () => {
 
             .pauseFor(4000)
             .deleteAll(5)
-            .typeString('But most importantly...')
+            .typeString('More importantly...')
             .pauseFor(1000)
             .typeString(' I hold a passion for scalable, efficient, and reliable software.')
 

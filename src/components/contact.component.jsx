@@ -76,7 +76,7 @@ export default class Contact extends Component {
       If you do not want to include certain information, please leave it as 'N/A'. Thank you!`
 
       if (!emailRegex.test(templateParams.email)) {
-        this.setState({ emailRes: 'Invalid email format. Please provide a valid email address.', awaitingReq: false });
+        this.setState({ emailRes: 'Invalid email format. Please provide a valid email addressin the form: <prefix>@<domain>.<dom>', awaitingReq: false });
         return;
       }
 
@@ -115,8 +115,9 @@ export default class Contact extends Component {
     render() {
   
       return (
-        <Container className="contact-wrapper">
+        <>
         <h1>Get In Touch!</h1>
+        <Container className="contact-wrapper">
         <h5>If you would like to get in contact with me, please fill out this form and I will get back to you!</h5>
           <Form >
           <Form.Group widths='equal'>
@@ -162,7 +163,7 @@ export default class Contact extends Component {
           />
               {this.state.awaitingReq ? (<Button lodaing className="cool-button">
               <p>
-              
+              <Icon loading name="spinner" size="large"></Icon>Hold On...
               </p>
               </Button>) : 
               (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
@@ -205,6 +206,7 @@ export default class Contact extends Component {
 
               : (<Null/>)}
         </Container>
+        </>
       )
     }
   }

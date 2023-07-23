@@ -35,9 +35,9 @@ export default class Work extends Component {
       title: 'IT Intern', 
       long: "Information Technology Intern",
       accomplishments: [
-        'Updated and maintained a widely used Ruby on Rails application with a React frontend.',
-        'Collaborated with international team through GitLab to develop novel features in the company.',
-        'Built, dockerized, and deployed a Django authentication application on an existing kubernetes cluster.'
+        'Updated and maintained a widely used Ruby on Rails application with a React frontend. (Ongoing)',
+        'Collaborated with international team through GitLab to develop novel features in the company. (Ongoing)',
+        'Built, dockerized, and deployed a Django authentication application on an existing kubernetes cluster. (Ongoing)'
       ], 
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',

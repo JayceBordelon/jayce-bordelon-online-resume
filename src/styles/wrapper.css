@@ -1,8 +1,8 @@
 /*global vars/themes */
 :root {
-  --primary: #1D1D1D; /*background*/
-  --secondary: #122b56; /*Main Color besides background*/
-  --text-center: #2272FF; /* CHANGE FROM WHITE TO LIGHT VERSION OF SECONDARY*/
+  --primary: black; /*background*/
+  --secondary: #194ca5; /*Main Color besides background*/
+  --text-center: #7eadff; /* CHANGE FROM WHITE TO LIGHT VERSION OF SECONDARY*/
   --text-outer: white; /* Text mesh outer */
 
 }

@@ -140,7 +140,7 @@ export default class Contact extends Component {
         <>
         <h1>Get In Touch!</h1>
         <Container className="contact-wrapper">
-        <h5>If you would like to get in contact with me, please fill out this form and I will get back to you!</h5>
+        <h5>If you would like to get in contact with me, please email me by filling out this form and I will get back to you!</h5>
           <Form >
           <Form.Group widths='equal'>
             <Form.Input 
@@ -216,23 +216,20 @@ export default class Contact extends Component {
                 </Modal.Actions>
               </Modal>)
                 : (<Null/>)}
-                
-
-
-        </Container>
-        <Button className='cool-button' onClick={() => this.getLinked()}>
+                <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
                 <Icon name='linkedin' size="large"></Icon> linkedin
                 </p>
               </Button>
               <Button className='cool-button' onClick={() => this.getGit()}>
               <p>
-                <Icon name='github' size="large"></Icon> Github Repo
+                <Icon name='github' size="large"></Icon> Repository
                 </p>
               </Button>
-          <Button className='cool-button' onClick={() => this.getResume()}>
-          <p><Icon name='file pdf' size='large'/> Resume </p>
-        </Button>
+              <Button className='cool-button' onClick={() => this.getResume()}>
+                <p><Icon name='file pdf' size='large'/> Resume </p>
+              </Button>
+        </Container>
         </>
       )
     }

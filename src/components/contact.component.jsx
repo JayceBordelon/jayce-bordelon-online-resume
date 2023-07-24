@@ -111,17 +111,23 @@ export default class Contact extends Component {
       window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");
     }
     getResume = () => {
-      fetch('JayceBordelonFinalResume.pdf').then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'JayceBordelonFinalResume.pdf';
-            alink.click();
+      try{
+        fetch('JayceBordelonFinalResume.pdf').then(response => {
+          response.blob().then(blob => {
+              // Creating new object of PDF file
+              const fileURL = window.URL.createObjectURL(blob);
+              // Setting various property values
+              let alink = document.createElement('a');
+              alink.href = fileURL;
+              alink.download = 'JayceBordelonFinalResume.pdf';
+              alink.click();
+          })
         })
-    })
+      } catch (err){
+        const message = "Something went wrong with downloading my resume. Please send me an email and I will get it to you as soon as possible! "
+        this.setState({emailRes : message})
+        console.log(err)
+      }
 
     };
 

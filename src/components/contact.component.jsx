@@ -110,6 +110,22 @@ export default class Contact extends Component {
     getGit = () =>{
       window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");
     }
+    getResume = () => {
+      fetch('JayceBordelonFinalResume.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'JayceBordelonFinalResume.pdf';
+            alink.click();
+        })
+    })
+
+    };
+
+      
 
   
     render() {
@@ -172,7 +188,33 @@ export default class Contact extends Component {
               </p>
               </Button>)
               }
-              <Button className='cool-button' onClick={() => this.getLinked()}>
+
+          </Form>
+            {this.state.emailRes ? 
+            (<Modal
+                basic
+                open={true}
+                size='small'
+              >
+                <Header icon>
+                  <Icon name='inbox' />
+                  <h2 className="mod">Email status</h2>
+                </Header>
+                <Modal.Content>
+                <h3 className="mod">{this.state.emailRes}</h3>
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
+                    <p><Icon name='checkmark' size='large'/> OK </p>
+                  </Button>
+                </Modal.Actions>
+              </Modal>)
+                : (<Null/>)}
+                
+
+
+        </Container>
+        <Button className='cool-button' onClick={() => this.getLinked()}>
               <p>
                 <Icon name='linkedin' size="large"></Icon> linkedin
                 </p>
@@ -182,30 +224,9 @@ export default class Contact extends Component {
                 <Icon name='github' size="large"></Icon> Github Repo
                 </p>
               </Button>
-          </Form>
-          {this.state.emailRes ? 
-          (<Modal
-      basic
-      open={true}
-      size='small'
-    >
-      <Header icon>
-        <Icon name='inbox' />
-        <h2 className="mod">Email status</h2>
-      </Header>
-      <Modal.Content>
-      <h3 className="mod">{this.state.emailRes}</h3>
-      </Modal.Content>
-      <Modal.Actions>
-        <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
-          <p><Icon name='checkmark' size='large'/> OK </p>
+          <Button className='cool-button' onClick={() => this.getResume()}>
+          <p><Icon name='file pdf' size='large'/> Resume </p>
         </Button>
-      </Modal.Actions>
-    </Modal>)
-
-
-              : (<Null/>)}
-        </Container>
         </>
       )
     }

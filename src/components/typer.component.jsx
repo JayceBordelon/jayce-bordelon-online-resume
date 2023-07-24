@@ -47,7 +47,11 @@ const Typer = () => {
 
             .pauseFor(3000)
             .deleteAll(5)
-            .typeString('Thank you for your time! :)')
+            .typeString('Almost every icon on this site is clickable!')
+
+            .pauseFor(3000)
+            .deleteAll(5)
+            .typeString('Thank you and enjoy!')
 
             .pauseFor(3000)
             .deleteAll(0)

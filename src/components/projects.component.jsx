@@ -14,7 +14,7 @@ export default class Projects extends Component {
     Our solution seamlessly integrated Twilio's SMS API, Amazon's Rekognition, and AWS Lambda software. 
     Using Python, we created a chat bot that accurately identifies objects from user-provided images, 
     all within less than 200 lines of code.`,
-    comp: <SiMajorleaguehacking size={300}/>,
+    comp: <SiMajorleaguehacking size={250}/>,
     src: 'https://devpost.com/software/project-what-is-that',
   }
 
@@ -23,7 +23,7 @@ export default class Projects extends Component {
     desc: `I spearheaded the software architecture and development for an AI-driven job matching platform. 
     The project, built on the MERN stack, spanned a semester and resulted in a fully functional MVP, 
     powered by the skillsEngine API. Ask me for a demo! :)`,
-    comp: <SiOpenstreetmap size={260}/>,
+    comp: <SiOpenstreetmap size={200}/>,
     src: 'https://youtu.be/omSyXatmo7s',
   }
 
@@ -34,7 +34,7 @@ export default class Projects extends Component {
     I am developing an application using the NEXT.js Stack. 
     The platform aims to create a cohesive and user-friendly family tree experience, allowing easy administration, 
     CRUD operations for updates, and effortless comprehension of the lineage data.    `,
-    comp: <GiFamilyTree size={300}/>,
+    comp: <GiFamilyTree size={250}/>,
   }
 
   genBackdrop = (comp) => {
@@ -57,10 +57,10 @@ export default class Projects extends Component {
             <Grid.Column className='proj-desc' onClick={() => this.redirectTo(this.hackWashu.src)}>
               <List>
                 <List.Item 
-                  content={<h1>{this.hackWashu.title}</h1>}
+                  content={<h2>{this.hackWashu.title}</h2>}
                 />
                 <List.Item
-                  content={<h3>{this.hackWashu.desc}</h3>}
+                  content={<h4>{this.hackWashu.desc}</h4>}
                 />
               </List>
             </Grid.Column>
@@ -72,10 +72,10 @@ export default class Projects extends Component {
             <Grid.Column className='proj-desc' onClick={() => this.redirectTo(this.magnifi.src)}>
               <List>
                 <List.Item 
-                  content={<h1>{this.magnifi.title}</h1>}
+                  content={<h2>{this.magnifi.title}</h2>}
                 />
                 <List.Item
-                  content={<h3>{this.magnifi.desc}</h3>}
+                  content={<h4>{this.magnifi.desc}</h4>}
                 />
               </List>
             </Grid.Column>
@@ -87,10 +87,10 @@ export default class Projects extends Component {
             <Grid.Column className='proj-desc' >
               <List>
                 <List.Item 
-                  content={<h1>{this.familyTree.title}</h1>}
+                  content={<h2>{this.familyTree.title}</h2>}
                 />
                 <List.Item
-                  content={<h3>{this.familyTree.desc}</h3>}
+                  content={<h4>{this.familyTree.desc}</h4>}
                 />
               </List>
             </Grid.Column>

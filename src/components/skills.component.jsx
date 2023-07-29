@@ -37,31 +37,31 @@ export default class Skills extends Component {
 
 
     languages = [
-      {name: 'CSS', comp: <DiCss3 size={200}/>, rel: this.titles.mag, yrs: '~3 years'},
-      {name: 'Node.js', comp: <DiNodejs size={200}/>, rel: this.titles.mag, yrs: '~1 year'},
-      {name: 'Python', comp: <DiPython size={200}/>, rel: this.titles.iti, yrs: '~3 years'},
-      {name: 'React.js', comp: <DiReact size={200}/>, rel: this.titles.iti, yrs: '~1 year'},
-      {name: 'HTML', comp: <DiHtml5 size={200}/>, rel: this.titles.tut, yrs: '~4 years'},
-      {name: 'Java', comp: <DiJava size={200}/>, rel: this.titles.ass, yrs: '~4 years'},
-      {name: 'JavaScript', comp: <DiJavascript1 size={200}/>, rel: this.titles.ful, yrs: '~4 years'},
-      {name: 'C++', comp: <TbBrandCpp size={200}/>, rel: this.titles.edu, yrs: '~1 year'},
-      {name: 'AVR Assembly', comp: <SiAssemblyscript size={160}/>, rel: this.titles.edu, yrs: '~1 year'},
-      {name: 'Kubernetes (conceptual)', comp: <SiKubernetes size={200}/>, rel: this.titles.iti, yrs: '~1 year'},
-      {name: 'Docker (conceptual)', comp: <SiDocker size={200}/>, rel: this.titles.iti, yrs: '~1 year'},
-      {name: 'Svelte (conceptual)', comp: <SiSvelte size={200}/>, rel: this.titles.own, yrs: '~1 year'},
+      {name: 'CSS', comp: <DiCss3 size={100}/>, rel: this.titles.mag, yrs: '~3 years'},
+      {name: 'Node.js', comp: <DiNodejs size={100}/>, rel: this.titles.mag, yrs: '~1 year'},
+      {name: 'Python', comp: <DiPython size={100}/>, rel: this.titles.iti, yrs: '~3 years'},
+      {name: 'React.js', comp: <DiReact size={100}/>, rel: this.titles.iti, yrs: '~1 year'},
+      {name: 'HTML', comp: <DiHtml5 size={100}/>, rel: this.titles.tut, yrs: '~4 years'},
+      {name: 'Java', comp: <DiJava size={100}/>, rel: this.titles.ass, yrs: '~4 years'},
+      {name: 'JavaScript', comp: <DiJavascript1 size={100}/>, rel: this.titles.ful, yrs: '~4 years'},
+      {name: 'C++', comp: <TbBrandCpp size={100}/>, rel: this.titles.edu, yrs: '~1 year'},
+      {name: 'AVR Assembly', comp: <SiAssemblyscript size={90}/>, rel: this.titles.edu, yrs: '~1 year'},
+      {name: 'Kubernetes (conceptual)', comp: <SiKubernetes size={100}/>, rel: this.titles.iti, yrs: '~1 year'},
+      {name: 'Docker (conceptual)', comp: <SiDocker size={100}/>, rel: this.titles.iti, yrs: '~1 year'},
+      {name: 'Svelte (conceptual)', comp: <SiSvelte size={100}/>, rel: this.titles.own, yrs: '~1 year'},
     ]
     web_frameworks = [
-      {name: 'Ruby on Rails', comp: <DiRuby size={170}/>, rel: this.titles.ful, yrs: '~3 years'},
-      {name: 'MERN stack', comp: <SiMongodb size={200}/>, rel: this.titles.mag, yrs: '~1 year'},
-      {name: 'Python Django', comp: <TbBrandDjango size={200}/>, rel: this.titles.iti, yrs: '~1 year'},
+      {name: 'Ruby on Rails', comp: <DiRuby size={95}/>, rel: this.titles.ful, yrs: '~3 years'},
+      {name: 'MERN stack', comp: <SiMongodb size={100}/>, rel: this.titles.mag, yrs: '~1 year'},
+      {name: 'Python Django', comp: <TbBrandDjango size={100}/>, rel: this.titles.iti, yrs: '~1 year'},
     ]
     db_and_other = [
-      {name: 'Git', comp: <FaGit size={200}/>, rel: this.titles.iti, yrs: '~2 years'},
-      {name: 'APi Development', comp: <TbApi size={200}/>, rel: this.titles.mag, yrs: '~2 years'},
-      {name: 'OCR Technology', comp: <GiArtificialHive size={200}/>, rel: this.titles.bac, yrs: '~2 years'},
-      {name: 'Linux (WSL)', comp: <FaLinux size={200}/>, rel: this.titles.iti, yrs: '~1 years'},
-      {name: 'PostgreSQL (PSQL)', comp: <SiPostgresql size={200}/>, rel: this.titles.dat, yrs: '~3 years'},
-      {name: 'AWS Lambda', comp: <SiAwslambda size={200}/>, rel: this.titles.own, yrs: '~2 months'},
+      {name: 'Git', comp: <FaGit size={100}/>, rel: this.titles.iti, yrs: '~2 years'},
+      {name: 'APi Development', comp: <TbApi size={100}/>, rel: this.titles.mag, yrs: '~2 years'},
+      {name: 'OCR Technology', comp: <GiArtificialHive size={100}/>, rel: this.titles.bac, yrs: '~2 years'},
+      {name: 'Linux (WSL)', comp: <FaLinux size={100}/>, rel: this.titles.iti, yrs: '~1 years'},
+      {name: 'PostgreSQL (PSQL)', comp: <SiPostgresql size={100}/>, rel: this.titles.dat, yrs: '~3 years'},
+      {name: 'AWS Lambda', comp: <SiAwslambda size={100}/>, rel: this.titles.own, yrs: '~2 months'},
     ]
 
     toComponent = (lang) => {

@@ -41,7 +41,7 @@ export default class Work extends Component {
       ], 
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
-      src: <GiServerRack size={300}/>},
+      src: <GiServerRack size={100}/>},
 
       {when: 'July 2022 - Present', 
       title: `Teacher's Assistant`, 
@@ -53,7 +53,7 @@ export default class Work extends Component {
       ], 
       company: 'Washington University in St. Louis', 
       learned: 'Java|Object Oriented Programming|Teaching|Managing',
-      src:<GiTeacher size={300} />},
+      src:<GiTeacher size={100} />},
 
       {when: 'January 2023 - May 2023', 
       title: 'Software Architect', 
@@ -65,7 +65,7 @@ export default class Work extends Component {
       ], 
       company: 'Magnifi', 
       learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
-      src:<SiBlueprint size={300} />},
+      src:<SiBlueprint size={100} />},
 
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
@@ -78,7 +78,7 @@ export default class Work extends Component {
       ], 
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML|CSS',
-      src:<SiRubyonrails size={300} />},
+      src:<SiRubyonrails size={100} />},
 
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
@@ -91,7 +91,7 @@ export default class Work extends Component {
       ], 
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL',
-      src:<DiRuby size={300} />},
+      src:<DiRuby size={100} />},
 
       {when: 'May 2019 - August 2019', 
       title: 'Data Entry Intern', 
@@ -101,9 +101,9 @@ export default class Work extends Component {
         'Handled data degradation on over 1,764 entries.',
         'Exposed myself to PSQL while validating financially sensetive information'
       ], 
-      company: 'Command Alkon', 
+      company: 'Ruckit', 
       learned: 'PostgreSQL|Data Validation|Data Analysis',
-      src:<BsDatabaseUp size={300}/>},
+      src:<BsDatabaseUp size={100}/>},
 
       {when: 'May 2019 - August 2021', 
       title: 'Calculus Tutor', 
@@ -115,7 +115,7 @@ export default class Work extends Component {
       ], 
       company: 'Self Employed', 
       learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',
-      src: <TbMathFunction size={300}/>}
+      src: <TbMathFunction size={100}/>}
     ]
     render() {
   
@@ -129,7 +129,7 @@ export default class Work extends Component {
             <List>
             {this.state.currentExp.accomplishments.map(accomplish=> (
               <List.Item
-                icon='code branch inverted blue'
+                icon='code branch inverted white'
                 content={<h3>{accomplish}</h3>}
               />
         ))}

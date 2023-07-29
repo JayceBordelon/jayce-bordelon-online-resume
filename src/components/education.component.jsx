@@ -34,7 +34,7 @@ export default class Education extends Component {
       <Segment className="edu-elem" textAlign="left">
         <List >
           <List.Item 
-          icon='graduation large blue'
+          icon='graduation large white'
           content={<h1>Class of 2025</h1>}
           />
           <List.Item
@@ -52,9 +52,9 @@ export default class Education extends Component {
         <List.Item 
           content={<h1>Accomplishments</h1>}
           />
-          <List.Item content={<h3>{this.washu.accomplishments[0]}</h3>} icon="fork blue large" />
-          <List.Item content={<h3>{this.washu.accomplishments[1]}</h3>} icon="book blue large" />
-          <List.Item content={<h3>{this.washu.otherInterests[0]}</h3>} icon="react blue large" />
+          <List.Item content={<h3>{this.washu.accomplishments[0]}</h3>} icon="fork white large" />
+          <List.Item content={<h3>{this.washu.accomplishments[1]}</h3>} icon="book white large" />
+          <List.Item content={<h3>{this.washu.otherInterests[0]}</h3>} icon="react white large" />
         </List>
     </Segment>
     </Grid.Column>
@@ -64,10 +64,10 @@ export default class Education extends Component {
         <List.Item 
           content={<h1>Hobbies/Interests</h1>}
           />
-          <List.Item content={<h3>{this.washu.otherInterests[1]}</h3>} icon="male blue large" />
-          <List.Item content={<h3>{this.washu.otherInterests[2]}</h3>} icon="line graph blue large" />
-          <List.Item content={<h3>{this.washu.otherInterests[3]}</h3>} icon="music blue large" />
-          <List.Item content={<h3>{this.washu.otherInterests[4]}</h3>} icon="chess blue large" />
+          <List.Item content={<h3>{this.washu.otherInterests[1]}</h3>} icon="male white large" />
+          <List.Item content={<h3>{this.washu.otherInterests[2]}</h3>} icon="line graph white large" />
+          <List.Item content={<h3>{this.washu.otherInterests[3]}</h3>} icon="music white large" />
+          <List.Item content={<h3>{this.washu.otherInterests[4]}</h3>} icon="chess white large" />
         </List>
     </Segment>
     </Grid.Column>

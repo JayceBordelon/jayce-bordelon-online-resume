@@ -1,17 +1,15 @@
 /*global vars/themes */
 :root {
   --primary: black; /*background*/
-  --secondary: #194ca5; /*Main Color besides background*/
-  --text-center: #7eadff; /* CHANGE FROM WHITE TO LIGHT VERSION OF SECONDARY*/
-  --text-outer: white; /* Text mesh outer */
+  --secondary: rgb(60, 60, 60); /*Main Color besides background*/
+  --text-center: #ffffff; /* CHANGE FROM WHITE TO LIGHT VERSION OF SECONDARY*/
+  --text-outer: rgb(176, 176, 176); /* Text mesh outer */
 
 }
 
 
 html, body {
   background-color: var(--primary);
-  background-image: radial-gradient(var(--secondary) 0.5px, var(--primary) 0.5px);
-  background-size: 10px 10px;
 
 }
 

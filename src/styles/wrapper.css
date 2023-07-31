@@ -84,29 +84,42 @@ h1, h2, h3, h4, h5, p {
 
 /* skills style */
 .skills-wrapper {
-  flex-wrap: wrap;
+  min-width: 100% !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  justify-content: center !important; /* Center the whole grid horizontally */
+  justify-content: space-evenly !important; /* For broader browser support */
+  grid-auto-flow: dense !important;
+}
+
+.skills-icon,
+.active-skill {
   display: flex;
-  margin-top:20px;
-   margin-bottom: 20px;
-   justify-content: space-evenly !important;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  color: var(--tertiary);
+  transition: transform 0.5s ease-in-out;
 }
 
-.skills-icon {
-  margin: 10px;
-  display: inline-block;
-  color: var(--text-center);
-  transition: transform 0.2s ease-in-out;
+.active-skill {
+  background: var(--secondary);
+  border-radius: 15px;
 }
 
-.skills-icon:hover{
+.skills-icon:hover,
+.active-skill:hover {
   cursor: pointer;
   transform: translateY(-10px);
-}
-
-.work-modal{
-  background: var(--secondary) !important;
-  padding: 20px;
 }
 
 /* contact style */

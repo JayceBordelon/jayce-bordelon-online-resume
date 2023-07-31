@@ -58,7 +58,7 @@ export default class Wrapper extends Component {
         <div ref={this.bottomElementRef}></div>
         <Container textAlign="center" className="footer-text">
         <p>
-          Note: while deployments are handled through <strong>Netlify</strong>, this website and its contents belong entirely to Jayce Bordelon.
+          Note: Style and layout updates for this site are coming soon!
         </p>
         </Container>
       </Container>

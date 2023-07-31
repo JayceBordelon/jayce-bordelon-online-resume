@@ -1,9 +1,8 @@
 /*global vars/themes */
 :root {
-  --primary: black; /*background*/
-  --secondary: rgb(60, 60, 60); /*Main Color besides background*/
-  --text-center: #ffffff; /* CHANGE FROM WHITE TO LIGHT VERSION OF SECONDARY*/
-  --text-outer: rgb(176, 176, 176); /* Text mesh outer */
+  --primary: #3c3846; /*background*/
+  --secondary: #4a4b7b; /*Main Color besides background*/
+  --tertiary:  #fde9cc;
 
 }
 
@@ -13,17 +12,11 @@ html, body {
 
 }
 
-p {
-  color: var(--text-center);
-}
 
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
   font-weight:bolder;
-  background: linear-gradient(45deg, var(--text-outer), var(--text-center), var(--text-outer));
-  -webkit-background-clip: text; /* For Safari and older versions of Chrome */
-  background-clip: text;
-  color: transparent;
+  color: var(--tertiary);
 }
   
 
@@ -51,7 +44,7 @@ h1, h2, h3, h4, h5 {
 /*navbar*/
 .nav{
   position: fixed;
-  background: linear-gradient(to bottom, var(--secondary), var(--primary)) !important;
+  background: var(--secondary) !important;
   top: 0;
   left: 0;
   z-index: 999;
@@ -75,11 +68,10 @@ h1, h2, h3, h4, h5 {
   padding: 10px 20px !important;
   text-align: center;
   text-decoration: none !important;
-  background: linear-gradient(-45deg, var(--primary) , var(--secondary), var(--primary) ) !important;
+  background: transparent !important;
   background-size: 200% 200% !important;
   border-radius: 5px !important;
   border: none !important;
-  box-shadow: 0 2px 4px var(--secondary) !important;
   outline:none;
   transition: opacity 0.3s ease;
   margin: 20px !important;
@@ -112,14 +104,18 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-10px);
 }
 
+.work-modal{
+  background: var(--secondary) !important;
+  padding: 20px;
+}
+
 /* contact style */
 .contact-wrapper{
   margin-bottom: 40px !important;
   padding: 10px;
   display: flex;
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: transparent;
   border-radius: 15px;
-  box-shadow: 10px 5px 5px var(--secondary);
   justify-content: center;
 }
 
@@ -190,48 +186,51 @@ background-color: black !important;
 
 .work-wrap{
   margin-top:20px;
-  flex-wrap: wrap !important;
-  display: flex !important;
-  justify-content: space-evenly;
+  max-width: 80% !important;
+  display: grid;
 }
 
-
-.work-exp {
-  color: var(--text-center);
-  display: inline-block;
-  margin: 10px;
-  transition: transform 0.2s ease-in-out;
+.work-exp{
+  background: transparent !important;
+  padding: 20px;
+  min-width: 50%;
 }
 
-.work-exp:hover {
-  transform: translateY(-10px);
-  cursor: pointer;
+.fader {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.work-modal{
-  background: black !important;
-  background-image: linear-gradient(to bottom, var(--secondary),var(--primary),var(--primary),var(--primary),var(--primary),var(--primary)) !important;
-  border-radius: 15px !important;
-  padding: 25px;
+.fader.fade-in {
+  animation: fadeIn 0.5s ease forwards;
 }
 
-.work-modal-icon{
-  color: var(--text-center);
-  position: relative;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.work-modal-learnings{
-  display: flex;
-  flex-wrap: wrap; /* This should be 'wrap', not 'flex-wrap' */
-  justify-content: flex-start; /* Adjust this property as needed */
-  align-items: flex-start; /* Adjust this property as needed */
-}
-.work-modal-learning{
+.learning {
+  color: var(--tertiary);
   background-color: var(--secondary);
-  margin: 5px;
-  padding: 10px;
   border-radius: 15px;
+  padding: 8px;
+  margin: 5px;
 }
+
+.learning:hover{
+  color: var(--secondary);
+  background-color: var(--tertiary);
+}
+
+.learning-holder {
+  display: flex;
+  flex-wrap: wrap; /* Corrected property name here */
+}
+
+
 
 .trans-back-force {
   background: transparent !important;
@@ -240,9 +239,8 @@ background-color: black !important;
 
 /* education styles */
 .edu-outer{
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: transparent;
   border-radius: 15px;
-  box-shadow: 10px 5px 5px var(--secondary);
 }
 .edu-wrap {
   margin-top: 20px !important;
@@ -267,9 +265,7 @@ background-color: black !important;
 
 /* Project Styles */
 .proj-wrap{
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
   border-radius: 15px;
-  box-shadow: 10px 5px 5px var(--secondary);
   margin-top: 20px !important;
   padding: 10px;
 }

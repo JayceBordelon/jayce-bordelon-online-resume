@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Container, Modal, Button, Icon, List} from 'semantic-ui-react'
+import {Container, Grid, Icon, Divider, Segment} from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
 import { TbMathFunction } from 'react-icons/tb'
@@ -10,25 +10,49 @@ import '../styles/wrapper.css'
 import { DiRuby } from 'react-icons/di'
 
 export default class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.workExperiences = React.createRef();
+    this.observer = null;
+  }
+  componentDidMount() {
+    this.observer = new IntersectionObserver(this.handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.9, // Adjust this value based on when you want the fade-in effect to trigger
+    });
+
+    if (this.workExperiences.current) {
+      const elements = this.workExperiences.current.querySelectorAll('.work-exp');
+      elements.forEach((element) => this.observer.observe(element));
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add('fade-in');
+        this.observer.unobserve(entry.target);
+      }
+    });
+  };
   // accomplishments left
   state = {
     'showModal': false,
     'currentExp': {}
   }
 
-  toComponent = (lang) => {
-    return lang.comp;
-  }
 
   toSingleLearning = (learnings) => {
     return learnings.split("|");
   }
 
-  handleModal = (exp) => {
-    this.setState({showModal: !this.state.showModal})
-    this.setState({currentExp: exp})
-    console.log(exp.long)
-  }
 
     experiences = [
       {when: 'June 2023 - Present', 
@@ -120,46 +144,30 @@ export default class Work extends Component {
     render() {
   
       return (
-        <>
-        {this.state.showModal ? (
-          <Modal className="work-modal" open={true}>
-          <span className="work-modal-icon">{this.state.currentExp.src}</span>
-          <h1>{this.state.currentExp.company} - {this.state.currentExp.long}</h1>
-          <h2>{this.state.currentExp.when}</h2>
-            <List>
-            {this.state.currentExp.accomplishments.map(accomplish=> (
-              <List.Item
-                icon='code branch inverted white'
-                content={<h3>{accomplish}</h3>}
-              />
-        ))}
-              <List.Item
-                content={<h2>What I Learned</h2>}
-              /> 
-              <div className= "work-modal-learnings">
-              {this.toSingleLearning(this.state.currentExp.learned).map(learning=> (<span className="work-modal-learning"><h4>{learning} </h4></span>))}
-              </div>
-            </List>
-            <Button onClick={() => this.setState({ showModal: false })} className="cool-button">
-                  <p>
-                  <Icon name='checkmark' size="large" /> Close
-                  </p>
-                </Button>
-                
-          </Modal>
-        ) : (
-          <Null />
-        )}
 
-        <Container className="work-wrap" textAlign="center">
-          {this.experiences.map(exp => (
-            <span className="work-exp" onClick={() => this.handleModal(exp)} key={exp.title}>
-              {exp.src}
-              <h2>{exp.title}</h2>
-            </span>
+        <Container className="work-wrap" textAlign="left">
+        <div ref={this.workExperiences}>
+          {this.experiences.map((exp) => (
+            <>
+              <Divider horizontal inverted>{exp.src}<h3>{exp.title}</h3> @ {exp.company}</Divider>
+              <Segment className="work-exp fader" text-align="left" key={exp.title}>
+                {exp.accomplishments.map((accomplishment) => (
+                  <p>
+                    <Icon name="code branch" /> {accomplishment}
+                  </p>
+                ))}
+                <div className="learning-holder">
+                  {this.toSingleLearning(exp.learned)
+                    .sort()
+                    .map((learning) => (
+                      <span className="learning">{learning}</span>
+                    ))}
+                </div>
+              </Segment>
+            </>
           ))}
-        </Container>
-      </>
+        </div>
+      </Container>
       )
     }
   }

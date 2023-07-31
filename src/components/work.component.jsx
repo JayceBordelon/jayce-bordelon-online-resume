@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
-import {Container, Grid, Icon, Divider, Segment} from 'semantic-ui-react'
+import {Container, Icon, Divider, Segment} from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
 import { TbMathFunction } from 'react-icons/tb'
 import {SiBlueprint,  SiRubyonrails} from 'react-icons/si'
 import { GiServerRack, GiTeacher} from 'react-icons/gi'
-import Null from './null.component'
 import '../styles/wrapper.css'
 import { DiRuby } from 'react-icons/di'
 

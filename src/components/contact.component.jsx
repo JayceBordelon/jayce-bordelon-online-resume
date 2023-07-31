@@ -216,19 +216,6 @@ export default class Contact extends Component {
                 </Modal.Actions>
               </Modal>)
                 : (<Null/>)}
-                <Button className='cool-button' onClick={() => this.getLinked()}>
-              <p>
-                <Icon name='linkedin' size="large"></Icon> linkedin
-                </p>
-              </Button>
-              <Button className='cool-button' onClick={() => this.getGit()}>
-              <p>
-                <Icon name='github' size="large"></Icon> Repository
-                </p>
-              </Button>
-              <Button className='cool-button' onClick={() => this.getResume()}>
-                <p><Icon name='file pdf' size='large'/> Resume </p>
-              </Button>
         </Container>
         </>
       )

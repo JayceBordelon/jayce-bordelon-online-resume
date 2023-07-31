@@ -13,6 +13,7 @@ import Contact from '../components/contact.component';
 
 // styles
 import '../styles/wrapper.css';
+import Footer from '../components/footer.component';
 
 export default class Wrapper extends Component {
   bottomElementRef = React.createRef();
@@ -43,6 +44,7 @@ export default class Wrapper extends Component {
 
   render() {
     return (
+      <>
       <Container textAlign="center" className="super-container">
         <Menu fluid tabular inverted widths={4} className="nav nav-background">
         <Menu.Item name="Work" onClick={() => this.handlePath(<Work />)} className="nav-item" />
@@ -56,12 +58,9 @@ export default class Wrapper extends Component {
         </Segment>
         <Contact />
         <div ref={this.bottomElementRef}></div>
-        <Container textAlign="center" className="footer-text">
-        <p>
-          Note: Style and layout updates for this site are coming soon!
-        </p>
-        </Container>
       </Container>
+      <Footer />
+      </>
     );
   }
 }

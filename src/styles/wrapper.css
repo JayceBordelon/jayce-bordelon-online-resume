@@ -20,11 +20,15 @@ h1, h2, h3, h4, h5, p {
 }
   
 
-  .footer-text{
-    font-size: small;
-    color: var(--text-center);
-    font-family: 'Times New Roman', Times, serif;
 
+  .footer-wrapper{
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    padding: 5px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly;
+    align-items: center;
   }
   
 
@@ -65,16 +69,13 @@ h1, h2, h3, h4, h5, p {
 /*universal button*/
 .cool-button {
   display: inline-block !important;
-  padding: 10px 20px !important;
   text-align: center;
   text-decoration: none !important;
   background: transparent !important;
-  background-size: 200% 200% !important;
   border-radius: 5px !important;
   border: none !important;
   outline:none;
   transition: opacity 0.3s ease;
-  margin: 20px !important;
 }
 
 .cool-button:hover {

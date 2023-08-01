@@ -69,12 +69,16 @@ export default class Wrapper extends Component {
   render() {
     return (
       <>
-      <div className="banner super-fade"></div>
+      <div className="banner super-fade">
         <h1 className="initial-refresh super-fade" onClick={()=>window.location.reload()}>JB.</h1>
-        <h2 className="comp-name super-fade">{this.state.current_component}</h2>
-          <h1 className="current-element super-fade">
+        <h1 className="current-element super-fade">
             <Icon name={this.state.icon} />
-          </h1>
+        </h1>
+        <span className="comp-name super-fade">
+          <h2>{this.state.current_component}</h2>
+        </span>
+        </div>
+        
         <Container textAlign="center" className="super-container super-fade">
           <Segment inverted className="trans">
             <Intro scrollToBottom={this.scrollToBottom} />

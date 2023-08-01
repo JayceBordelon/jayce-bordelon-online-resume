@@ -56,38 +56,29 @@ h1, h2, h3, h4, h5, p {
 
 
 /* New styles for the nav-item class */
+
 .current-element{
-  position: fixed;
-  top: -15px;
-  z-index: 61;
+  position: absolute;
   right: 15px;
-}
-.comp-name{
-  position: fixed;
-  top: -15px;
-  z-index: 61;
-  left: 47%;
+  top: -25px;
 }
 
-@media (max-width: 768px) {
-  .comp-name {
-    color: transparent; /* Change to the desired font color for mobile views */
-  }
-}
+
 
 .initial-refresh{
   position: fixed;
   z-index: 61;
-  top: -15px;
   left: 15px;
 }
 
 .banner{
   background: linear-gradient(-45deg, var(--secondary), #272840, var(--secondary));
   position:fixed;
+  text-align: center;
+  min-height:40px;
   top: 0;
   z-index: 60;
-  height:50px;
+  /* height:; */
   width:100%;
 }
 

@@ -1,46 +1,16 @@
 import React, {Component} from 'react'
-import {Container, Icon, Divider, Segment} from 'semantic-ui-react'
+import { Icon, Divider} from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
 import { TbMathFunction } from 'react-icons/tb'
-import {SiBlueprint,  SiRubyonrails} from 'react-icons/si'
+import { SiRubyonrails} from 'react-icons/si'
 import { GiServerRack, GiTeacher} from 'react-icons/gi'
+import {MdArchitecture} from 'react-icons/md'
 import '../styles/wrapper.css'
 import { DiRuby } from 'react-icons/di'
 
 export default class Work extends Component {
-  constructor(props) {
-    super(props);
-    this.workExperiences = React.createRef();
-    this.observer = null;
-  }
-  componentDidMount() {
-    this.observer = new IntersectionObserver(this.handleIntersection, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.9, // Adjust this value based on when you want the fade-in effect to trigger
-    });
 
-    if (this.workExperiences.current) {
-      const elements = this.workExperiences.current.querySelectorAll('.work-exp');
-      elements.forEach((element) => this.observer.observe(element));
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }
-
-  handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.classList.add('fade-in');
-        this.observer.unobserve(entry.target);
-      }
-    });
-  };
   // accomplishments left
   state = {
     'showModal': false,
@@ -88,7 +58,7 @@ export default class Work extends Component {
       ], 
       company: 'Magnifi', 
       learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
-      src:<SiBlueprint size={100} />},
+      src:<MdArchitecture size={100} />},
 
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
@@ -143,14 +113,13 @@ export default class Work extends Component {
     render() {
   
       return (
-        <>
+        <div id="work">
         <Divider horizontal inverted><p><Icon name="briefcase" size="big"/></p></Divider>
-        <Container className="work-wrap" id="work" textAlign="left">
-        <div ref={this.workExperiences}>
+        <div className="work-wrap">
           {this.experiences.map((exp) => (
-            <>
+            <span className="work-exp">
               {exp.src}<h3>{exp.title}</h3> @ {exp.company}
-              <Segment className="work-exp fader" text-align="left" key={exp.title}>
+              <span key={exp.title}>
                 {exp.accomplishments.map((accomplishment) => (
                   <h4>
                     <Icon name="code branch" /> {accomplishment}
@@ -163,12 +132,11 @@ export default class Work extends Component {
                       <span className="learning" onClick={()=> window.open(`https://www.google.com/search?q=what+is+${learning}`, "_blank")}>{learning}</span>
                     ))}
                 </div>
-              </Segment>
-            </>
+              </span>
+            </span>
           ))}
         </div>
-      </Container>
-      </>
+      </div>
       )
     }
   }

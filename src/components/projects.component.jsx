@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { List, Grid, Divider, Icon } from 'semantic-ui-react';
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
-import {GiFamilyTree} from 'react-icons/gi'
+import {GiFruitTree} from 'react-icons/gi'
 import '../styles/wrapper.css';
 
 
@@ -34,7 +34,7 @@ export default class Projects extends Component {
     I am developing an application using the NEXT.js Stack. 
     The platform aims to create a cohesive and user-friendly family tree experience, allowing easy administration, 
     CRUD operations for updates, and effortless comprehension of the lineage data.    `,
-    comp: <GiFamilyTree size={250}/>,
+    comp: <GiFruitTree size={250}/>,
   }
 
   genBackdrop = (comp) => {

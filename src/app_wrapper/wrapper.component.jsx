@@ -26,7 +26,7 @@ export default class Wrapper extends Component {
   };
 
   state = {
-    current_component: "INTRO",
+    current_component: "INTRODUCTION",
     icon: 'hand peace outline',
   };
 
@@ -61,7 +61,7 @@ export default class Wrapper extends Component {
     } else if (scrollY >= workElement.offsetTop) {
       this.setState({ current_component: "WORK", icon: "briefcase" });
     } else if (scrollY >= introElement.offsetTop) {
-      this.setState({ current_component: "INTRO", icon: "hand peace outline" });
+      this.setState({ current_component: "INTRODUCTION", icon: "hand peace outline" });
     }
   };
 

@@ -75,13 +75,12 @@ export default class Contact extends Component {
       const NSI=`Your email request seems to be missing field(s). Please ensure every box is filled with something.
       If you do not want to include certain information, please leave it as 'N/A'. Thank you!`
 
-      if (!emailRegex.test(templateParams.email)) {
-        this.setState({ emailRes: 'Invalid email format. Please provide a valid email addressin the form: <prefix>@<domain>.<dom>', awaitingReq: false });
-        return;
-      }
 
-      if (Object.values(templateParams).every((field) => field !== '')) 
-
+      if (Object.values(templateParams).every((field) => field !== '')) {
+        if (!emailRegex.test(templateParams.email)) {
+          this.setState({ emailRes: `Oops! '${templateParams.email}' is not a vaid email. Please provide a valid email address to get in touch!`, awaitingReq: false });
+          return;
+        }
         axios
           .post(`https://api.emailjs.com/api/v1.0/email/send`, {
             service_id: REACT_APP_EMAIL_SERVICE_ID,
@@ -90,7 +89,6 @@ export default class Contact extends Component {
             template_params: templateParams,
           })
           .then((response) => {
-            console.log('Email sent successfully:', response);
             this.setState({emailRes : SUCCESS})
             this.setState({awaitingReq: false})
           })
@@ -100,7 +98,7 @@ export default class Contact extends Component {
             this.setState({awaitingReq: false})
           });
 
-      else {
+        }else {
         this.setState({emailRes : NSI, awaitingReq: false})
       }
     }
@@ -145,16 +143,14 @@ export default class Contact extends Component {
           <Form.Group widths='equal'>
             <Form.Input 
             fluid 
-            label={(<h2>First Name</h2>)} 
-            placeholder="First" 
+            placeholder="First Name" 
             className="contact-fancy-input"
             value={this.state.firstText} 
             onChange={this.handleChangeFirst}
             />
             <Form.Input 
             fluid 
-            label={(<h2>Last Name</h2>)} 
-            placeholder="Last" 
+            placeholder="Last Name" 
             className="contact-fancy-input"
             value={this.state.lastText} 
             onChange={this.handleChangeLast}
@@ -162,15 +158,17 @@ export default class Contact extends Component {
           </Form.Group>
           <Form.Group widths='equal'>
             <Form.Input 
-            label={(<Icon name="mail" inverted size="large"/>)} 
-            placeholder="b.jayce@wustl.edu" 
+            icon='mail' 
+            iconPosition='left'
+            placeholder="Email" 
             className="contact-fancy-input"
             value={this.state.emailText} 
             onChange={this.handleChangeEmail}
             />
             <Form.Input 
-            label={(<Icon name="phone" inverted size="large"/>)} 
-            placeholder="832-260-5650" 
+            icon='phone' 
+            iconPosition='left'
+            placeholder="Phone #" 
             className="contact-fancy-input"
             value={this.state.phoneText} 
             onChange={this.handleChangePhone}
@@ -178,17 +176,16 @@ export default class Contact extends Component {
           </Form.Group>
           <Form.TextArea 
           fluid 
-          label={(<Icon name="pencil alternate" inverted size="large"/>)} 
-          placeholder='Please leave me a message' 
+          placeholder='Please leave me a message and I will get back to you!'
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
           />
-              {this.state.awaitingReq ? (<Button lodaing className="cool-button">
+              {this.state.awaitingReq ? (<Button lodaing className="send-mail">
               <p>
               <Icon loading name="spinner" size="large"></Icon>Hold On...
               </p>
               </Button>) : 
-              (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
+              (<Button  onClick={() => this.handleSubmit(this.state)} className="send-mail">
               <p>
               <Icon name="send" size="large"></Icon>Send 
               </p>

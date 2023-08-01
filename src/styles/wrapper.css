@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, p {
 
 /* footer */
   .footer-wrapper{
+    border-top: solid; 
     color: var(--tertiary);
     background: var(--secondary);
     padding: 5px;
@@ -78,7 +79,7 @@ h1, h2, h3, h4, h5, p {
   min-height:40px;
   top: 0;
   z-index: 60;
-  /* height:; */
+  border-bottom: solid; 
   width:100%;
 }
 
@@ -87,20 +88,33 @@ h1, h2, h3, h4, h5, p {
   color: var(--primary)
 }
 
-/* Style the last nav item to remove the dividing line */
-.nav-item:last-child {
-  border-right: none;
-}
 /*universal button*/
 .cool-button {
   display: inline-block !important;
   text-align: center;
   text-decoration: none !important;
   background: transparent !important;
-  border-radius: 5px !important;
+  border-radius: none !important;
   border: none !important;
   outline:none;
   transition: opacity 0.3s ease;
+}
+
+.send-mail{
+  box-shadow: 0px 2px 2px #0d0f65b0 !important;
+  display: inline-block !important;
+  text-align: center;
+  background: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+
+.send-mail:hover{
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: none !important;
+  border-bottom: none;
 }
 
 .cool-button:hover {
@@ -108,19 +122,17 @@ h1, h2, h3, h4, h5, p {
   opacity: 80%;
 }
 
+
 /* skills style */
 .skills-wrapper {
-  min-width: 100% !important;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
+  max-width: 90% !important;
 }
 
 .skills-grid {
     padding: 5px;
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-evenly !important;
+    justify-content: center !important;
     align-items: center;
 }
 
@@ -130,11 +142,22 @@ h1, h2, h3, h4, h5, p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin: 10px;
   width: 200px;
   height: 200px;
   color: var(--tertiary);
   transition: transform 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-wrapper{
+    max-width: 100%;
+  }
+  .skills-icon,
+  .active-skill {
+    margin: none;
+  }
+
 }
 
 .active-skill {
@@ -215,9 +238,10 @@ background-color: black !important;
 
 .work-wrap{
   margin-top:20px;
-  max-width: 80% !important;
+  text-align: left;
   display: flex !important;
-  flex: wrap !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
 }
 
 .work-exp{
@@ -225,21 +249,19 @@ background-color: black !important;
   padding: 20px;
 }
 
-.fader {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.fader.fade-in {
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media only screen and (min-width: 600px) {
+  .work-exp{
+    max-width: 50% !important;
   }
 }
+@media only screen and (max-width: 600px) {
+  .work-exp{
+    max-width: 100% !important;
+  }
+}
+
+
+
 
 .learning {
   color: var(--tertiary);

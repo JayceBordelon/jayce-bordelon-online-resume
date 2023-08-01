@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Grid } from 'semantic-ui-react';
+import { List, Grid, Divider, Icon } from 'semantic-ui-react';
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
 import {GiFamilyTree} from 'react-icons/gi'
 import '../styles/wrapper.css';
@@ -47,7 +47,9 @@ export default class Projects extends Component {
     render() {
   
       return (
-        <Grid columns={6} divided stackable className="proj-wrap">
+        <>
+        <Divider horizontal inverted><p><Icon name="cogs" size="big"/></p></Divider>
+        <Grid id="projects" columns={6} divided stackable className="proj-wrap">
           <Grid.Row>
 
             <Grid.Column className='proj-elem' onClick={() => this.redirectTo(this.hackWashu.src)}>
@@ -97,6 +99,7 @@ export default class Projects extends Component {
 
           </Grid.Row>
         </Grid>
+        </>
       )
     }
   }

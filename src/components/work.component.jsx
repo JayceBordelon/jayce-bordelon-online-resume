@@ -143,23 +143,24 @@ export default class Work extends Component {
     render() {
   
       return (
-
-        <Container className="work-wrap" textAlign="left">
+        <>
+        <Divider horizontal inverted><p><Icon name="briefcase" size="big"/></p></Divider>
+        <Container className="work-wrap" id="work" textAlign="left">
         <div ref={this.workExperiences}>
           {this.experiences.map((exp) => (
             <>
-              <Divider horizontal inverted>{exp.src}<h3>{exp.title}</h3> @ {exp.company}</Divider>
+              {exp.src}<h3>{exp.title}</h3> @ {exp.company}
               <Segment className="work-exp fader" text-align="left" key={exp.title}>
                 {exp.accomplishments.map((accomplishment) => (
-                  <p>
+                  <h4>
                     <Icon name="code branch" /> {accomplishment}
-                  </p>
+                  </h4>
                 ))}
                 <div className="learning-holder">
                   {this.toSingleLearning(exp.learned)
                     .sort()
                     .map((learning) => (
-                      <span className="learning">{learning}</span>
+                      <span className="learning" onClick={()=> window.open(`https://www.google.com/search?q=what+is+${learning}`, "_blank")}>{learning}</span>
                     ))}
                 </div>
               </Segment>
@@ -167,6 +168,7 @@ export default class Work extends Component {
           ))}
         </div>
       </Container>
+      </>
       )
     }
   }

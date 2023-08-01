@@ -11,9 +11,10 @@ import Picture from '../styles/headshot.JPG'
 
 
 export default class Intro extends Component {
+  contextRef = React.createRef()
   render() {
     return (
-      <Container textAlign='center' className="intro-wrapper">
+      <Container textAlign='center' id="intro" className="intro-wrapper">
       <Image src={Picture} onClick={this.props.scrollToBottom} className="intro-profile-pic"/>
         <span className="intro-typer-text"><h1 className="intro-typer-text"><Typer/> </h1></span>
       </Container>

@@ -1,6 +1,6 @@
 //dependencies
 import React, { Component } from 'react';
-import { Button, Container, Form, Icon, Modal, Header } from 'semantic-ui-react';
+import { Button, Container, Form, Icon, Modal, Header, Divider } from 'semantic-ui-react';
 import axios from 'axios';
 
 //components
@@ -138,9 +138,9 @@ export default class Contact extends Component {
   
       return (
         <>
-        <h1>Get In Touch!</h1>
-        <Container className="contact-wrapper">
-        <h5>If you would like to get in contact with me, please email me by filling out this form and I will get back to you!</h5>
+        <Divider horizontal inverted><h2>Get in Touch</h2></Divider>
+        <Container id="contact" className="contact-wrapper">
+        <h3>If you would like to get in contact with me, please email me by filling out this form and I will get back to you!</h3>
           <Form >
           <Form.Group widths='equal'>
             <Form.Input 

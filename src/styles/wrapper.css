@@ -20,19 +20,20 @@ h1, h2, h3, h4, h5, p {
 }
   
 
-
+/* footer */
   .footer-wrapper{
     color: var(--tertiary);
-    background-color: var(--secondary);
+    background: var(--secondary);
     padding: 5px;
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
     align-items: center;
   }
   
+  
 
-
+/*general*/
 .super-container{
     border-radius: 15px !important;
     color: var(--text-center);
@@ -45,21 +46,40 @@ h1, h2, h3, h4, h5, p {
   background-color: transparent !important;
 }
 
-/*navbar*/
-.nav{
-  position: fixed;
-  background: var(--secondary) !important;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  color: var(--text-center);
-}
 
 /* New styles for the nav-item class */
-.nav-item {
-  border-right: 1px solid black !important; /* Add a black dividing line to the right of each nav item */
-  padding-right: 10px; /* Add some right padding to separate the dividing line from the text */
-  font-weight:bolder !important;
+.current-element{
+  position: fixed;
+  top: -15px;
+  z-index: 61;
+  right: 15px;
+}
+.comp-name{
+  position: fixed;
+  top: -15px;
+  z-index: 61;
+  left: 47%;
+}
+
+.initial-refresh{
+  position: fixed;
+  z-index: 61;
+  top: -15px;
+  left: 15px;
+}
+
+.banner{
+  background: linear-gradient(-45deg, var(--secondary), #272840, var(--secondary));
+  position:fixed;
+  top: 0;
+  z-index: 60;
+  height:50px;
+  width:100%;
+}
+
+.initial-refresh:hover{
+  cursor: pointer;
+  color: var(--primary)
 }
 
 /* Style the last nav item to remove the dividing line */
@@ -92,12 +112,11 @@ h1, h2, h3, h4, h5, p {
 }
 
 .skills-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, 200px);
-  gap: 20px;
-  justify-content: center !important; /* Center the whole grid horizontally */
-  justify-content: space-evenly !important; /* For broader browser support */
-  grid-auto-flow: dense !important;
+    padding: 5px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+    align-items: center;
 }
 
 .skills-icon,
@@ -106,6 +125,7 @@ h1, h2, h3, h4, h5, p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
   width: 200px;
   height: 200px;
   color: var(--tertiary);
@@ -201,13 +221,13 @@ background-color: black !important;
 .work-wrap{
   margin-top:20px;
   max-width: 80% !important;
-  display: grid;
+  display: flex !important;
+  flex: wrap !important;
 }
 
 .work-exp{
   background: transparent !important;
   padding: 20px;
-  min-width: 50%;
 }
 
 .fader {
@@ -237,6 +257,7 @@ background-color: black !important;
 .learning:hover{
   color: var(--secondary);
   background-color: var(--tertiary);
+  cursor:pointer;
 }
 
 .learning-holder {

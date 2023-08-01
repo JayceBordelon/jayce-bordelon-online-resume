@@ -1,6 +1,6 @@
 //Dependencies
 import React, { Component } from 'react';
-import { Container} from 'semantic-ui-react';
+import { Container, Divider, Icon} from 'semantic-ui-react';
 
 //Components (Icons)
 import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
@@ -82,7 +82,8 @@ export default class Skills extends Component {
       this.db_and_other.sort((a, b) => a.name.localeCompare(b.name));
       return (
         <>
-          <Container className="skills-wrapper">
+        <Divider horizontal inverted><p><Icon name="tasks" size="big"/></p></Divider>
+          <Container id="skills" className="skills-wrapper">
             <h1>Languages</h1>
             <div className="skills-grid">
             {this.languages.map(lang => (

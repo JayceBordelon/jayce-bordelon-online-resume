@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, List, Grid, Segment } from 'semantic-ui-react';
+import { Image, List, Grid, Segment, Divider, Icon } from 'semantic-ui-react';
 import '../styles/wrapper.css';
 
 export default class Education extends Component {
@@ -23,7 +23,9 @@ export default class Education extends Component {
 
   render() {
     return (
-      <div className="edu-outer">
+      <>
+      <Divider horizontal inverted><p><Icon name="graduation cap" size="big"/></p></Divider>
+      <div id="education" className="edu-outer">
       <Grid stackable columns={2} className="edu-wrap">
     <Grid.Column>
       <Segment className="edu-elem">
@@ -73,6 +75,7 @@ export default class Education extends Component {
     </Grid.Column>
     </Grid>
     </div>
+    </>
     );
   }
 }

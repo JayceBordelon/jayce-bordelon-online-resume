@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .super-fade { 
-  animation: super-fade 1s both ease-in; 
+  animation: super-fade .5s both ease-in; 
 }
 
 /* footer */

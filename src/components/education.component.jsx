@@ -26,7 +26,7 @@ export default class Education extends Component {
       <>
       <Divider horizontal inverted><p><Icon name="graduation cap" size="big"/></p></Divider>
       <div id="education" className="edu-outer">
-      <Grid stackable columns={2} className="edu-wrap">
+      <Grid stackable columns={2} className="edu-wrap" textAlign='left'>
     <Grid.Column>
       <Segment className="edu-elem">
         <Image src={this.washu.src} className="washu-logo"/>

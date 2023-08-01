@@ -49,7 +49,7 @@ export default class Projects extends Component {
       return (
         <>
         <Divider horizontal inverted><p><Icon name="cogs" size="big"/></p></Divider>
-        <Grid id="projects" columns={6} divided stackable className="proj-wrap">
+        <Grid textAlign='left' id="projects" columns={6} divided stackable className="proj-wrap">
           <Grid.Row>
 
             <Grid.Column className='proj-elem' onClick={() => this.redirectTo(this.hackWashu.src)}>

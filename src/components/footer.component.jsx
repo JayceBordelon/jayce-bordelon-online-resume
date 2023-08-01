@@ -46,7 +46,7 @@ export default class Footer extends Component {
               <div>
               <Button className='cool-button' onClick={() => this.getGit()}>
               <p>
-                <Icon name='github' size="large"></Icon> Repo
+                <Icon name='github' size="large"></Icon> Repository
                 </p>
               </Button>
               </div>

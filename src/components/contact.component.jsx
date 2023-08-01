@@ -190,7 +190,7 @@ export default class Contact extends Component {
               </Button>) : 
               (<Button  onClick={() => this.handleSubmit(this.state)} className="cool-button">
               <p>
-              <Icon name="send" size="large"></Icon>Send Mail
+              <Icon name="send" size="large"></Icon>Send 
               </p>
               </Button>)
               }

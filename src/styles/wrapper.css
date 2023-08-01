@@ -19,6 +19,14 @@ h1, h2, h3, h4, h5, p {
   color: var(--tertiary);
 }
   
+@keyframes super-fade {
+  from    { opacity: 0; }
+  to      { opacity: 1; }
+}
+
+.super-fade { 
+  animation: super-fade 1s both ease-in; 
+}
 
 /* footer */
   .footer-wrapper{
@@ -174,16 +182,6 @@ background-color: black !important;
 
 
 /* intro styles */
-.intro-typer-text {
-  margin-top: 10px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1; 
-  overflow: auto;
-  align-self: center;
-  min-height: 150px;
-}
 
 
 .intro-profile-pic {
@@ -204,13 +202,13 @@ background-color: black !important;
 .intro-profile-pic:hover {
   transform: translateY(-10px);
   cursor: pointer;
-
 }
-
 .intro-wrapper {
   display: flex;
   justify-content: center;
   align-items: center !important;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .custom-pop-up{

@@ -88,7 +88,7 @@ export default class Skills extends Component {
             <div className="skills-grid">
             {this.languages.map(lang => (
               lang.active ? (
-                <span className="active-skill"
+                <span className="active-skill super-fade"
                 >
                 {this.getIcon(lang)}
                 <p>Most relavent experience - {lang.rel}</p>
@@ -112,7 +112,7 @@ export default class Skills extends Component {
             <div className="skills-grid">
             {this.web_frameworks.map(lang => (
               lang.active ? (
-                <span className="active-skill"
+                <span className="active-skill super-fade"
                 >
                 {this.getIcon(lang)}
                 <p>Most relavent experience - {lang.rel}</p>
@@ -136,7 +136,7 @@ export default class Skills extends Component {
             <div className="skills-grid">
             {this.db_and_other.map(lang => (
               lang.active ? (
-                <span className="active-skill"
+                <span className="active-skill super-fade"
                 >
                 {this.getIcon(lang)}
                 <p>Most relavent experience - {lang.rel}</p>

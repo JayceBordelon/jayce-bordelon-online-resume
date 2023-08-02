@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, p {
     background-color: var(--secondary);
     position:fixed;
     border-bottom-left-radius: 15px;
-    width: 180px;
+    width: 190px;
     right: 0px;
     top: 40px;
     border-left: solid;

@@ -82,7 +82,7 @@ export default class Skills extends Component {
       this.db_and_other.sort((a, b) => a.name.localeCompare(b.name));
       return (
         <>
-        <Divider horizontal inverted><p><Icon name="tasks" size="big"/></p></Divider>
+        <Divider horizontal inverted><p><Icon name="code" size="big"/></p></Divider>
           <Container id="skills" className="skills-wrapper">
             <h1>Languages</h1>
             <div className="skills-grid">

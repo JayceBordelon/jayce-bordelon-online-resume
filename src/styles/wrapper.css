@@ -58,10 +58,11 @@ h1, h2, h3, h4, h5, p {
 
 /* New styles for the nav-item class */
 
-.current-element{
+.nav-icon{
+  color: var(--tertiary) !important;
   position: absolute;
   right: 15px;
-  top: -25px;
+  z-index: 61;
 }
 
 
@@ -70,6 +71,12 @@ h1, h2, h3, h4, h5, p {
   position: fixed;
   z-index: 61;
   left: 15px;
+}
+
+.nav-icon:hover,
+.initial-refresh:hover{
+  cursor: pointer;
+  color: var(--primary) !important;
 }
 
 .banner{
@@ -83,9 +90,67 @@ h1, h2, h3, h4, h5, p {
   width:100%;
 }
 
-.initial-refresh:hover{
-  cursor: pointer;
-  color: var(--primary)
+
+.dropdown-outer{
+    background: linear-gradient(-45deg, var(--secondary), #272840, var(--secondary));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/*Desktop Dropdown menu */
+
+@media only screen and (min-width: 600px) {
+  .dropdown-outer{
+    background-color: var(--secondary);
+    position:fixed;
+    border-bottom-left-radius: 15px;
+    width: 180px;
+    right: 0px;
+    top: 40px;
+    border-left: solid;
+    border-bottom:solid;
+  }
+  .dropdown-item{
+    align-items: center !important;
+    margin-left: 10px;
+    width:150px;
+    height: 45px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .dropdown-item:hover{
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #0d0f65b0 !important;
+    border: solid var(--tertiary);
+  }
+
+}
+/*Mobile view for menu drop */
+@media only screen and (max-width: 600px) {
+  .dropdown-outer{
+    background-color: var(--secondary);
+    position:fixed;
+    padding: 10px;
+    width: 100%;
+    height: 95%;
+    left: 0px;
+    top: 40px;
+  }
+  .dropdown-item{
+    align-items: center !important;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #0d0f65b0 !important;
+    border: solid var(--tertiary);
+    padding-left: 50px;
+    padding-top: 30px;
+  }
 }
 
 /*universal button*/
@@ -116,6 +181,7 @@ h1, h2, h3, h4, h5, p {
   box-shadow: none !important;
   border-bottom: none;
 }
+
 
 .cool-button:hover {
   cursor: pointer;
@@ -215,7 +281,6 @@ background-color: black !important;
 
 .intro-profile-pic:hover {
   transform: translateY(-10px);
-  cursor: pointer;
 }
 .intro-wrapper {
   display: flex;

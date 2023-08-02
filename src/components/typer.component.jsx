@@ -10,7 +10,7 @@ const Typer = ({text}) => {
         options={{
         autoStart: true,
         cursor: ' ',
-        delay: 30,
+        delay: 15,
         loop: false,
         deleteSpeed: 5,
         }}

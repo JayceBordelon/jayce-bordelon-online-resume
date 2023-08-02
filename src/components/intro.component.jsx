@@ -18,12 +18,11 @@ export default class Intro extends Component {
       <Image src={Picture} onClick={this.props.scrollToBottom} className="intro-profile-pic"/>
       <h1><Typer text={`Welcome!`}/></h1>
       <div className="wrap-text">
-        <h2><Typer text={`I am a student at Washington University in St. Louis. `}/> </h2>
-        <h2><Typer text={`Over the last few years, I have gained exposure to a plethora of technologies. `}/> </h2>
-        <h2><Typer text={`But more importantly... I love what I do. `}/> </h2>
-        <h2><Typer text={`If my experience is of interest to you, reach out! `}/> </h2>
-        <h2><Typer text={`I am always looking for opportunities to grow, learn, and contribute. `}/> </h2>
-        <h2><Typer text={`Thank you for your time :)`}/> </h2>
+        <h2><Typer text={`Over the last few years, I have gained exposure to a plethora of technologies.`}/></h2>
+        <h2><Typer text={`In turn, I have become fascinated in reliable, efficient, and inovate software.`}/></h2>
+        <h2><Typer text={`If my experience is of interest to you, do not hesitate to reach out. `}/> </h2>
+        <h2><Typer text={`I am searching for opportunities to grow, learn, and contribute. `}/> </h2>
+        <h2><Typer text={`Thank you for your time :) !`}/> </h2>
         <h3><Typer text={'-Jayce Bordelon'}/></h3>
       </div>
       </Container>

@@ -72,7 +72,7 @@ export default class Contact extends Component {
 
       const SUCCESS=`Thank you ${templateParams.sender}! Your email has been sent! You will be hearing back soon!`
       const FAIL=`Sorry ${templateParams.sender}! something went wrong sending your email. Please try again.`
-      const NSI=`Your email request seems to be missing field(s). Please ensure every box is filled with something.
+      const NSI=`Your email request seems to be missing field(s).
       If you do not want to include certain information, please leave it as 'N/A'. Thank you!`
 
 

@@ -136,9 +136,10 @@ export default class Contact extends Component {
   
       return (
         <>
-        <Divider horizontal inverted><h2>Get in Touch</h2></Divider>
+        <Divider horizontal inverted className="divider-spacing"><p><Icon name="mail" size="big"/></p></Divider>
         <Container id="contact" className="contact-wrapper">
-        <h3>If you would like to get in contact with me, please email me by filling out this form and I will get back to you!</h3>
+        <h1>Reach out!</h1>
+        <p>A successful submission of this form will email me its content, and automate a reply to you as verification.</p>
           <Form >
           <Form.Group widths='equal'>
             <Form.Input 

@@ -1,6 +1,6 @@
 // dependencies
 import React, { Component } from 'react';
-import { Container, Divider, Icon, Segment } from 'semantic-ui-react';
+import { Container, Icon, Segment } from 'semantic-ui-react';
 
 // components
 import Education from '../components/education.component';
@@ -116,19 +116,16 @@ export default class Wrapper extends Component {
             <Projects/>
 
           </Segment>
-          <Contact />
           <div ref={this.contactRef}/>
+          <Contact />
         </Container>
         <Footer />
         {this.state.show_menu && 
         (<span className="dropdown-outer">
           {menu_items.map(item =>(
-            <>
             <div className="dropdown-item" onClick={()=>this.scrollToElement(item.ref)}>
-              <h2 className="dropdown-item-inner"><Icon name={item.icon}/>{item.name}</h2>
+              <span className="dropdown-item-inner"><h2><Icon name={item.icon}/>{item.name}</h2> </span>
             </div>
-            {item.name!=="Contact" && (<Divider inverted/>)}
-            </>
           ))}
         </span>)}
       </>

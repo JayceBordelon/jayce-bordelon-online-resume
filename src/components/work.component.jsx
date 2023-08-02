@@ -114,7 +114,7 @@ export default class Work extends Component {
   
       return (
         <div id="work">
-        <Divider horizontal inverted><p><Icon name="briefcase" size="big"/></p></Divider>
+        <Divider horizontal inverted className="divider-spacing"><p><Icon name="briefcase" size="big"/></p></Divider>
         <div className="work-wrap">
           {this.experiences.map((exp) => (
             <span className="work-exp">

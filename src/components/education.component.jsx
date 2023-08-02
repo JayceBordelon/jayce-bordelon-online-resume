@@ -24,7 +24,7 @@ export default class Education extends Component {
   render() {
     return (
       <>
-      <Divider horizontal inverted><p><Icon name="graduation cap" size="big"/></p></Divider>
+      <Divider horizontal inverted className="divider-spacing"><p><Icon name="graduation cap" size="big"/></p></Divider>
       <div id="education" className="edu-outer">
       <Grid stackable columns={2} className="edu-wrap" textAlign='left'>
     <Grid.Column>

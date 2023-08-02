@@ -48,7 +48,7 @@ export default class Projects extends Component {
   
       return (
         <>
-        <Divider horizontal inverted><p><Icon name="cogs" size="big"/></p></Divider>
+        <Divider horizontal inverted clasName="divider-spacing"><p><Icon name="cogs" size="big"/></p></Divider>
         <Grid textAlign='left' id="projects" columns={6} divided stackable className="proj-wrap">
           <Grid.Row>
 

@@ -14,7 +14,7 @@ export default class Projects extends Component {
     Our solution seamlessly integrated Twilio's SMS API, Amazon's Rekognition, and AWS Lambda software. 
     Using Python, we created a chat bot that accurately identifies objects from user-provided images, 
     all within less than 200 lines of code.`,
-    comp: <SiMajorleaguehacking size={250}/>,
+    comp: <SiMajorleaguehacking size={150}/>,
     src: 'https://devpost.com/software/project-what-is-that',
   }
 
@@ -23,7 +23,7 @@ export default class Projects extends Component {
     desc: `I spearheaded the software architecture and development for an AI-driven job matching platform. 
     The project, built on the MERN stack, spanned a semester and resulted in a fully functional MVP, 
     powered by the skillsEngine API. Ask me for a demo! :)`,
-    comp: <SiOpenstreetmap size={200}/>,
+    comp: <SiOpenstreetmap size={100}/>,
     src: 'https://youtu.be/omSyXatmo7s',
   }
 
@@ -34,7 +34,7 @@ export default class Projects extends Component {
     I am developing an application using the NEXT.js Stack. 
     The platform aims to create a cohesive and user-friendly family tree experience, allowing easy administration, 
     CRUD operations for updates, and effortless comprehension of the lineage data.    `,
-    comp: <GiFruitTree size={250}/>,
+    comp: <GiFruitTree size={150}/>,
   }
 
   genBackdrop = (comp) => {
@@ -48,7 +48,7 @@ export default class Projects extends Component {
   
       return (
         <>
-        <Divider horizontal inverted clasName="divider-spacing"><p><Icon name="cogs" size="big"/></p></Divider>
+        <Divider horizontal inverted className="divider-spacing"><p><Icon name="cogs" size="big"/></p></Divider>
         <Grid textAlign='left' id="projects" columns={6} divided stackable className="proj-wrap">
           <Grid.Row>
 

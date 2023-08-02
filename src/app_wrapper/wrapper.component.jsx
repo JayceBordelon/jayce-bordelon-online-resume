@@ -113,7 +113,7 @@ export default class Wrapper extends Component {
             <Education />
 
             <div ref={this.projRef}/>
-            <Projects/>
+            <Projects />
 
           </Segment>
           <div ref={this.contactRef}/>

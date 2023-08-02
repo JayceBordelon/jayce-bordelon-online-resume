@@ -298,6 +298,7 @@ background-color: black !important;
 
 
 
+
 .custom-pop-up{
   background: var(--primary) !important;
   background-color: var(--primary) !important;
@@ -362,29 +363,36 @@ background-color: black !important;
 }
 
 /* education styles */
-.edu-outer{
-  background: transparent;
-  border-radius: 15px;
+.slider-style{
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary), var(--primary));
+  margin-top:20px;
+  margin-bottom:20px;;
+  border: solid var(--secondary);
 }
-.edu-wrap {
-  border-radius: 15px;
-}
-
-.edu-elem{
-  background: transparent !important;
-  outline: none !important;
-  border: none !important;
-  color: var(--text-center) !important;
+.image-force{
+  position:relative !important;
+  top:50%;
+  margin: auto;
 }
 
-
-
-.washu-logo {
-  position: relative; /* Make sure the container is positioned */
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%); /* Center the image */
+.elements{
+  margin-top:45px;
+  padding:20px;
+  text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .elements{
+    margin-top:25px;
+  }
+  .image-force{
+    margin-top:10px;
+  }
+}
+
+
+
+
 
 /* Project Styles */
 .proj-wrap{

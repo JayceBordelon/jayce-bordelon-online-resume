@@ -48,12 +48,6 @@ export default class Wrapper extends Component {
 
 
 
-
-
-
-  
-
-
   render() {
     const menu_items = [
       {

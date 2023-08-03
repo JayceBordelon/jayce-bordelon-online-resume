@@ -322,6 +322,16 @@ background-color: black !important;
   padding: 20px;
 }
 
+
+@keyframes conditional-fader {
+  from    { opacity: 0; }
+  to      { opacity: 1; }
+}
+
+.conditional-fader { 
+  animation: conditional-fader 1s both ease-in; 
+}
+
 @media only screen and (min-width: 600px) {
   .work-exp{
     max-width: 50% !important;

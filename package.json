@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@react-hooks-library/core": "^0.5.1",
     "@react-icons/all-files": "^4.1.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@trendyol-js/react-carousel": "^3.0.2",
+    "@uidotdev/usehooks": "^2.0.1",
     "axios": "^1.4.0",
     "emailjs": "^4.0.2",
     "framer-motion": "^10.15.0",

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { Divider, Icon, Image } from 'semantic-ui-react';
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { washu } from '../helpers/education-helper';
+import { useIntersectionObserver } from '@react-hooks-library/core'
 import '../styles/wrapper.css';
+import { generateHeader } from '../helpers/skills-helper';
 
 const Logo = (
     <div >
@@ -31,12 +33,13 @@ function Education(){
     autoplay: true,
     autoplaySpeed: 6000,
   };
+  const inner = useRef(null)
+  const { inView } = useIntersectionObserver(inner)
   return (
     <>
     <Divider className="divider-spacing" horizontal inverted><p><Icon name="graduation cap" size="big"/></p></Divider>
-    <div>
-    <h1>More than just a Student.</h1>
-    <h3>WashU class of 2025</h3>
+    {generateHeader("More than just a Student - Washu class of 2025")}
+    <div ref={inner} className={inView ? "appear" : ""}>
       <Slider className="slider-style"{...settings}>
         {Logo}
         {Overview}

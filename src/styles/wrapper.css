@@ -33,6 +33,12 @@ h1, h2, h3, h4, h5, p {
   margin-bottom: 100px !important;
 }
 
+.header-text{
+  background: var(--secondary) !important;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 20px !important;
+}
 /* footer */
   .footer-wrapper{
     border-top: solid; 
@@ -212,9 +218,12 @@ h1, h2, h3, h4, h5, p {
   justify-content: center;
   margin: 10px;
   width: 200px;
-  height: 200px;
+  height: 300px;
+  box-shadow: 4px 4px 4px black;
+  background: var(--secondary);
+  border: solid var(--tertiary) 1px;
+  border-radius: 15px;
   color: var(--tertiary);
-  transition: transform 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {
@@ -227,17 +236,45 @@ h1, h2, h3, h4, h5, p {
   }
 
 }
+@keyframes flip {
+  0%{
+    transform-style: preserve-3d;
+  }
+  100%{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+  }
 
-.active-skill {
-  background: var(--secondary);
-  border-radius: 15px;
 }
 
-.skills-icon:hover,
+.flip { 
+  animation: flip .5s both ease-in-out; 
+}
+@keyframes inner-flip {
+  0%{
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  90%{
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(180deg);
+  }
+
+}
+
+.inner-flip { 
+  animation: inner-flip .3s both ease-in-out; 
+}
+
 .active-skill:hover {
   cursor: pointer;
-  transform: translateY(-10px);
 }
+
+
 
 /* contact style */
 .contact-wrapper{
@@ -323,13 +360,21 @@ background-color: black !important;
 }
 
 
-@keyframes conditional-fader {
-  from    { opacity: 0; }
-  to      { opacity: 1; }
+@keyframes appear {
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity:1;
+  }
+
 }
 
-.conditional-fader { 
-  animation: conditional-fader 1s both ease-in; 
+.appear { 
+  animation: appear 1s both ease-in-out; 
 }
 
 @media only screen and (min-width: 600px) {
@@ -374,10 +419,12 @@ background-color: black !important;
 
 /* education styles */
 .slider-style{
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary), var(--primary));
+  background: transparent;
   margin-top:20px;
-  margin-bottom:20px;;
-  border: solid var(--secondary);
+  border-radius: 15px;
+  margin-bottom:20px;
+  border: solid var(--secondary) 10px;
+  box-shadow: 0px 4px 4px black;
 }
 .image-force{
   position:relative !important;
@@ -406,37 +453,43 @@ background-color: black !important;
 
 /* Project Styles */
 .proj-wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.project{
+  width: auto;
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 20px;
   border-radius: 15px;
-  padding: 10px;
+  border: solid var(--secondary) 5px;
 }
 
-.proj-elem{
-  align-self: center;
-  min-width: 50%;
-  transition: transform 0.2s ease-in-out;
-  color:var(--text-center);
-  align-self: center;
+.hack{
+  background-image: url('https://tse4.mm.bing.net/th/id/OIP.K8Zo_Rn3bOzSwwS2evP-5AHaFj?pid=ImgDet&rs=1');
+  background-size: 100% 100%;
+}
+.magy{
+  background-image: url('https://ennisco.com/wp-content/uploads/2020/02/AdobeStock_294230796.jpeg');
+  background-size: 100% 100%;
+}
+.tree {
+  background-image: url('https://tse1.mm.bing.net/th/id/OIP.FAqLtQqnls5UDVX1_Wt2XgHaEo?pid=ImgDet&rs=1');
+  /* Add the blur effect */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-size: 100% 100%;
 }
 
-.proj-elem:hover{
-  cursor: pointer;
-  transform: translateY(-10px);
-}
-
-.proj-desc {
-  background: transparent !important;
-  outline: none !important;
-  border: none !important;
-  min-width: 50%;
-  align-self: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.proj-desc:hover {
-  cursor: pointer;
-  transform: translateY(-10px);
+.force-contrast{
+  z-index: 70;
+  background: var(--secondary);
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px;
 
 }
-
 
 

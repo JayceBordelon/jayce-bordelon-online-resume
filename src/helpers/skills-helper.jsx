@@ -43,7 +43,7 @@ export function SkillsHelper() {
         {name: 'Docker (conceptual)', comp: <SiDocker size={100}/>, rel: titles.iti, yrs: '~1 year', active: false, refer: useRef(null)},
         {name: 'Svelte (conceptual)', comp: <SiSvelte size={100}/>, rel: titles.own, yrs: '~1 year', active: false, refer: useRef(null)},
         {name: 'Ruby on Rails', comp: <DiRuby size={95}/>, rel: titles.ful, yrs: '~3 years', active: false, refer: useRef(null)},
-        {name: 'MERN stack', comp: <SiMongodb size={100}/>, rel: titles.mag, yrs: '~1 year', active: false, refer: useRef(null)},
+        {name: 'MongoDB', comp: <SiMongodb size={100}/>, rel: titles.mag, yrs: '~1 year', active: false, refer: useRef(null)},
         {name: 'Python Django', comp: <TbBrandDjango size={100}/>, rel: titles.iti, yrs: '~1 year', active: false, refer: useRef(null)},
         {name: 'Git', comp: <FaGit size={100}/>, rel: titles.iti, yrs: '~2 years', active: false, refer: useRef(null)},
         {name: 'APi Development', comp: <TbApi size={100}/>, rel: titles.mag, yrs: '~2 years', active: false, refer: useRef(null)},
@@ -66,27 +66,28 @@ export function SkillsHelper() {
     
     return (
         <>
-        {generateHeader("Never Heard of it? Click it!")}
+        {generateHeader("I have worked in...")}
+        <h3>Click a card to flip it.</h3>
         <div ref={wrapperReference}>
         <Container id="skills" className={inView ? "skills-wrapper appear" : "skills-wrapper"}>
             <div className="skills-grid">
             {languages.sort((a, b) => a.name.localeCompare(b.name)).map((lang, index) => (
               lang.active ? (
-                <span className="active-skill" onClick={()=> window.open(`https://www.google.com/search?q=what+is+${lang.name}`, "_blank")}>
-                {lang.comp}
-                <h3>{lang.name}</h3>
-                <p>Most relavent experience - {lang.rel}</p>
-                <p>{lang.yrs} of experience.</p>
+                <span className="active-skill flip" onClick={() => !lang.active && activateLanguage(index)}>
+                  <span className="inner-flip">
+                    {lang.comp}
+                    <h3>{lang.name}</h3>
+                    <p>Most relavent experience - {lang.rel}</p>
+                    <p>{lang.yrs} of experience.</p>
+                  </span>
                 
               </span>
               ) : 
               
               (
               <span className="skills-icon" 
-                onMouseEnter={() => !lang.active && activateLanguage(index)} >
-                <h4><strong>Hover over me!</strong></h4>
+                onClick={() => !lang.active && activateLanguage(index)} >
                 {lang.comp}
-                <h3>{lang.name}</h3>
               </span>
               )
             ))}

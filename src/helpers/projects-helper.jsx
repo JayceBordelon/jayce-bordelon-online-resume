@@ -14,15 +14,17 @@ export const hackWashu = {
     all within less than 200 lines of code.`,
     comp: <SiMajorleaguehacking/>,
     src: 'https://devpost.com/software/project-what-is-that',
+    back: 'hack'
   }
 
   export const magnifi = {
-    title: 'Undergraduate Software Architect',
+    title: 'Magnifi Talent',
     desc: `I spearheaded the software architecture and development for an AI-driven job matching platform. 
     The project, built on the MERN stack, spanned a semester and resulted in a fully functional MVP, 
     powered by the skillsEngine API. Ask me for a demo! :)`,
     comp: <SiOpenstreetmap/>,
     src: 'https://youtu.be/omSyXatmo7s',
+    back: 'magy'
   }
 
   export const familyTree = {
@@ -33,6 +35,7 @@ export const hackWashu = {
     The platform aims to create a cohesive and user-friendly family tree experience, allowing easy administration, 
     CRUD operations for updates, and effortless comprehension of the lineage data.    `,
     comp: <GiFruitTree/>,
+    back: 'tree'
   }
 
 
@@ -40,21 +43,21 @@ export const hackWashu = {
     const redirectTo = (projSrc) => {
       window.open(projSrc, "_blank");
     }
-    const forceBackdrop = (icon) => {
-
-    }
     const allProjects = [hackWashu , magnifi , familyTree]
     return (
       <>
-      {generateHeader("I build stuff!")}
+      {generateHeader("A few of my projects")}
       <div className="proj-wrap">
         {allProjects.map(project=>(
-          <div className="project">
-            <h1>{project.title}</h1>
-            <h3>{project.desc}</h3>
-            <Button onClick={()=>redirectTo(project.src)} className="send-mail cool-button"><h3>{project.comp}Take me there!</h3></Button>
+          <>
+          <div className={`project ${project.back}`}>
+            
+            <h1 className="force-contrast">{project.title}</h1>
+            <h3 className="force-contrast">{project.desc}</h3>
+            {project.title!=='Family Tree (Coming Soon)' &&  (<Button onClick={()=>redirectTo(project.src)} className="send-mail cool-button"><h1>{project.comp}</h1></Button>)}
           </div>
-
+          <div className="burrer"/>
+          </>
         ))}
       </div>
       

@@ -10,12 +10,13 @@ import {MdArchitecture} from 'react-icons/md'
 import { DiRuby } from 'react-icons/di'
 
 import '../styles/wrapper.css'
+import { generateHeader } from './skills-helper'
 
 
 
 
 
-  export function WorkyHelpy() {
+  export function WorkHelper() {
     const inner = useRef(null)
     const { inView } = useIntersectionObserver(inner)
     const experiences = [
@@ -110,10 +111,12 @@ import '../styles/wrapper.css'
     }
   
     return (
+      <div ref={inner}>
+      {generateHeader("Real World Experience")}
+      <div className="work-wrap">
 
-      <div className="work-wrap" ref={inner}>
       {experiences.map((exp) => (
-        <div className={inView ? "work-exp conditional-fader" : "work-exp"}>
+        <div className={inView ? "work-exp appear" : "work-exp"}>
             {exp.src}<h3>{exp.title}</h3> @ {exp.company}
             <span key={exp.title}>
               {exp.accomplishments.map((accomplishment) => (
@@ -132,6 +135,7 @@ import '../styles/wrapper.css'
           
         </div>
       ))}
+      </div>
       </div>
     )
   }

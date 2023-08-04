@@ -33,6 +33,12 @@ h1, h2, h3, h4, h5, p {
   margin-bottom: 100px !important;
 }
 
+.header-text{
+  background: var(--secondary) !important;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 20px !important;
+}
 /* footer */
   .footer-wrapper{
     border-top: solid; 
@@ -231,13 +237,17 @@ h1, h2, h3, h4, h5, p {
 .active-skill {
   background: var(--secondary);
   border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.skills-icon:hover,
 .active-skill:hover {
-  cursor: pointer;
   transform: translateY(-10px);
+  background: var(--primary) !important;
+  color: var(--secondary) !important;
+  cursor: pointer;
 }
+
+
 
 /* contact style */
 .contact-wrapper{
@@ -323,13 +333,21 @@ background-color: black !important;
 }
 
 
-@keyframes conditional-fader {
-  from    { opacity: 0; }
-  to      { opacity: 1; }
+@keyframes appear {
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity:1;
+  }
+
 }
 
-.conditional-fader { 
-  animation: conditional-fader 1s both ease-in; 
+.appear { 
+  animation: appear 1s both ease-in-out; 
 }
 
 @media only screen and (min-width: 600px) {
@@ -374,10 +392,11 @@ background-color: black !important;
 
 /* education styles */
 .slider-style{
-  background: linear-gradient(to right, var(--primary), var(--secondary), var(--secondary), var(--primary));
+  background: transparent;
   margin-top:20px;
-  margin-bottom:20px;;
-  border: solid var(--secondary);
+  margin-bottom:20px;
+  border: solid var(--secondary) 10px;
+  box-shadow: 0px 4px 4px black;
 }
 .image-force{
   position:relative !important;
@@ -406,37 +425,16 @@ background-color: black !important;
 
 /* Project Styles */
 .proj-wrap{
-  border-radius: 15px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.proj-elem{
-  align-self: center;
-  min-width: 50%;
-  transition: transform 0.2s ease-in-out;
-  color:var(--text-center);
-  align-self: center;
+.project{
+  width: auto;
+  height: auto;
+  border: solid black;
 }
 
-.proj-elem:hover{
-  cursor: pointer;
-  transform: translateY(-10px);
-}
-
-.proj-desc {
-  background: transparent !important;
-  outline: none !important;
-  border: none !important;
-  min-width: 50%;
-  align-self: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-.proj-desc:hover {
-  cursor: pointer;
-  transform: translateY(-10px);
-
-}
 
 
 

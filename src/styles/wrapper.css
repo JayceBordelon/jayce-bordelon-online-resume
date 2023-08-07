@@ -1,7 +1,7 @@
 /*global vars/themes */
 :root {
   --primary: #0b0c10; /*background*/
-  --secondary: #45a29e;
+  --secondary: #416a59;
   --tertiary:  #c5c6c7;
 }
 
@@ -24,8 +24,11 @@ h1{
 
 
 .fancy-boxen{
-  box-shadow: var(--secondary) 0px 30px 90px;
 }
+.fancy-boxen:hover{
+  box-shadow: var(--secondary) 0px 30px 90px !important;
+}
+
 @media only screen and (min-width: 600px) {
   h1{
     font-size: 75px;
@@ -78,7 +81,6 @@ h1{
 
 /*general*/
 .super-container{
-    border-radius: 15px !important;
     color: var(--text-center);
     margin: 10px;
     max-height: 100% !important;
@@ -268,7 +270,6 @@ h1{
 .skills-spacer:hover{
   color: var(--secondary) !important;
   border: solid var(--secondary);
-  box-shadow: var(--secondary) 0px 30px 90px;
   background: var(--tertiary) !important;
 }
 
@@ -296,7 +297,6 @@ color: #333;
 .contact-fancy-input:focus {
 outline: none;
 background-color: black !important;
-box-shadow: var(--secondary) 0px 30px 90px !important;
 }
 
 
@@ -439,11 +439,10 @@ box-shadow: var(--secondary) 0px 30px 90px !important;
 
 .thing{
   padding:5px;
-  margin: 5px;
+  margin-top: 20px;
   border-radius: 15px;
-  border: solid var(--tertiary) 2px;
   z-index: 100;
-  background: var(--secondary);
+  background: transparent;
 }
 
 @media only screen and (min-width: 600px) {
@@ -476,7 +475,6 @@ box-shadow: var(--secondary) 0px 30px 90px !important;
   padding: 20px;
   border-radius: 15px;
   background: transparent;
-  box-shadow: var(--secondary) 0px 30px 90px;
 }
 @media only screen and (min-width: 600px) {
   .project{

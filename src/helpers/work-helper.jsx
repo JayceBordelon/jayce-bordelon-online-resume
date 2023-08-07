@@ -104,7 +104,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       accomplishments: [
         'Collaborated with International data entry team.',
         'Handled data degradation on over 1,764 entries.',
-        'Exposed myself to PSQL while validating financially sensetive information'
+        'Exposed myself to PSQL while validating financially sensitive information'
       ], 
       company: 'Ruckit', 
       learned: 'PostgreSQL|Data Validation|Data Analysis',

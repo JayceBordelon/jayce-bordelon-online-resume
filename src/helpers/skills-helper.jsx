@@ -64,7 +64,7 @@ export function SkillsHelper() {
         <div id="skills" className="skills-wrapper">
             <div className="skills-grid">
             {languages.map(lang=>(
-              <span className="skills-spacer">
+              <span className="skills-spacer fancy-boxen">
               {lang.comp}
               <span>{lang.name}</span>
               {lang.yrs} of experience

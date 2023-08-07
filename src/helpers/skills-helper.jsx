@@ -65,13 +65,9 @@ export function SkillsHelper() {
             <div className="skills-grid">
             {languages.map(lang=>(
               <span className="skills-spacer">
-              <Popup
-              className="skills-pop-up"
-                content={<p>{lang.yrs} of experience</p>}
-                key={lang.name}
-                header={<h2>{lang.name}</h2>}
-                trigger={lang.comp}
-              />
+              {lang.comp}
+              <span>{lang.name}</span>
+              {lang.yrs} of experience
               </span>
             ))}
             </div>

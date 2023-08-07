@@ -51,10 +51,9 @@ h1{
 .header-text{
   background: var(--tertiary) !important;
   color: var(--primary) !important;
-  border-radius: 15px !important;
   font-size: xx-large !important;
   padding: 10px !important;
-  box-shadow: 2px 2px 2px var(--secondary);
+  box-shadow: var(--secondary) 0px 30px 90px;;
   margin-bottom: 20px !important;
 }
 
@@ -229,7 +228,7 @@ h1{
     padding: 5px;
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important;
+    justify-content: space-evenly !important;
     align-items: center;
 }
 
@@ -243,12 +242,25 @@ h1{
   padding: 10px;
   border-radius: 15px;
   border: solid var(--tertiary);
-  margin:20px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+@media only screen and (max-width: 600px) {
+  .skills-spacer{
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .skills-spacer{
+    width: 150px;
+    height: 160px;
+  }
 }
 
 .skills-spacer:hover{
   color: var(--secondary) !important;
   border: solid var(--secondary);
+  box-shadow: var(--secondary) 0px 30px 90px;
   background: var(--tertiary) !important;
 }
 
@@ -276,6 +288,7 @@ color: #333;
 .contact-fancy-input:focus {
 outline: none;
 background-color: black !important;
+box-shadow: var(--secondary) 0px 30px 90px !important;
 }
 
 
@@ -283,13 +296,13 @@ background-color: black !important;
 
 
 .intro-profile-pic {
-  background-image:linear-gradient(-45deg,  var(--primary), var(--secondary) );
+  background-image:linear-gradient(-45deg,  var(--primary), var(--secondary));
   background-size: 110% 110%;
   background-position: 50% 50%;
   filter: contrast(110%) brightness(90%);
   border: 8px solid transparent;
   padding: 2px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   /* width: 200px; Adjust this value as needed */
   height: 200px; /* Adjust this value as needed */
   margin: 0 auto; /* Center horizontally */
@@ -333,10 +346,11 @@ background-color: black !important;
 .work-exp{
   background: var(--secondary) !important;
   padding: 20px;
-  border-radius: 15px;
   margin-bottom: 20px;
-  border: solid  var(--tertiary);
   min-height: 550px;
+}
+.center-stuffs{
+  text-align: center !important;
 }
 
 .work-exp:hover{
@@ -355,15 +369,13 @@ background-color: black !important;
 
 .force-dimension{
   align-items: center !important;
-  border: none;
-  background: transparent;
+  background: transparent !important;
   padding-top: 200px;
 }
 
 @media only screen and (min-width: 600px) {
   .work-exp{
-    max-width: 50% !important;
-    min-width: 40% !important;
+    width:50%;
   }
 }
 @media only screen and (max-width: 600px) {

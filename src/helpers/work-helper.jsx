@@ -127,7 +127,8 @@ import { generateHeader } from './skills-helper'
 
       {experiences.map((exp, index) => (
         <div className={!exp.show ? "force-dimension work-exp":"work-exp"} onClick={()=>updateExp(index)}>
-            <h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"}/>{exp.title}</h2><h2><strong>@ {exp.company} </strong></h2>
+            {exp.show ? (<><h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"}/>{exp.title}</h2><h2><strong>@ {exp.company} </strong></h2></>) : (
+              <span className="center-stuffs"><h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"} size="big"/></h2><h2>{exp.title}</h2><h2><strong>@{exp.company}</strong></h2></span>)}
             {exp.show && (
               <div className="exp-in" key={exp.title}>
               {exp.accomplishments.map((accomplishment) => (

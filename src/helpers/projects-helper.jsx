@@ -5,6 +5,8 @@ import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
 import { Button } from 'semantic-ui-react';
 
+
+
 export const hackWashu = {
     title: 'Hack WashU Winner',
     desc: `
@@ -37,7 +39,7 @@ export const hackWashu = {
     const allProjects = [hackWashu , magnifi , familyTree]
     return (
       <>
-      {generateHeader("3 Of My Projects")}
+      {generateHeader("3 of my projects")}
       <div className="proj-wrap">
         {allProjects.map(project=>(
           <>

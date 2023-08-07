@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Icon } from 'semantic-ui-react'
+import { Icon, Image } from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
 import { TbMathFunction } from 'react-icons/tb'
@@ -10,6 +10,14 @@ import { DiRuby } from 'react-icons/di'
 
 import '../styles/wrapper.css'
 import { generateHeader } from './skills-helper'
+
+//imgs
+import WashuLogo from "../styles/washu-logo-work.png"
+import SynopsysLogo from "../styles/synopsys-logo.jpeg"
+import CommandLogo from "../styles/command-logo.jpeg"
+import RuckitLogo from "../styles/ruckit-logo.png"
+import TutorLogo from "../styles/tutor-logo.jpeg"
+import MagnifiLogo from "../styles/mgfi-logo.webp"
 
 
 
@@ -28,7 +36,8 @@ import { generateHeader } from './skills-helper'
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
       src: <GiServerRack size={100}/>,
-      show: false
+      show: false,
+      logo: SynopsysLogo
     },
   
       {when: 'July 2022 - Present', 
@@ -42,7 +51,8 @@ import { generateHeader } from './skills-helper'
       company: 'WashU', 
       learned: 'Java|Object Oriented Programming|Teaching|Managing',
       src:<GiTeacher size={100} />,
-      show: false},
+      show: false,
+      logo: WashuLogo},
   
       {when: 'January 2023 - May 2023', 
       title: 'Software Architect', 
@@ -55,7 +65,8 @@ import { generateHeader } from './skills-helper'
       company: 'Magnifi', 
       learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
       src:<MdArchitecture size={100} />,
-      show: false},
+      show: false,
+      logo: MagnifiLogo},
   
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
@@ -69,7 +80,8 @@ import { generateHeader } from './skills-helper'
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML|CSS',
       src:<SiRubyonrails size={100} />,
-      show: false},
+      show: false,
+      logo: CommandLogo},
   
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
@@ -83,7 +95,8 @@ import { generateHeader } from './skills-helper'
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL',
       src:<DiRuby size={100} />,
-      show: false},
+      show: false,
+      logo: CommandLogo},
   
       {when: 'May 2019 - August 2019', 
       title: 'Data Entry Intern', 
@@ -96,7 +109,8 @@ import { generateHeader } from './skills-helper'
       company: 'Ruckit', 
       learned: 'PostgreSQL|Data Validation|Data Analysis',
       src:<BsDatabaseUp size={100}/>,
-      show: false},
+      show: false,
+      logo: RuckitLogo},
   
       {when: 'May 2019 - August 2021', 
       title: 'Calculus Tutor', 
@@ -109,7 +123,8 @@ import { generateHeader } from './skills-helper'
       company: 'Self Employed', 
       learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',
       src: <TbMathFunction size={100}/>,
-      show: false}
+      show: false,
+      logo: TutorLogo}
     ])
     const toSingleLearning = (learnings) => {
       return learnings.split("|");
@@ -126,9 +141,19 @@ import { generateHeader } from './skills-helper'
       <div className="work-wrap">
 
       {experiences.map((exp, index) => (
-        <div className={!exp.show ? "force-dimension work-exp":"work-exp"} onClick={()=>updateExp(index)}>
-            {exp.show ? (<><h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"}/>{exp.title}</h2><h2><strong>@ {exp.company} </strong></h2></>) : (
-              <span className="center-stuffs"><h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"} size="big"/></h2><h2>{exp.title}</h2><h2><strong>@{exp.company}</strong></h2></span>)}
+        <div className={!exp.show ? "force-dimension work-exp fancy-boxen":"work-exp"} onClick={()=>updateExp(index)}>
+            {exp.show ? (<>
+            <h2>{exp.src}</h2>
+            <h2>{exp.title}</h2>
+            <h2><strong>@ {exp.company} </strong></h2>
+            <h3>{exp.when}</h3></>) : (
+              <span className="center-stuffs">
+              <h2>{exp.src}</h2><h2>{exp.title}</h2>
+              <h2><strong>@{exp.company}</strong></h2>
+              <h3>{exp.when}</h3>
+              <Image className="company-logo" src={exp.logo} />
+              <h1><Icon name="sort up" size="small"/></h1>
+              </span>)}
             {exp.show && (
               <div className="exp-in" key={exp.title}>
               {exp.accomplishments.map((accomplishment) => (

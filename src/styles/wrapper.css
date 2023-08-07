@@ -22,6 +22,10 @@ h1{
   font-weight: 200%;
 }
 
+
+.fancy-boxen{
+  box-shadow: var(--secondary) 0px 30px 90px;
+}
 @media only screen and (min-width: 600px) {
   h1{
     font-size: 75px;
@@ -351,7 +355,7 @@ box-shadow: var(--secondary) 0px 30px 90px !important;
   background: var(--secondary) !important;
   padding: 20px;
   margin-bottom: 20px;
-  min-height: 550px;
+  min-height: 650px;
 }
 .center-stuffs{
   text-align: center !important;
@@ -374,9 +378,12 @@ box-shadow: var(--secondary) 0px 30px 90px !important;
 .force-dimension{
   align-items: center !important;
   background: transparent !important;
-  padding-top: 200px;
+  padding-top: 50px;
 }
-
+.company-logo{
+  width: 150px !important;
+  margin: auto !important;
+}
 @media only screen and (min-width: 600px) {
   .work-exp{
     width:50%;
@@ -467,9 +474,9 @@ box-shadow: var(--secondary) 0px 30px 90px !important;
   margin-bottom: 30px;
   margin-top: 30px;
   padding: 20px;
-  border: solid var(--tertiary);
   border-radius: 15px;
-  background: linear-gradient(-45deg, var(--secondary), var(--primary), var(--secondary), var(--primary), var(--secondary));
+  background: transparent;
+  box-shadow: var(--secondary) 0px 30px 90px;
 }
 @media only screen and (min-width: 600px) {
   .project{

@@ -170,6 +170,11 @@ h1{
   }
 
 }
+
+.mod{
+  color: var(--secondary);
+  font-size: large;
+}
 /*Mobile view for menu drop */
 @media only screen and (max-width: 600px) {
   .dropdown-outer{

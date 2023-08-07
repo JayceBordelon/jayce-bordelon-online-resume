@@ -79,7 +79,7 @@ export default class Contact extends Component {
 
       if (Object.values(templateParams).every((field) => field !== '')) {
         if (!emailRegex.test(templateParams.email)) {
-          this.setState({ emailRes: `Oops! '${templateParams.email}' is not a vaid email. Please provide a valid email address to get in touch!`, awaitingReq: false });
+          this.setState({ emailRes: `Oops! '${templateParams.email}' is not a valid email. Please provide a valid email address to get in touch!`, awaitingReq: false });
           return;
         }
         axios
@@ -182,7 +182,7 @@ export default class Contact extends Component {
           value={this.state.messageText} 
           onChange={this.handleChangeMessage}
           />
-              {this.state.awaitingReq ? (<Button lodaing className="send-mail">
+              {this.state.awaitingReq ? (<Button loading className="send-mail">
               <p>
               <Icon loading name="spinner" size="large"></Icon>Hold On...
               </p>
@@ -206,11 +206,11 @@ export default class Contact extends Component {
                   <h2 className="mod">Email status</h2>
                 </Header>
                 <Modal.Content>
-                <h3 className="mod">{this.state.emailRes}</h3>
+                <div className="mod">{this.state.emailRes}</div>
                 </Modal.Content>
                 <Modal.Actions>
                   <Button className='cool-button' onClick={() => this.setState({emailRes: ''})}>
-                    <p><Icon name='checkmark' size='large'/> OK </p>
+                    <span className="mod"><Icon name='checkmark' size='big'/> OK </span>
                   </Button>
                 </Modal.Actions>
               </Modal>)

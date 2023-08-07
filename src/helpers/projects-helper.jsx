@@ -3,7 +3,7 @@ import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
 import {GiFruitTree} from 'react-icons/gi'
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
-import { Button, Image } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 export const hackWashu = {
     title: 'Hack WashU Winner',

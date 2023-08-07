@@ -1,4 +1,4 @@
-import { Icon } from "semantic-ui-react";
+import { Icon, Image } from "semantic-ui-react";
 
 
 export const washu = {
@@ -37,6 +37,7 @@ export function EducationHelper(){
     return(
         <div className="edu-wrap">
             <h2>{washu.description}</h2>
+            <Image src={washu.src} className="washu-logo"/>
             {washu.thingz.map(thing=>(
                 <div className="thing">
                 <h2><Icon name={thing.icon} size="large"/></h2>

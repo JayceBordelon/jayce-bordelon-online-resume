@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Label, Popup,  } from 'semantic-ui-react'
+import { Label, Popup,  } from 'semantic-ui-react'
 //icons
 import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'

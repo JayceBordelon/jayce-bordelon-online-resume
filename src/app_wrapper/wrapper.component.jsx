@@ -64,14 +64,14 @@ export default class Wrapper extends Component {
       mode: "dark"
     };
     setLight = (rooty) => {
-      rooty.style.setProperty('--primary', '#BFA181');
-      rooty.style.setProperty('--secondary', '#178582');
-      rooty.style.setProperty('--tertiary', '#0A1828');
+      rooty.style.setProperty('--primary', '#e9e5dc');
+      rooty.style.setProperty('--secondary', '#815034');
+      rooty.style.setProperty('--tertiary', '#1d130e');
     }
     setDark = (rooty) => {
-      rooty.style.setProperty('--primary', '#0A1828');
-      rooty.style.setProperty('--secondary', '#178582');
-      rooty.style.setProperty('--tertiary', '#BFA181');
+      rooty.style.setProperty('--primary', '#1d130e');
+      rooty.style.setProperty('--secondary', '#815034');
+      rooty.style.setProperty('--tertiary', '#e9e5dc');
     }
     toggleMode = () =>{
       let r = document.querySelector(':root');
@@ -118,7 +118,7 @@ export default class Wrapper extends Component {
       <>
       <div className="banner super-fade">
         <h2 className="initial-refresh super-fade" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
-        <Button onClick={()=>this.toggleMode()} className="light-dark" circular icon={this.state.mode==="light" ? "sun ": "moon"}></Button>
+        <Button onClick={()=>this.toggleMode()} className="light-dark" circular icon={this.state.mode==="light" ? "sun": "moon"}></Button>
         <span className="nav-icon super-fade" onClick={()=>this.setState({show_menu: !this.state.show_menu})}>
             {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }
         </span>

@@ -9,7 +9,7 @@ function Education(){
   return (
     <>
     <Divider className="divider-spacing" horizontal inverted><p><Icon name="graduation cap" size="big"/></p></Divider>
-    {generateHeader("More Than a Student")}
+    {generateHeader("More Than Just A Student")}
     <EducationHelper />
     </>
   );

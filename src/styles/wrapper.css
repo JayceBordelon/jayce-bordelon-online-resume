@@ -1,8 +1,8 @@
 /*global vars/themes */
 :root {
-  --primary: #0A1828; /*background*/
-  --secondary: #178582; /*Main Color besides background*/
-  --tertiary:  #BFA181;
+  --primary: #1d130e; /*background*/
+  --secondary: #815034; /*Main Color besides background*/
+  --tertiary:  #e9e5dc;
 }
 
 

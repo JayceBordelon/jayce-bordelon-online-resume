@@ -64,14 +64,14 @@ export default class Wrapper extends Component {
       mode: "dark"
     };
     setLight = (rooty) => {
-      rooty.style.setProperty('--primary', '#e9e5dc');
-      rooty.style.setProperty('--secondary', '#815034');
-      rooty.style.setProperty('--tertiary', '#1d130e');
+      rooty.style.setProperty('--primary', '#c5c6c7');
+      rooty.style.setProperty('--secondary', '#45a29e');
+      rooty.style.setProperty('--tertiary', '#0b0c10');
     }
     setDark = (rooty) => {
-      rooty.style.setProperty('--primary', '#1d130e');
-      rooty.style.setProperty('--secondary', '#815034');
-      rooty.style.setProperty('--tertiary', '#e9e5dc');
+      rooty.style.setProperty('--primary', '#0b0c10');
+      rooty.style.setProperty('--secondary', '#45a29e');
+      rooty.style.setProperty('--tertiary', '#c5c6c7');
     }
     toggleMode = () =>{
       let r = document.querySelector(':root');

@@ -1,8 +1,8 @@
 /*global vars/themes */
 :root {
-  --primary: #1d130e; /*background*/
-  --secondary: #815034; /*Main Color besides background*/
-  --tertiary:  #e9e5dc;
+  --primary: #0b0c10; /*background*/
+  --secondary: #45a29e;
+  --tertiary:  #c5c6c7;
 }
 
 
@@ -212,9 +212,6 @@ h1{
 
 
 .send-mail:hover{
-  -ms-transform: translateY(4px);
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
   box-shadow: none !important;
   border-bottom: none;
 }
@@ -339,7 +336,7 @@ background-color: black !important;
   border-radius: 15px;
   margin-bottom: 20px;
   border: solid  var(--tertiary);
-
+  min-height: 550px;
 }
 
 .work-exp:hover{
@@ -347,7 +344,8 @@ background-color: black !important;
 }
 
 @keyframes exp-in {
-  from    { opacity: 0; }
+  from    { opacity: 0;
+            transform: translateY(30px); }
   to      { opacity: 1; }
 }
 
@@ -355,6 +353,12 @@ background-color: black !important;
   animation: exp-in .5s both ease-in-out; 
 }
 
+.force-dimension{
+  align-items: center !important;
+  border: none;
+  background: transparent;
+  padding-top: 200px;
+}
 
 @media only screen and (min-width: 600px) {
   .work-exp{
@@ -406,7 +410,6 @@ background-color: black !important;
 }
 .super-logo{
   filter: contrast(200%) brightness(90%);
-  max-width: 60% !important;
   border-radius: 10px;
 }
 
@@ -423,6 +426,9 @@ background-color: black !important;
 @media only screen and (min-width: 600px) {
   .thing{
     width: 45%;
+  }
+  .super-logo{
+    max-width: 60% !important;
   }
 }
 

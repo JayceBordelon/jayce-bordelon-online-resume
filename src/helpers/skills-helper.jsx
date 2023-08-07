@@ -59,7 +59,7 @@ export function SkillsHelper() {
     
     return (
         <>
-        {generateHeader("21 Different Technologies")}
+        {generateHeader("Versed in the latest technology")}
         <div>
         <div id="skills" className="skills-wrapper">
             <div className="skills-grid">

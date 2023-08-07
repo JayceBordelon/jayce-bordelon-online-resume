@@ -1,16 +1,23 @@
 //Dependencies
+import { useInView } from 'react-intersection-observer';
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
 
 
 const Typer = ({text}) => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
   return (
+    <span ref={ref}>
+    {inView &&(
       <Typewriter
         options={{
         autoStart: true,
-        cursor: ' ',
-        delay: 15,
+        cursor: '|',
+        delay: 25,
         loop: false,
         deleteSpeed: 5,
         }}
@@ -19,7 +26,8 @@ const Typer = ({text}) => {
             .typeString(text)
             .start();
         }}
-   />
+      />)}
+   </span>
   );
 };
 

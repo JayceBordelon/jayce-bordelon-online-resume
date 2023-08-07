@@ -5,6 +5,7 @@ import axios from 'axios';
 
 //components
 import Null from './null.component'
+import { generateHeader } from '../helpers/skills-helper';
 
 //styles
 import '../styles/wrapper.css'
@@ -138,7 +139,7 @@ export default class Contact extends Component {
         <>
         <Divider horizontal inverted className="divider-spacing"><p><Icon name="mail" size="big"/></p></Divider>
         <Container id="contact" className="contact-wrapper">
-        <h1>Contact Me!</h1>
+        {generateHeader("Get In Touch")}
         <p>A successful submission of this form will email me its content, and automate a reply to you as verification.</p>
           <Form >
           <Form.Group widths='equal'>

@@ -1,26 +1,11 @@
+import { Icon } from "semantic-ui-react";
 
 
 export const washu = {
-    description: `I am pursuing a Bachelor's of Science in Computer Science & Finance with a minor in Human-Computer Interaction. 
-    Cocurrent to my coursework, I am a Teacher's Assistant for an entry-level Java course, and an advanced C++ course.`, // index 0
+    description: `Beyond the classroom and my role as a teacher's assistant, I persue a plethora of interests.`, // index 0
 
 
     thingz: [
-        {
-            title: `I am a software architect`,
-            desc: `Led software architect for 'Magnifi', a skills based & artificial intelligence job matching platform.`,
-            icon: `react`
-        }, //1-0
-        {
-            title: `I am a hackathon winner`,
-            desc: `My team of three was crowned winner of 'the most creative use of Twilio API' in Hack Washu, a school wide hackathon.`, 
-            icon: 'spy'
-        },
-        {
-            title: `I am a dean's list student`,
-            desc: `Awarded with dean's list for semesters of FL2021 & SP2023.`,
-            icon: `book`
-        },
         {
             title: `I am a bodybuilder`,
             desc: `I have a great pssion for physical health, weightlifting, and bodybuilding. I prefer taking my own approach to the art rather than consulting a coach.`,
@@ -46,3 +31,21 @@ export const washu = {
 
     src: 'https://marcomm.wustl.edu/app/uploads/2015/07/3lineposRGB1000-01-1fuxmn8-e1517349537248-300x246.png' // index 3
 };
+
+export function EducationHelper(){
+
+    return(
+        <div className="edu-wrap">
+            <h2>{washu.description}</h2>
+            {washu.thingz.map(thing=>(
+                <div className="thing">
+                <h2><Icon name={thing.icon} size="large"/></h2>
+                <h2>{thing.title}</h2>
+                <h3>{thing.desc} </h3>
+                </div>
+
+            ))}
+        </div>
+
+    )
+}

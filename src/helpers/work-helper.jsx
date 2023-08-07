@@ -1,5 +1,4 @@
-import React, {useRef} from 'react'
-import { useIntersectionObserver } from '@react-hooks-library/core'
+import React, { useState } from 'react'
 import { Icon } from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
@@ -17,9 +16,7 @@ import { generateHeader } from './skills-helper'
 
 
   export function WorkHelper() {
-    const inner = useRef(null)
-    const { inView } = useIntersectionObserver(inner)
-    const experiences = [
+    const [experiences, setExperiences] = useState([
       {when: 'June 2023 - Present', 
       title: 'IT Intern', 
       long: "Information Technology Intern",
@@ -30,7 +27,9 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
-      src: <GiServerRack size={100}/>},
+      src: <GiServerRack size={100}/>,
+      show: false
+    },
   
       {when: 'July 2022 - Present', 
       title: `Teacher's Assistant`, 
@@ -40,9 +39,10 @@ import { generateHeader } from './skills-helper'
         'Grading student code and exams.',
         'Hosting and managing other Teacher Assistants to create student led instruction sessions.'
       ], 
-      company: 'Washington University in St. Louis', 
+      company: 'WashU', 
       learned: 'Java|Object Oriented Programming|Teaching|Managing',
-      src:<GiTeacher size={100} />},
+      src:<GiTeacher size={100} />,
+      show: false},
   
       {when: 'January 2023 - May 2023', 
       title: 'Software Architect', 
@@ -54,7 +54,8 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Magnifi', 
       learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
-      src:<MdArchitecture size={100} />},
+      src:<MdArchitecture size={100} />,
+      show: false},
   
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
@@ -67,7 +68,8 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML|CSS',
-      src:<SiRubyonrails size={100} />},
+      src:<SiRubyonrails size={100} />,
+      show: false},
   
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
@@ -80,7 +82,8 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL',
-      src:<DiRuby size={100} />},
+      src:<DiRuby size={100} />,
+      show: false},
   
       {when: 'May 2019 - August 2019', 
       title: 'Data Entry Intern', 
@@ -92,7 +95,8 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Ruckit', 
       learned: 'PostgreSQL|Data Validation|Data Analysis',
-      src:<BsDatabaseUp size={100}/>},
+      src:<BsDatabaseUp size={100}/>,
+      show: false},
   
       {when: 'May 2019 - August 2021', 
       title: 'Calculus Tutor', 
@@ -104,21 +108,29 @@ import { generateHeader } from './skills-helper'
       ], 
       company: 'Self Employed', 
       learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',
-      src: <TbMathFunction size={100}/>}
-    ]
+      src: <TbMathFunction size={100}/>,
+      show: false}
+    ])
     const toSingleLearning = (learnings) => {
       return learnings.split("|");
     }
+    const updateExp = (index) => {
+      let updatedStuff = [...experiences];
+      updatedStuff[index] = { ...updatedStuff[index], show: !updatedStuff[index].show };
+      setExperiences(updatedStuff);
+    }
   
     return (
-      <div ref={inner}>
-      {generateHeader("Real World Experience")}
+      <div>
+      {generateHeader("7 Real World Experiences")}
       <div className="work-wrap">
 
-      {experiences.map((exp) => (
-        <div className={inView ? "work-exp appear" : "work-exp"}>
-            {exp.src}<h3>{exp.title}</h3> @ {exp.company}
-            <span key={exp.title}>
+      {experiences.map((exp, index) => (
+        <div className="work-exp" onClick={()=>updateExp(index)}>
+          <span className="">
+            <h2>{exp.src}<Icon name={exp.show? "angle up": "angle down"}/>{exp.title}</h2><h3><strong>{exp.company} </strong></h3>
+            {exp.show && (
+              <div className="exp-in" key={exp.title}>
               {exp.accomplishments.map((accomplishment) => (
                   <h4>
                     <Icon name="code branch" /> {accomplishment}
@@ -131,8 +143,9 @@ import { generateHeader } from './skills-helper'
                     <span className="learning" onClick={()=> window.open(`https://www.google.com/search?q=what+is+${learning}`, "_blank")}>{learning}</span>
                   ))}
               </div>
+            </div>
+            )}
             </span>
-          
         </div>
       ))}
       </div>

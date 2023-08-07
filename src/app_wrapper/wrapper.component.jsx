@@ -1,6 +1,6 @@
 // dependencies
 import React, { Component } from 'react';
-import { Container, Icon, Segment } from 'semantic-ui-react';
+import { Button, Container, Icon, Segment } from 'semantic-ui-react';
 
 // components
 import Education from '../components/education.component';
@@ -28,7 +28,24 @@ export default class Wrapper extends Component {
     this.contactRef = React.createRef();
     
   }
+  getResume = () => {
+    try{
+      fetch('JayceBordelonFinalResume.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'JayceBordelonFinalResume.pdf';
+            alink.click();
+        })
+      })
+    } catch (err){
+      console.log(err)
+    }
 
+  };
   scrollToElement = (refer) => {
     // Access the DOM node using the ref and scroll it into view
     if (refer.current) {
@@ -43,8 +60,24 @@ export default class Wrapper extends Component {
     state = {
       current_component: "INTRODUCTION",
       icon: 'coffee',
-      show_menu: false
+      show_menu: false,
+      mode: "dark"
     };
+    setLight = (rooty) => {
+      rooty.style.setProperty('--primary', '#BFA181');
+      rooty.style.setProperty('--secondary', '#178582');
+      rooty.style.setProperty('--tertiary', '#0A1828');
+    }
+    setDark = (rooty) => {
+      rooty.style.setProperty('--primary', '#0A1828');
+      rooty.style.setProperty('--secondary', '#178582');
+      rooty.style.setProperty('--tertiary', '#BFA181');
+    }
+    toggleMode = () =>{
+      let r = document.querySelector(':root');
+      this.state.mode === "light" ? this.setDark(r) : this.setLight(r);
+      this.state.mode === "light" ? this.setState({mode: "dark"}): this.setState({mode:"light"});
+    }
 
 
 
@@ -66,14 +99,14 @@ export default class Wrapper extends Component {
         ref: this.skillsRef
       },
       {
-        name: "Education",
-        icon: "graduation cap",
-        ref: this.eduRef
-      },
-      {
         name: "Projects",
         icon: "cogs",
         ref: this.projRef
+      },
+      {
+        name: "Education",
+        icon: "graduation cap",
+        ref: this.eduRef
       },
       {
         name: "Contact",
@@ -84,8 +117,8 @@ export default class Wrapper extends Component {
     return (
       <>
       <div className="banner super-fade">
-        <h1 className="initial-refresh super-fade" onClick={()=>window.location.reload()}>JB.</h1>
-        
+        <h2 className="initial-refresh super-fade" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
+        <Button onClick={()=>this.toggleMode()} className="light-dark" circular icon={this.state.mode==="light" ? "sun ": "moon"}></Button>
         <span className="nav-icon super-fade" onClick={()=>this.setState({show_menu: !this.state.show_menu})}>
             {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }
         </span>
@@ -103,11 +136,12 @@ export default class Wrapper extends Component {
             <div ref={this.skillsRef}/>
             <Skills />
 
+            <div ref={this.projRef}/>
+            <Projects />
+
             <div ref={this.eduRef}/>
             <Education />
 
-            <div ref={this.projRef}/>
-            <Projects />
 
           </Segment>
           <div ref={this.contactRef}/>

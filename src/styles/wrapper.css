@@ -1,9 +1,8 @@
 /*global vars/themes */
 :root {
-  --primary: #3c3846; /*background*/
-  --secondary: #4a4b7b; /*Main Color besides background*/
-  --tertiary:  #fde9cc;
-
+  --primary: #0A1828; /*background*/
+  --secondary: #178582; /*Main Color besides background*/
+  --tertiary:  #BFA181;
 }
 
 
@@ -17,6 +16,22 @@ html, body {
 h1, h2, h3, h4, h5, p {
   font-weight:bolder;
   color: var(--tertiary);
+}
+
+h1{
+  font-weight: 200%;
+}
+
+@media only screen and (min-width: 600px) {
+  h1{
+    font-size: 75px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 40px;
+  }
 }
   
 @keyframes super-fade {
@@ -34,14 +49,18 @@ h1, h2, h3, h4, h5, p {
 }
 
 .header-text{
-  background: var(--secondary) !important;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px black;
+  background: var(--tertiary) !important;
+  color: var(--primary) !important;
+  border-radius: 15px !important;
+  font-size: xx-large !important;
+  padding: 10px !important;
+  box-shadow: 2px 2px 2px var(--secondary);
   margin-bottom: 20px !important;
 }
+
 /* footer */
   .footer-wrapper{
-    border-top: solid; 
+    border-top: solid var(--tertiary) 5px; 
     color: var(--tertiary);
     background: var(--secondary);
     padding: 5px;
@@ -49,6 +68,7 @@ h1, h2, h3, h4, h5, p {
     flex-wrap: wrap !important;
     justify-content: space-evenly !important;
     align-items: center;
+    z-index: 100;
   }
 
   
@@ -84,6 +104,14 @@ h1, h2, h3, h4, h5, p {
   left: 15px;
 }
 
+.light-dark{
+  margin-top:5px;
+  height:80%;
+  color: var(--secondary) !important;
+  border: solid var(--tertiary) !important;
+  background-color: var(--primary) !important;
+}
+
 .nav-icon:hover,
 .initial-refresh:hover{
   cursor: pointer;
@@ -91,19 +119,21 @@ h1, h2, h3, h4, h5, p {
 }
 
 .banner{
-  background: linear-gradient(-45deg, var(--secondary), #272840, var(--secondary));
+  background: var(--secondary);
   position:fixed;
+  justify-content: center !important;
   text-align: center;
   min-height:40px;
   top: 0;
   z-index: 60;
+  padding: 5px;
   border-bottom: solid; 
   width:100%;
 }
 
 
 .dropdown-outer{
-    background: linear-gradient(-45deg, var(--secondary), #272840, var(--secondary));
+    background: linear-gradient(-45deg, var(--secondary), var(--secondary-alt), var(--secondary));
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex !important;
@@ -137,8 +167,7 @@ h1, h2, h3, h4, h5, p {
   }
   .dropdown-item:hover{
     cursor: pointer;
-    box-shadow: 0px 4px 4px #0d0f65b0 !important;
-    border: solid var(--primary);
+    box-shadow: 4px 4px 4px var(--primary) !important;
   }
 
 }
@@ -148,7 +177,7 @@ h1, h2, h3, h4, h5, p {
     background-color: var(--secondary);
     position:fixed;
     left: 0px;
-    top: 40px;
+    top: 50px;
     height: 95%;
     z-index: 999;
   }
@@ -156,7 +185,7 @@ h1, h2, h3, h4, h5, p {
     cursor: pointer;
     min-width: 80%;
     min-height: 10%;
-    box-shadow: 0px 4px 4px #0d0f65b0 !important;
+    box-shadow: 0px 4px 4px var(--secondary) !important;
     border: solid var(--primary);
   }
 }
@@ -174,7 +203,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .send-mail{
-  box-shadow: 0px 2px 2px #0d0f65b0 !important;
+  box-shadow: 0px 2px 2px var(--secondary) !important;
   display: inline-block !important;
   text-align: center;
   background: var(--secondary) !important;
@@ -198,9 +227,6 @@ h1, h2, h3, h4, h5, p {
 
 
 /* skills style */
-.skills-wrapper {
-  max-width: 90% !important;
-}
 
 .skills-grid {
     padding: 5px;
@@ -210,69 +236,25 @@ h1, h2, h3, h4, h5, p {
     align-items: center;
 }
 
-.skills-icon,
-.active-skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  width: 200px;
-  height: 300px;
-  box-shadow: 4px 4px 4px black;
+.skills-pop-up{
+  background: var(--secondary) !important;
+
+}
+.skills-spacer{
   background: var(--secondary);
-  border: solid var(--tertiary) 1px;
-  border-radius: 15px;
   color: var(--tertiary);
+  padding: 10px;
+  border-radius: 15px;
+  border: solid var(--tertiary);
+  margin:20px;
 }
 
-@media only screen and (max-width: 600px) {
-  .skills-wrapper{
-    max-width: 100%;
-  }
-  .skills-icon,
-  .active-skill {
-    margin: none;
-  }
-
-}
-@keyframes flip {
-  0%{
-    transform-style: preserve-3d;
-  }
-  100%{
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-  }
-
+.skills-spacer:hover{
+  color: var(--secondary) !important;
+  border: solid var(--secondary);
+  background: var(--tertiary) !important;
 }
 
-.flip { 
-  animation: flip .5s both ease-in-out; 
-}
-@keyframes inner-flip {
-  0%{
-    opacity: 0;
-    transform: rotateY(180deg);
-  }
-  90%{
-    opacity: 0;
-    transform: rotateY(180deg);
-  }
-  100%{
-    opacity: 1;
-    transform: rotateY(180deg);
-  }
-
-}
-
-.inner-flip { 
-  animation: inner-flip .3s both ease-in-out; 
-}
-
-.active-skill:hover {
-  cursor: pointer;
-}
 
 
 
@@ -317,10 +299,6 @@ background-color: black !important;
   transition: transform 0.2s ease-in-out;
 
 }
-
-.intro-profile-pic:hover {
-  transform: translateY(-10px);
-}
 .intro-wrapper {
   display: flex;
   justify-content: center;
@@ -329,7 +307,7 @@ background-color: black !important;
 }
 @media only screen and (max-width: 600px) {
   .intro-wrapper{
-    min-height: 1000px !important;
+    min-height: 50px !important; 
   }
 }
 
@@ -351,40 +329,41 @@ background-color: black !important;
   text-align: left;
   display: flex !important;
   flex-wrap: wrap !important;
-  justify-content: center !important;
+  justify-content: space-evenly !important;
 }
 
 .work-exp{
-  background: transparent !important;
+  background: var(--secondary) !important;
   padding: 20px;
-}
-
-
-@keyframes appear {
-  0%{
-    opacity:0;
-  }
-  50%{
-    opacity: 0.5;
-  }
-  100%{
-    opacity:1;
-  }
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: solid  var(--tertiary);
 
 }
 
-.appear { 
-  animation: appear 1s both ease-in-out; 
+.work-exp:hover{
+  cursor: pointer;
 }
+
+@keyframes exp-in {
+  from    { opacity: 0; }
+  to      { opacity: 1; }
+}
+
+.exp-in { 
+  animation: exp-in .5s both ease-in-out; 
+}
+
 
 @media only screen and (min-width: 600px) {
   .work-exp{
     max-width: 50% !important;
+    min-width: 40% !important;
   }
 }
 @media only screen and (max-width: 600px) {
   .work-exp{
-    max-width: 100% !important;
+    width: 100%;
   }
 }
 
@@ -393,7 +372,7 @@ background-color: black !important;
 
 .learning {
   color: var(--tertiary);
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-radius: 15px;
   padding: 8px;
   margin: 5px;
@@ -418,33 +397,19 @@ background-color: black !important;
 }
 
 /* education styles */
-.slider-style{
-  background: transparent;
-  margin-top:20px;
+.edu-wrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thing{
+  padding:10px;
+  margin:10px;
   border-radius: 15px;
-  margin-bottom:20px;
-  border: solid var(--secondary) 10px;
-  box-shadow: 0px 4px 4px black;
-}
-.image-force{
-  position:relative !important;
-  top:50%;
-  margin: auto;
-}
-
-.elements{
-  margin-top:45px;
-  padding:20px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .elements{
-    margin-top:25px;
-  }
-  .image-force{
-    margin-top:10px;
-  }
+  max-width: 45%;
+  border: solid var(--tertiary) 2px;
+  background: var(--secondary);
 }
 
 
@@ -458,38 +423,18 @@ background-color: black !important;
 }
 
 .project{
-  width: auto;
   height: auto;
+  width: auto;
   margin-bottom: 30px;
   margin-top: 30px;
   padding: 20px;
+  border: solid var(--tertiary);
   border-radius: 15px;
-  border: solid var(--secondary) 5px;
+  background: linear-gradient(-45deg, var(--secondary), var(--primary), var(--secondary), var(--primary), var(--secondary));
 }
 
-.hack{
-  background-image: url('https://tse4.mm.bing.net/th/id/OIP.K8Zo_Rn3bOzSwwS2evP-5AHaFj?pid=ImgDet&rs=1');
-  background-size: 100% 100%;
-}
-.magy{
-  background-image: url('https://ennisco.com/wp-content/uploads/2020/02/AdobeStock_294230796.jpeg');
-  background-size: 100% 100%;
-}
-.tree {
-  background-image: url('https://tse1.mm.bing.net/th/id/OIP.FAqLtQqnls5UDVX1_Wt2XgHaEo?pid=ImgDet&rs=1');
-  /* Add the blur effect */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  background-size: 100% 100%;
-}
-
-.force-contrast{
-  z-index: 70;
-  background: var(--secondary);
-  border-radius: 15px;
-  margin: 5px;
-  padding: 5px;
-
+.project-button{
+  background: var(--primary) !important;
 }
 
 

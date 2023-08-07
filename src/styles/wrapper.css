@@ -248,7 +248,7 @@ h1{
   border-radius: 15px;
   border: solid var(--tertiary);
   margin-bottom: 10px;
-  height: 150px;
+  height: 160px;
 }
 @media only screen and (max-width: 600px) {
   .skills-spacer{
@@ -258,7 +258,6 @@ h1{
 @media only screen and (min-width: 600px) {
   .skills-spacer{
     width: 150px;
-    height: 160px;
   }
 }
 

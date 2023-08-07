@@ -1,6 +1,5 @@
 import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
-import {GiFruitTree} from 'react-icons/gi'
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
 import { Button } from 'semantic-ui-react';

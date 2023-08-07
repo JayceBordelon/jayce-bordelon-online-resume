@@ -1,4 +1,5 @@
 import { Icon, Image } from "semantic-ui-react";
+import LOGO from "../styles/washu-logo.png"
 
 
 export const washu = {
@@ -7,13 +8,18 @@ export const washu = {
 
     thingz: [
         {
+            title: `I am a teacher's assistant`,
+            desc: `I teach both an introductory Java course and an advanced C++ course throughout school session. Teaching has become a great passion of mine.`,
+            icon: `book`
+        },
+        {
             title: `I am a bodybuilder`,
             desc: `I have a great pssion for physical health, weightlifting, and bodybuilding. I prefer taking my own approach to the art rather than consulting a coach.`,
             icon: `dna`
         },
         {
             title: `I am a stock & options trader`,
-            desc: `I spend a lot of my free time researching and trading on various options and positions`,
+            desc: `I spend a lot of my free time researching and trading on various options and positions. I am hoping to put togther an undergradutate trading organization soon!`,
             icon: `line graph`
         },
         {
@@ -29,15 +35,14 @@ export const washu = {
     ],
 
 
-    src: 'https://marcomm.wustl.edu/app/uploads/2015/07/3lineposRGB1000-01-1fuxmn8-e1517349537248-300x246.png' // index 3
+    src: LOGO // index 3
 };
 
 export function EducationHelper(){
 
     return(
         <div className="edu-wrap">
-            <h2>{washu.description}</h2>
-            <Image src={washu.src} className="washu-logo"/>
+        <Image src={washu.src} className="super-logo"/>
             {washu.thingz.map(thing=>(
                 <div className="thing">
                 <h2><Icon name={thing.icon} size="large"/></h2>

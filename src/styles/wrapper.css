@@ -289,6 +289,7 @@ background-color: black !important;
   background-image:linear-gradient(-45deg,  var(--primary), var(--secondary) );
   background-size: 110% 110%;
   background-position: 50% 50%;
+  filter: contrast(110%) brightness(90%);
   border: 8px solid transparent;
   padding: 2px;
   border-radius: 50%;
@@ -399,20 +400,23 @@ background-color: black !important;
 /* education styles */
 .edu-wrap{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
   flex-wrap: wrap;
 }
-
-.washu-logo{
-  background:var(--secondary) !important;
-  border-radius: 15px;
+.super-logo{
+  filter: contrast(200%) brightness(90%);
+  max-width: 60% !important;
+  border-radius: 10px;
 }
 
+
 .thing{
-  padding:10px;
-  margin:10px;
+  padding:5px;
+  margin: 5px;
   border-radius: 15px;
   border: solid var(--tertiary) 2px;
+  z-index: 100;
   background: var(--secondary);
 }
 
@@ -424,7 +428,7 @@ background-color: black !important;
 
 @media only screen and (max-width: 600px) {
   .thing{
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -433,12 +437,11 @@ background-color: black !important;
 /* Project Styles */
 .proj-wrap{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .project{
-  height: auto;
-  width: auto;
   margin-bottom: 30px;
   margin-top: 30px;
   padding: 20px;
@@ -446,6 +449,12 @@ background-color: black !important;
   border-radius: 15px;
   background: linear-gradient(-45deg, var(--secondary), var(--primary), var(--secondary), var(--primary), var(--secondary));
 }
+@media only screen and (min-width: 600px) {
+  .project{
+    max-width: 30%;
+  }
+}
+
 
 .project-button{
   background: var(--primary) !important;

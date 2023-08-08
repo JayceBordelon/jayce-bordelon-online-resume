@@ -9,14 +9,14 @@ import { Button } from 'semantic-ui-react';
 export const hackWashu = {
     title: 'Hack WashU Winner',
     desc: `
-    I led a team of three to create an image recognition API integrating Twilio's SMS API, Amazon's Rekognition, and AWS Lambda. `,
+    I led a team of three to create an image recognition API that integrated Twilio's SMS API with Amazon's Rekognition API in an AWS Lambda Function. `,
     comp: <SiMajorleaguehacking size={50}/>,
     src: 'https://devpost.com/software/project-what-is-that',
   }
 
   export const magnifi = {
     title: 'Magnifi Talent',
-    desc: `I spearheaded the software architecture and development for an AI-driven job matching platform. Ask me for a demo! :)`,
+    desc: `I spearheaded the software architecture and development for an AI-driven, job matching platform. Ask me for a live demo!`,
     comp: <SiOpenstreetmap size={50}/>,
     src: 'https://youtu.be/omSyXatmo7s',
   }

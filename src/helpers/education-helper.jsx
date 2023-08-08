@@ -9,27 +9,27 @@ export const washu = {
     thingz: [
         {
             title: `I am a teacher's assistant`,
-            desc: `I teach both an introductory Java course and an advanced C++ course throughout school session. Teaching has become a great passion of mine.`,
+            desc: `Teaching both an introductory Java course and an advanced C++ course throughout school session`,
             icon: `book`
         },
         {
             title: `I am a bodybuilder`,
-            desc: `I have a great passion for physical health, weightlifting, and bodybuilding. I prefer taking my own approach to the art rather than consulting a coach.`,
+            desc: `Writing and following my own workout and nutrition plans for competition`,
             icon: `dna`
         },
         {
             title: `I am a stock & options trader`,
-            desc: `I spend a lot of my free time researching and trading on various options and positions. I am hoping to put together an undergraduate trading organization soon!`,
+            desc: `Learning financial markets by researching and trading options`,
             icon: `line graph`
         },
         {
             title: `I am a pianist`,
-            desc: `Over the past few years, I have become a self-taught pianist with interests in music theory and composition`,
+            desc: `Interested in composition and music theory`,
             icon: `music`
         },
         {
             title: `I am a chess player`,
-            desc: `Since I started playing in high school, I have become fascinated by the limitless strategy and improvisation that goes into a chess game. I still play to this day.`,
+            desc: `Fascinated by the limitless strategy and improvisation that goes into a chess game`,
             icon: `chess`
         },
     ],

@@ -26,12 +26,11 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
       {when: 'June 2023 - Present', 
-      title: 'IT Intern', 
+      title: 'IT - Technical Intern', 
       long: "Information Technology Intern",
       accomplishments: [
-        'Updated and maintained a widely used Ruby on Rails application with a React frontend. (Ongoing)',
-        'Collaborated with international team through GitLab to develop novel features in the company. (Ongoing)',
-        'Built, dockerized, and deployed a Django authentication application on an existing kubernetes cluster. (Ongoing)'
+        'Updated and maintained a Ruby on Rails web application in a fast-paced development environment',
+        'Created, containerized, and deployed a CI/CD Flask application using Docker and Kubernetes'
       ], 
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
@@ -44,9 +43,9 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: `Teacher's Assistant`, 
       long: "Computer Science Lead Teacher's Assistant",
       accomplishments: [
-        'Streamlining learning process of Object Oriented Programming for students.',
-        'Grading student code and exams.',
-        'Hosting and managing other Teacher Assistants to create student led instruction sessions.'
+        `Hosted and managed other Teacher's Assistants to create student led instruction periods`,
+        'Tailored personalized instruction for students of all levels of understanding',
+        'Ensured students fundamental knowledge in Object Oriented Programming'
       ], 
       company: 'WashU', 
       learned: 'Java|Object Oriented Programming|Teaching|Managing',
@@ -58,9 +57,9 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Software Architect', 
       long: "Software Architecture & Development Lead",
       accomplishments: [
-        'Led development and software architecture of a skills based & AI powered job matching application.',
-        'Gained exposure & experience in working with a dynamic start up',
-        'Successfully built out and presented MVP on the MERN stack.'
+        `Built out MVP utilizing skillsEngine's artificial intelligence API `,
+        'Gained exposure & experience in working in a dynamic start up environment',
+        'Launched conversations with numerous investors through carefully crafted and executed pitches'
       ], 
       company: 'Magnifi', 
       learned: 'MERN Stack|HTML|CSS|React|Netlify|Heroku|Software Architecture|Node.js|Express.js|MongoDB',
@@ -72,10 +71,10 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Full Stack Intern', 
       long: "Full Stack Software Development Intern",
       accomplishments: [
-        'Developed and updated Ruby on Rails application for accounting in the trucking industry.',
-        'Consulted with 18 customers to develop novel features according to their desire.',
-        'Streamlined accounting processes through generation of 37 dynamic CSV exports.',
-        'Collaborated through GitHub for large application updates.'
+        'Consulted with 18 customers to develop novel features according to their desire',
+        'Streamlined accounting processes through generation of 37 dynamic CSV exports',
+        'Implemented novel feature to allow for data synchronization on over 4,000 user accounts',
+        'Collaborated with international team through GitHub for large application updates'
       ], 
       company: 'Command Alkon', 
       learned: 'Ruby on Rails|PostgreSQL|Bootstrap|JavaScript|Heroku|HTML|CSS',
@@ -87,9 +86,9 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Backend Intern', 
       long: "Backend Software Development Intern",
       accomplishments: [
-        'Developed API integration with an OCR to streamline data entry process.',
-        'Automated accounting process for 26 company specific ticket types.',
-        'Outlined 47 company specific data entry requests for existing workers.'
+        'Developed API integration with an OCR to streamline data entry process',
+        'Automated accounting process for 26 company specific ticket types',
+        'Outlined 47 company specific data entry requests for existing workers'
   
       ], 
       company: 'Command Alkon', 
@@ -102,12 +101,12 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Data Entry Intern', 
       long: "Data Entry Intern",
       accomplishments: [
-        'Collaborated with International data entry team.',
-        'Handled data degradation on over 1,764 entries.',
+        'Collaborated with International data entry team',
+        'Handled data degradation on over 1,764 entries',
         'Exposed myself to PSQL while validating financially sensitive information'
       ], 
       company: 'Ruckit', 
-      learned: 'PostgreSQL|Data Validation|Data Analysis',
+      learned: 'PostgreSQL|GitHub|Data Validation|Data Analysis',
       src:<BsDatabaseUp size={100}/>,
       show: false,
       logo: RuckitLogo},
@@ -116,9 +115,9 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Calculus Tutor', 
       long: "High School Calculus Tutor",
       accomplishments: [
-        'Developed website to advertize and schedule tutoring sessions.',
-        'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher.',
-        'Expanded my service to include Geometry, Advanced Algebra, and Trigonometry.'
+        'Developed website to advertize and schedule tutoring sessions',
+        'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher',
+        'Expanded my service to include Geometry, Advanced Algebra, and Trigonometry'
       ], 
       company: 'Self Employed', 
       learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',

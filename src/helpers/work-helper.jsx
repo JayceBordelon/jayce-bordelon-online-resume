@@ -26,8 +26,8 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
       {when: 'June 2023 - Present', 
-      title: 'IT - Technical Intern', 
-      long: "Information Technology Intern",
+      title: 'Software Engineering Intern', 
+      long: "Core Infrastructure - Software Engineering Intern",
       accomplishments: [
         'Updated and maintained a Ruby on Rails web application in a fast-paced development environment',
         'Automated the synchronization of over 3,000 LDAP instances with a centralized SQL database',

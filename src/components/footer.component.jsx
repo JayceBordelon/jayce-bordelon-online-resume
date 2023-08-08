@@ -12,14 +12,14 @@ export default class Footer extends Component {
       }
       getResume = () => {
         try{
-          fetch('JayceBordelonsResume.pdf').then(response => {
+          fetch(`JayceBordelon'sResume.pdf`).then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'JayceBordelon.pdf';
+                alink.download = 'JayceBordelonResume.pdf';
                 alink.click();
             })
           })

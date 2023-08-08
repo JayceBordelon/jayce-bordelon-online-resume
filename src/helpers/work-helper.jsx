@@ -141,7 +141,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       <div className="work-wrap">
 
       {experiences.map((exp, index) => (
-        <div className={!exp.show ? "force-dimension work-exp fancy-boxen":"work-exp"} onClick={()=>updateExp(index)}>
+        <div className={!exp.show ? "force-dimension work-exp fancy-boxen exp-in":"work-exp"} onClick={()=>updateExp(index)}>
             {exp.show ? (<>
             <h2>{exp.src}</h2>
             <h2>{exp.title}</h2>

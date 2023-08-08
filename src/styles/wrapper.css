@@ -8,6 +8,7 @@
 
 html, body {
   background-color: var(--primary);
+  font-family: sans-serif;
 
 }
 
@@ -23,8 +24,7 @@ h1{
 }
 
 
-.fancy-boxen{
-}
+
 .fancy-boxen:hover{
   box-shadow: var(--secondary) 0px 30px 90px !important;
 }
@@ -254,7 +254,7 @@ h1{
   border-radius: 15px;
   border: solid var(--tertiary);
   margin-bottom: 10px;
-  height: 160px;
+  height: 170px;
 }
 @media only screen and (max-width: 600px) {
   .skills-spacer{
@@ -271,6 +271,17 @@ h1{
   color: var(--secondary) !important;
   border: solid var(--secondary);
   background: var(--tertiary) !important;
+}
+
+.skill-name{
+  font-size: large;
+  font-weight:700;
+}
+
+.years{
+  font-size: medium;
+
+
 }
 
 
@@ -348,14 +359,14 @@ background-color: black !important;
   text-align: left;
   display: flex !important;
   flex-wrap: wrap !important;
-  justify-content: space-evenly !important;
+  justify-content: center !important;
 }
 
 .work-exp{
   background: var(--secondary) !important;
   padding: 20px;
-  margin-bottom: 20px;
   min-height: 650px;
+
 }
 .center-stuffs{
   text-align: center !important;
@@ -364,6 +375,17 @@ background-color: black !important;
 .work-exp:hover{
   cursor: pointer;
 }
+
+@keyframes glow {
+  from    { opacity: 0;
+            transform: translateY(30px); }
+  to      { opacity: 1; }
+}
+
+.glow { 
+  animation: exp-in .5s both ease-in-out; 
+}
+
 
 @keyframes exp-in {
   from    { opacity: 0;

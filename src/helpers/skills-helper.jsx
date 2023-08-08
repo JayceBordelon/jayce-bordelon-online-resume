@@ -3,7 +3,7 @@ import { Label,  } from 'semantic-ui-react'
 //icons
 import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
-import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte} from 'react-icons/si'
+import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql} from 'react-icons/si'
 import {FaLinux, FaGit} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 
@@ -46,11 +46,12 @@ export function SkillsHelper() {
         {name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, rel: titles.mag, yrs: ' 1 year'},
         {name: 'Python Django', comp: <TbBrandDjango size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
         {name: 'Git', comp: <FaGit size={skillSize}/>, rel: titles.iti, yrs: ' 2 years'},
-        {name: 'APi Development', comp: <TbApi size={skillSize}/>, rel: titles.mag, yrs: ' 2 years'},
+        {name: 'API Development', comp: <TbApi size={skillSize}/>, rel: titles.mag, yrs: ' 2 years'},
         {name: 'OCR Technology', comp: <GiArtificialHive size={skillSize}/>, rel: titles.bac, yrs: ' 2 years'},
-        {name: 'Linux (WSL)', comp: <FaLinux size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'PostgreSQL (PSQL)', comp: <SiPostgresql size={skillSize}/>, rel: titles.dat, yrs: ' 3 years'},
+        {name: 'Linux', comp: <FaLinux size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
+        {name: 'PostgreSQL', comp: <SiPostgresql size={skillSize}/>, rel: titles.dat, yrs: ' 3 years'},
         {name: 'AWS Lambda', comp: <SiAwslambda size={skillSize}/>, rel: titles.own, yrs: ' 1 year'},
+        {name: 'SQL', comp: <SiMysql size={skillSize}/>, rel: titles.own, yrs: ' 2 years'},
       ]
 
       function sortByExperience(a, b) {
@@ -72,15 +73,15 @@ export function SkillsHelper() {
     
     return (
         <>
-        {generateHeader("Versed in applicable technologies")}
+        {generateHeader("Experienced in applicable technologies")}
         <div>
         <div id="skills" className="skills-wrapper">
             <div className="skills-grid">
             {languages.sort(sortByExperience).map(lang=>(
               <span className="skills-spacer fancy-boxen">
               {lang.comp}
-              <div>{lang.name}</div>
-              {lang.yrs} of experience
+              <div className="skill-name">{lang.name}</div>
+              <div className="years">{lang.yrs}</div>
               </span>
             ))}
             </div>

@@ -30,6 +30,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       long: "Information Technology Intern",
       accomplishments: [
         'Updated and maintained a Ruby on Rails web application in a fast-paced development environment',
+        'Automated the synchronization of over 3,000 LDAP instances with a centralized SQL database',
         'Created, containerized, and deployed a CI/CD Flask application using Docker and Kubernetes'
       ], 
       company: 'Synopsys Inc.', 
@@ -72,7 +73,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       long: "Full Stack Software Development Intern",
       accomplishments: [
         'Consulted with 18 customers to develop novel features according to their desire',
-        'Streamlined accounting processes through generation of 37 dynamic CSV exports',
+        'Automated accounting processes through generation of 37 dynamic CSV exports',
         'Implemented novel feature to allow for data synchronization on over 4,000 user accounts',
         'Collaborated with international team through GitHub for large application updates'
       ], 

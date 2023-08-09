@@ -27,7 +27,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
     const [experiences, setExperiences] = useState([
       {when: 'June 2023 - Present', 
       title: 'Software Engineering Intern', 
-      long: "Core Infrastructure - Software Engineering Intern",
+      long: "Core Infrastructure Software Engineering Intern",
       accomplishments: [
         'Updated and maintained a Ruby on Rails web application in a fast-paced development environment',
         'Automated the synchronization of over 3,000 LDAP instances with a centralized SQL database',
@@ -70,7 +70,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   
       {when: 'May 2022 - August 2022', 
       title: 'Full Stack Intern', 
-      long: "Full Stack Software Development Intern",
+      long: "Full Stack Software Engineering Intern",
       accomplishments: [
         'Consulted with 18 customers to develop novel features according to their desire',
         'Automated accounting processes through generation of 37 dynamic CSV exports',
@@ -85,7 +85,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   
       {when: 'May 2021 - August 2021', 
       title: 'Backend Intern', 
-      long: "Backend Software Development Intern",
+      long: "Backend Software Engineering Intern",
       accomplishments: [
         'Developed API integration with an OCR to streamline data entry process',
         'Automated accounting process for 26 company specific ticket types',
@@ -137,14 +137,14 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   
     return (
       <div>
-      {generateHeader("7 Real world experiences")}
+      {generateHeader("Real world software experiences")}
       <div className="work-wrap">
 
       {experiences.map((exp, index) => (
         <div className={!exp.show ? "force-dimension work-exp fancy-boxen exp-in":"work-exp"} onClick={()=>updateExp(index)}>
             {exp.show ? (<>
             <h2>{exp.src}</h2>
-            <h2>{exp.title}</h2>
+            <h2>{exp.long}</h2>
             <h2><strong>@ {exp.company} </strong></h2>
             <h3>{exp.when}</h3></>) : (
               <span className="center-stuffs">

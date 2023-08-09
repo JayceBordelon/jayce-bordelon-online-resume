@@ -19,9 +19,6 @@ h1, h2, h3, h4, h5, p {
   color: var(--tertiary);
 }
 
-h1{
-  font-weight: 200%;
-}
 
 
 
@@ -56,8 +53,12 @@ h1{
 }
 
 .header-text{
-  background: var(--tertiary) !important;
-  color: var(--primary) !important;
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--secondary) 0%,
+    var(--primary) 100%
+  ) !important;
+  color: #0b0c10 !important;
   font-size: xx-large !important;
   padding: 10px !important;
   box-shadow: var(--secondary) 0px 30px 90px;;

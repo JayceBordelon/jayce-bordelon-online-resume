@@ -73,7 +73,7 @@ export function SkillsHelper() {
     
     return (
         <>
-        {generateHeader("Experienced in applicable technologies")}
+        {generateHeader("Experience in applicable technologies")}
         <div>
         <div id="skills" className="skills-wrapper">
             <div className="skills-grid">

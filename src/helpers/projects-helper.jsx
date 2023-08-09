@@ -35,7 +35,7 @@ export const hackWashu = {
     const allProjects = [hackWashu , magnifi , familyTree]
     return (
       <>
-      {generateHeader("3 of my projects")}
+      {generateHeader("Some of my work")}
       <div className="proj-wrap">
         {allProjects.map(project=>(
           <>

@@ -21,9 +21,8 @@ h1, h2, h3, h4, h5, p {
 
 
 
-
 .fancy-boxen:hover{
-  box-shadow: var(--secondary) 0px 30px 90px !important;
+  box-shadow: #416a59 0px 54px 55px, #416a59ad 0px -12px 30px, #416a5982  0px 4px 6px, #416a5956 0px 12px 13px, #416a5921 0px -3px 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -56,9 +55,9 @@ h1, h2, h3, h4, h5, p {
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
     var(--secondary) 0%,
-    var(--primary) 100%
+    var(--tertiary) 100%
   ) !important;
-  color: #0b0c10 !important;
+  color: var(--primary) !important;
   font-size: xx-large !important;
   padding: 10px !important;
   box-shadow: var(--secondary) 0px 30px 90px;;
@@ -161,11 +160,10 @@ h1, h2, h3, h4, h5, p {
     background-color: var(--secondary);
     position:fixed;
     border-bottom-left-radius: 15px;
-    width: 225px;
+    width: 350px;
     right: 0px;
     top: 40px;
-    border-left: solid;
-    border-bottom:solid;
+    border: solid var(--secondary);
   }
   .dropdown-item{
     width:100%;
@@ -173,7 +171,7 @@ h1, h2, h3, h4, h5, p {
   }
   .dropdown-item:hover{
     cursor: pointer;
-    box-shadow: 4px 4px 4px var(--primary) !important;
+    opacity: .5;
   }
 
 }
@@ -193,11 +191,12 @@ h1, h2, h3, h4, h5, p {
     z-index: 999;
   }
   .dropdown-item{
-    cursor: pointer;
     min-width: 80%;
     min-height: 10%;
-    box-shadow: 0px 4px 4px var(--secondary) !important;
-    border: solid var(--primary);
+  }
+  .dropdown-item:hover{
+    cursor: pointer;
+    opacity: .5;
   }
 }
 
@@ -367,7 +366,6 @@ background-color: black !important;
   background: var(--secondary) !important;
   padding: 20px;
   min-height: 650px;
-
 }
 .center-stuffs{
   text-align: center !important;

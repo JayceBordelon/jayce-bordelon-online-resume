@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, p {
   border-radius: 15px;
   border: solid var(--tertiary);
   margin-bottom: 10px;
-  height: 180px;
+  height: 190px;
 }
 @media only screen and (max-width: 600px) {
   .skills-spacer{

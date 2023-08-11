@@ -29,9 +29,10 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Software Engineering Intern', 
       long: "Core Infrastructure Software Engineering Intern",
       accomplishments: [
-        'Updated and maintained a Ruby on Rails web application in a fast-paced development environment',
-        'Automated the synchronization of over 3,000 LDAP instances with a centralized SQL database',
-        'Created, containerized, and deployed a CI/CD Flask application using Docker and Kubernetes'
+        'Developed 4 innovative features for a Ruby on Rails application',
+        'Automated the synchronization of over 20,000 LDAP instances with a centralized SQL database',
+        `Architected, created, containerized, and deployed a visualization application for our Kubernetes cluster's API`,
+        'Overcame the sharp learning curves of Ubuntu servers and terminals.'
       ], 
       company: 'Synopsys Inc.', 
       learned: 'Python|Ruby on Rails|React|Docker|Kubernetes|Git|MySQL|Ubuntu|Linux|SSH|CSS',
@@ -46,7 +47,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       accomplishments: [
         `Hosted and managed other Teacher's Assistants to create student led instruction periods`,
         'Tailored personalized instruction for students of all levels of understanding',
-        'Ensured students fundamental knowledge in Object Oriented Programming'
+        'Reviewed and requested specific alterations within the course structure and assignment base'
       ], 
       company: 'WashU', 
       learned: 'Java|Object Oriented Programming|Teaching|Managing',

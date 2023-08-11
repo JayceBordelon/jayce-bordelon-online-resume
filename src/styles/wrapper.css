@@ -1,7 +1,7 @@
 /*global vars/themes */
 :root {
   --primary: #0b0c10; /*background*/
-  --secondary: #416a59;
+  --secondary: #41666a;
   --tertiary:  #c5c6c7;
 }
 
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, p {
 
 
 .fancy-boxen:hover{
-  box-shadow: #416a59 0px 54px 55px, #416a59ad 0px -12px 30px, #416a5982  0px 4px 6px, #416a5956 0px 12px 13px, #416a5921 0px -3px 5px;
+  box-shadow: #41666a 0px 54px 55px, #41666ac4 0px -12px 30px, #41666a  0px 4px 6px, #41666a8c 0px 12px 13px, #41666a31 0px -3px 5px;
 }
 
 @media only screen and (min-width: 600px) {

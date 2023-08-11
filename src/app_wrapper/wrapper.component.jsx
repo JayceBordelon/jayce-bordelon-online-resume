@@ -65,12 +65,12 @@ export default class Wrapper extends Component {
     };
     setLight = (rooty) => {
       rooty.style.setProperty('--primary', '#c5c6c7');
-      rooty.style.setProperty('--secondary', '#416a59');
+      rooty.style.setProperty('--secondary', '#41666a');
       rooty.style.setProperty('--tertiary', '#0b0c10');
     }
     setDark = (rooty) => {
       rooty.style.setProperty('--primary', '#0b0c10');
-      rooty.style.setProperty('--secondary', '#416a59');
+      rooty.style.setProperty('--secondary', '#41666a');
       rooty.style.setProperty('--tertiary', '#c5c6c7');
     }
     toggleMode = () =>{

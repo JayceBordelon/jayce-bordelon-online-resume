@@ -7,7 +7,7 @@ import Typer from './typer.component';
 
 //styles
 import '../styles/wrapper.css'
-import Picture from '../styles/suit.JPG'
+import Picture from '../styles/Data_center.jpg'
 
 
 export default class Intro extends Component {

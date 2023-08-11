@@ -116,8 +116,8 @@ export default class Wrapper extends Component {
     ];
     return (
       <>
-      <div className="banner super-fade">
-        <h2 className="initial-refresh super-fade" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
+      <div className="banner nav-in">
+        <h2 className="initial-refresh" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
         <Button onClick={()=>this.toggleMode()} className="light-dark" circular icon={this.state.mode==="light" ? "sun": "moon"}></Button>
         <span className="nav-icon super-fade" onClick={()=>this.setState({show_menu: !this.state.show_menu})}>
             {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }

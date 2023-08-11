@@ -2,7 +2,7 @@ import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 
 
@@ -22,15 +22,18 @@ export const hackWashu = {
   }
 
   export const familyTree = {
-    title: 'Family Tree (Coming Soon)',
+    title: 'Family Tree',
     desc: `I am developing a user-friendly family tree application using the NEXT.js Stack to address concerns about the physical nature of our lineage documentation.`,
-    comp: <h3>Building...</h3>,
+    comp: <span><Icon name="cog loading" clasName="loader-icon" size="big"/> </span>,
   }
 
 
   export function ProjectsHelper(){
     const redirectTo = (projSrc) => {
-      window.open(projSrc, "_blank");
+      if (projSrc){
+        window.open(projSrc, "_blank");
+      }
+      
     }
     const allProjects = [hackWashu , magnifi , familyTree]
     return (
@@ -42,7 +45,8 @@ export const hackWashu = {
           <div className={`project fancy-boxen`}>
             <h2>{project.title}</h2>
             <h3>{project.desc}</h3>
-            {project.title!=='Family Tree (Coming Soon)' &&  (<Button onClick={()=>redirectTo(project.src)} className="send-mail cool-button project-button">{project.comp}</Button>)}
+            <Button onClick={()=>redirectTo(project.src)} className="send-mail cool-button project-button">{project.comp}</Button>
+            {project.title === 'Family Tree' && (<p>Coming soon...</p>)}
           </div>
           <div className="burrer"/>
           </>

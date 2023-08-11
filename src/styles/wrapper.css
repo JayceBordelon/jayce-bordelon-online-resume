@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, p {
 }
   
 @keyframes super-fade {
-  from    { opacity: 0; }
+  from    { opacity: 0;
+            transform: translateY(-50px); }
   to      { opacity: 1; }
 }
 
@@ -153,6 +154,18 @@ h1, h2, h3, h4, h5, p {
   justify-content: center !important;
   align-items: center !important;
 }
+@keyframes nav-in {
+  from    { opacity: 0;
+            width: 0px;}
+  to      { opacity: 1;
+             }
+}
+
+.nav-in { 
+  animation: nav-in 2s both ease-in-out; 
+}
+
+
 /*Desktop Dropdown menu */
 
 @media only screen and (min-width: 600px) {
@@ -254,7 +267,7 @@ h1, h2, h3, h4, h5, p {
   border-radius: 15px;
   border: solid var(--tertiary);
   margin-bottom: 10px;
-  height: 170px;
+  height: 180px;
 }
 @media only screen and (max-width: 600px) {
   .skills-spacer{
@@ -280,8 +293,21 @@ h1, h2, h3, h4, h5, p {
 
 .years{
   font-size: medium;
+}
 
+.prof-bar{
+  margin-top: 5px;
+  min-width: 90%;
+  height: 20px;
+  border: solid var(--secondary);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
+.prof-bar-over{
+  text-align: right;
+  border-right: var(--tertiary);
+  height: 100%;
+  background-image: linear-gradient( to right, var(--tertiary), var(--secondary), var(--primary));
 }
 
 
@@ -328,6 +354,16 @@ background-color: black !important;
   margin-top: 40px;
   transition: transform 0.2s ease-in-out;
 
+}
+
+@keyframes me-in {
+  from    { opacity: 0;
+            height: 0px;}
+  to      { opacity: 1; }
+}
+
+.me-in { 
+  animation: me-in 1s both ease-in-out; 
 }
 .intro-wrapper {
   display: flex;
@@ -487,7 +523,7 @@ background-color: black !important;
 .proj-wrap{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .project{
@@ -499,6 +535,7 @@ background-color: black !important;
 }
 @media only screen and (min-width: 600px) {
   .project{
+    height: 350px;
     max-width: 30%;
   }
 }
@@ -506,6 +543,9 @@ background-color: black !important;
 
 .project-button{
   background: var(--primary) !important;
+}
+.loader-icon{
+  position: absolute !important;
 }
 
 

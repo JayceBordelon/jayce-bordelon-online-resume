@@ -138,7 +138,7 @@ export default class Contact extends Component {
       return (
         <>
         <Divider horizontal inverted className="divider-spacing"><p><Icon name="mail" size="big"/></p></Divider>
-        <Container id="contact" className="contact-wrapper">
+        <Container id="contact" className="contact-wrapper exp-in">
         {generateHeader("Get In Touch")}
         <p>A successful submission of this form will email me its content, and automate a reply to you as verification.</p>
           <Form >

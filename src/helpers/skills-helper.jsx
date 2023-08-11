@@ -30,33 +30,33 @@ export const titles = {
 export function SkillsHelper() {
   const skillSize=80
     const languages=[
-        {name: 'CSS', comp: <DiCss3 size={skillSize}/>, rel: titles.mag, yrs: ' 3 years'},
-        {name: 'Node.js', comp: <DiNodejs size={skillSize}/>, rel: titles.mag, yrs: ' 1 year'},
-        {name: 'Python', comp: <DiPython size={skillSize}/>, rel: titles.iti, yrs: ' 3 years'},
-        {name: 'React.js', comp: <DiReact size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'HTML', comp: <DiHtml5 size={skillSize}/>, rel: titles.tut, yrs: ' 4 years'},
-        {name: 'Java', comp: <DiJava size={skillSize}/>, rel: titles.ass, yrs: ' 4 years'},
-        {name: 'JavaScript', comp: <DiJavascript1 size={skillSize}/>, rel: titles.ful, yrs: ' 4 years'},
-        {name: 'C++', comp: <TbBrandCpp size={skillSize}/>, rel: titles.edu, yrs: ' 1 year'},
-        {name: 'AVR Assembly', comp: <SiAssemblyscript size={skillSize}/>, rel: titles.edu, yrs: ' 1 year'},
-        {name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'Docker', comp: <SiDocker size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'Svelte', comp: <SiSvelte size={skillSize}/>, rel: titles.own, yrs: ' 1 year'},
-        {name: 'Ruby on Rails', comp: <DiRuby size={skillSize}/>, rel: titles.ful, yrs: ' 3 years'},
-        {name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, rel: titles.mag, yrs: ' 1 year'},
-        {name: 'Python Django', comp: <TbBrandDjango size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'Git', comp: <FaGit size={skillSize}/>, rel: titles.iti, yrs: ' 2 years'},
-        {name: 'API Development', comp: <TbApi size={skillSize}/>, rel: titles.mag, yrs: ' 2 years'},
-        {name: 'OCR Technology', comp: <GiArtificialHive size={skillSize}/>, rel: titles.bac, yrs: ' 2 years'},
-        {name: 'Linux', comp: <FaLinux size={skillSize}/>, rel: titles.iti, yrs: ' 1 year'},
-        {name: 'PostgreSQL', comp: <SiPostgresql size={skillSize}/>, rel: titles.dat, yrs: ' 3 years'},
-        {name: 'AWS Lambda', comp: <SiAwslambda size={skillSize}/>, rel: titles.own, yrs: ' 1 year'},
-        {name: 'SQL', comp: <SiMysql size={skillSize}/>, rel: titles.own, yrs: ' 2 years'},
+        {name: 'CSS', comp: <DiCss3 size={skillSize}/>, rel: titles.mag, yrs: ' 3 years', prof:80},
+        {name: 'Node.js', comp: <DiNodejs size={skillSize}/>, rel: titles.mag, yrs: ' 1 year', prof:70},
+        {name: 'Python', comp: <DiPython size={skillSize}/>, rel: titles.iti, yrs: ' 3 years', prof:60},
+        {name: 'React.js', comp: <DiReact size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:98},
+        {name: 'HTML', comp: <DiHtml5 size={skillSize}/>, rel: titles.tut, yrs: ' 4 years', prof:90},
+        {name: 'Java', comp: <DiJava size={skillSize}/>, rel: titles.ass, yrs: ' 4 years', prof:97},
+        {name: 'JavaScript', comp: <DiJavascript1 size={skillSize}/>, rel: titles.ful, yrs: ' 4 years', prof:85},
+        {name: 'C++', comp: <TbBrandCpp size={skillSize}/>, rel: titles.edu, yrs: ' 1 year', prof:70},
+        {name: 'Assembly', comp: <SiAssemblyscript size={skillSize}/>, rel: titles.edu, yrs: ' 1 year', prof:50},
+        {name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
+        {name: 'Docker', comp: <SiDocker size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
+        {name: 'Svelte', comp: <SiSvelte size={skillSize}/>, rel: titles.own, yrs: ' 1 year', prof:55},
+        {name: 'Ruby on Rails', comp: <DiRuby size={skillSize}/>, rel: titles.ful, yrs: ' 3 years', prof:99},
+        {name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, rel: titles.mag, yrs: ' 1 year', prof:90},
+        {name: 'Django', comp: <TbBrandDjango size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:70},
+        {name: 'Git', comp: <FaGit size={skillSize}/>, rel: titles.iti, yrs: ' 2 years', prof:92},
+        {name: 'API', comp: <TbApi size={skillSize}/>, rel: titles.mag, yrs: ' 2 years', prof:95},
+        {name: 'OCR', comp: <GiArtificialHive size={skillSize}/>, rel: titles.bac, yrs: ' 2 years', prof:84},
+        {name: 'Linux', comp: <FaLinux size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:75},
+        {name: 'PostgreSQL', comp: <SiPostgresql size={skillSize}/>, rel: titles.dat, yrs: ' 3 years', prof:78},
+        {name: 'AWS Lambda', comp: <SiAwslambda size={skillSize}/>, rel: titles.own, yrs: ' 1 year', prof:64},
+        {name: 'SQL', comp: <SiMysql size={skillSize}/>, rel: titles.own, yrs: ' 2 years', prof:88},
       ]
 
       function sortByExperience(a, b) {
-        const yearsA = parseInt(a.yrs);
-        const yearsB = parseInt(b.yrs);
+        const yearsA = a.prof;
+        const yearsB = b.prof;
       
         if (yearsA > yearsB) {
           return -1; // a comes before b
@@ -82,6 +82,12 @@ export function SkillsHelper() {
               {lang.comp}
               <div className="skill-name">{lang.name}</div>
               <div className="years">{lang.yrs}</div>
+              <div className="prof-bar">
+                <div className='prof-bar-over' style={{width: `${lang.prof}%`}}>
+                  {lang.prof}%
+
+                </div>
+              </div>
               </span>
             ))}
             </div>

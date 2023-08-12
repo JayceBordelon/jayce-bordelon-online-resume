@@ -5,7 +5,7 @@ import '../styles/wrapper.css';
 
 export default class Footer extends Component {
     getLinked = () =>{
-        window.open("https://www.linkedin.com/in/jayce-bordelon-680278234", "_blank");
+        window.open("https://www.linkedin.com/in/jaycebordelon", "_blank");
       }
       getGit = () =>{
         window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");

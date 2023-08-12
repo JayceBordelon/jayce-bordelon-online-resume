@@ -356,6 +356,9 @@ background-color: black !important;
 
 }
 
+.intro-profile-pic:hover{
+  cursor: pointer;
+}
 @keyframes me-in {
   from    { opacity: 0;
             height: 0px;}

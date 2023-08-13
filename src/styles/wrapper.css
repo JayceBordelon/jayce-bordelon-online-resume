@@ -78,6 +78,22 @@ h1, h2, h3, h4, h5, p {
     z-index: 100;
   }
 
+  .footer-text{
+    text-align: center;
+    position:relative;
+    padding: 5px;
+    font-size: x-small;
+    font-family: inherit;
+    color: var(--tertiary);
+    background: var(--secondary);
+    bottom:0;
+    margin-left: auto;
+  }
+
+  .footer-text:hover{
+    cursor: pointer;
+  }
+
   
 
 /*general*/

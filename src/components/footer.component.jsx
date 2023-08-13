@@ -4,6 +4,17 @@ import '../styles/wrapper.css';
 
 
 export default class Footer extends Component {
+    state = {
+      foot: "This is completely normal footer text... No need to click me."
+    }
+    fetchFact = () => {
+      this.setState({ foot: "Getting fun quote for you :) ..." });
+      
+      fetch('https://api.quotable.io/quotes/random')
+        .then(res => res.json())
+        .then(jsey => this.setState({ foot: `"${jsey[0].content}" - ${jsey[0].author}` }))
+        .catch(error => this.setState({ foot: "Failed message request :(" }));
+    }
     getLinked = () =>{
         window.open("https://www.linkedin.com/in/jaycebordelon", "_blank");
       }
@@ -34,6 +45,7 @@ export default class Footer extends Component {
     render() {
   
         return (
+          <>
           <div className="footer-wrapper">
             <div>
             <div>
@@ -63,6 +75,8 @@ export default class Footer extends Component {
                 <p><Icon name="phone" />+1(832)260-5650</p>
                 </div>
             </div>
+            <div className="footer-text" onClick={() => this.fetchFact()}><em>{this.state.foot}</em></div>
+            </>
 
         )
       }

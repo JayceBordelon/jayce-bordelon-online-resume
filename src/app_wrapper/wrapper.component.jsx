@@ -116,6 +116,7 @@ export default class Wrapper extends Component {
     ];
     return (
       <>
+      <div ref={this.introRef}/>
       <div className="banner nav-in">
         <h2 className="initial-refresh" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
         <Button onClick={()=>this.toggleMode()} className="light-dark" circular icon={this.state.mode==="light" ? "sun": "moon"}></Button>
@@ -123,11 +124,9 @@ export default class Wrapper extends Component {
             {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }
         </span>
       </div>
-        
         <Container textAlign="center" className="super-container super-fade">
           <Segment inverted className="trans">
 
-            <div ref={this.introRef}/>
             <Intro />
 
             <div ref={this.workRef}/>
@@ -149,7 +148,7 @@ export default class Wrapper extends Component {
         </Container>
         <Footer />
         {this.state.show_menu && 
-        (<span className="dropdown-outer">
+        (<span className="dropdown-outer drop-in">
           {menu_items.map(item =>(
             <div className="dropdown-item" onClick={()=>this.scrollToElement(item.ref)}>
               <span className="dropdown-item-inner"><h2><Icon name={item.icon}/>{item.name}</h2> </span>

@@ -178,7 +178,22 @@ h1, h2, h3, h4, h5, p {
 }
 
 .nav-in { 
-  animation: nav-in 2s both ease-in-out; 
+  animation: nav-in 1.5s both ease-in-out; 
+}
+
+@keyframes drop-in {
+  0%{
+    opacity: 0;
+    width: 10%;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.drop-in { 
+  animation: drop-in 0.5s both ease-in-out; 
 }
 
 
@@ -188,11 +203,11 @@ h1, h2, h3, h4, h5, p {
   .dropdown-outer{
     background-color: var(--secondary);
     position:fixed;
-    border-bottom-left-radius: 15px;
+    border-bottom: solid var(--primary) 5px;
+    box-shadow: 0px 10px 10px var(--primary);
     width: 350px;
     right: 0px;
     top: 40px;
-    border: solid var(--secondary);
   }
   .dropdown-item{
     width:100%;

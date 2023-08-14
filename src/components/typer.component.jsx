@@ -24,7 +24,7 @@ const Typer = ({text}) => {
         }}
         onInit={(typewriter) => {
             typewriter
-            .pauseFor(1000)
+            .pauseFor(500)
             .typeString(text)
             .start();
         }}

@@ -1,9 +1,12 @@
 import React from 'react'
-import { Label,  } from 'semantic-ui-react'
+import { Label  } from 'semantic-ui-react'
+
+import { useInView } from 'react-intersection-observer';
+import Typer from '../components/typer.component';
 //icons
-import { DiCss3, DiNodejs, DiPython, DiReact, DiRuby, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
+import { DiCss3, DiNodejs, DiPython, DiReact, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
-import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql} from 'react-icons/si'
+import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails} from 'react-icons/si'
 import {FaLinux, FaGit} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 
@@ -21,13 +24,17 @@ export const titles = {
   };
 
   export const  generateHeader = (input) => {
-    return (<Label className="header-text">{input}</Label>);
+    return (<Label className="header-text"><Typer text={input}/></Label>);
   }
 
 
 
 
 export function SkillsHelper() {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
   const skillSize=80
     const languages=[
         {name: 'CSS', comp: <DiCss3 size={skillSize}/>, rel: titles.mag, yrs: ' 3 years', prof:80},
@@ -42,7 +49,7 @@ export function SkillsHelper() {
         {name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
         {name: 'Docker', comp: <SiDocker size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
         {name: 'Svelte', comp: <SiSvelte size={skillSize}/>, rel: titles.own, yrs: ' 1 year', prof:55},
-        {name: 'Ruby on Rails', comp: <DiRuby size={skillSize}/>, rel: titles.ful, yrs: ' 3 years', prof:99},
+        {name: 'Ruby on Rails', comp: <SiRubyonrails size={skillSize}/>, rel: titles.ful, yrs: ' 3 years', prof:99},
         {name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, rel: titles.mag, yrs: ' 1 year', prof:90},
         {name: 'Django', comp: <TbBrandDjango size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:70},
         {name: 'Git', comp: <FaGit size={skillSize}/>, rel: titles.iti, yrs: ' 2 years', prof:92},
@@ -68,13 +75,12 @@ export function SkillsHelper() {
       }
 
 
-
     
     
     return (
         <>
         {generateHeader("Experience in applicable technologies")}
-        <div>
+        <div ref={ref}>
         <div id="skills" className="skills-wrapper">
             <div className="skills-grid">
             {languages.sort(sortByExperience).map(lang=>(
@@ -83,9 +89,14 @@ export function SkillsHelper() {
               <div className="skill-name">{lang.name}</div>
               <div className="years">{lang.yrs}</div>
               <div className="prof-bar">
-                <div className='prof-bar-over' style={{width: `${lang.prof}%`}}>
-                  {lang.prof}%
-
+              <div
+                    className='prof-bar-over'
+                    style={{
+                      width: inView ? `${lang.prof}%` : '0%',
+                      transition: inView ? 'width 1.5s ease-in-out' : 'none',
+                    }}
+                  >
+                  <p>{lang.prof}%</p>
                 </div>
               </div>
               </span>

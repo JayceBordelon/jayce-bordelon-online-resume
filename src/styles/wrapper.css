@@ -118,6 +118,18 @@ h1, h2, h3, h4, h5, p {
   z-index: 61;
 }
 
+@keyframes spill {
+  from    { 
+            
+            }
+  to      { 
+    transform: rotateX(90deg) !important;
+  }
+}
+
+.spill { 
+  animation: spill 1s both ease-in-out; 
+}
 
 
 .initial-refresh{
@@ -330,16 +342,18 @@ h1, h2, h3, h4, h5, p {
   margin-top: 5px;
   min-width: 90%;
   height: 20px;
-  border: solid var(--secondary);
+  background: var(--secondary);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .prof-bar-over{
+  font-weight: 200%;
   text-align: right;
-  border-right: var(--tertiary);
+  padding-right: 2px;
   height: 100%;
-  background-image: linear-gradient( to right, var(--tertiary), var(--secondary), var(--primary));
+  background: linear-gradient(var(--secondary), var(--primary));
 }
+
 
 
 
@@ -392,12 +406,12 @@ background-color: black !important;
 }
 @keyframes me-in {
   from    { opacity: 0;
-            height: 0px;}
+            }
   to      { opacity: 1; }
 }
 
 .me-in { 
-  animation: me-in 1s both ease-in-out; 
+  animation: me-in 2s both ease-in-out; 
 }
 .intro-wrapper {
   display: flex;

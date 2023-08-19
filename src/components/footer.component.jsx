@@ -75,7 +75,7 @@ export default class Footer extends Component {
                 <p><Icon name="phone" />+1(832)260-5650</p>
                 </div>
             </div>
-            <div className="footer-text" onClick={() => this.fetchFact()}><em>{this.state.foot}</em></div>
+            <div className="footer-text" onClick={() => this.fetchFact()}>{this.state.foot}</div>
             </>
 
         )

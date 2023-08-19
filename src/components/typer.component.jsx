@@ -17,14 +17,13 @@ const Typer = ({text}) => {
       <Typewriter
         options={{
         autoStart: true,
-        cursor: '|',
+        cursor: '',
         delay: 25,
         loop: false,
         deleteSpeed: 5,
         }}
         onInit={(typewriter) => {
             typewriter
-            .pauseFor(500)
             .typeString(text)
             .start();
         }}

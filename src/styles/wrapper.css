@@ -38,9 +38,9 @@ h1, h2, h3, h4, h5, p {
 }
   
 @keyframes super-fade {
-  from    { opacity: 0;
+  from    { 
             transform: translateY(-50px); }
-  to      { opacity: 1; }
+  to      {  }
 }
 
 .super-fade { 
@@ -53,12 +53,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 .header-text{
-  background-image: radial-gradient(
-    farthest-corner at 40px 40px,
-    var(--secondary) 0%,
-    var(--tertiary) 100%
-  ) !important;
-  color: var(--primary) !important;
+  background: transparent !important;
+  color: var(--tertiary) !important;
   font-size: xx-large !important;
   padding: 10px !important;
   box-shadow: var(--secondary) 0px 30px 90px;;
@@ -118,19 +114,48 @@ h1, h2, h3, h4, h5, p {
   z-index: 61;
 }
 
-@keyframes spill {
-  from    { 
-            
-            }
-  to      { 
-    transform: rotateX(90deg) !important;
-  }
+@keyframes nav-in {
+  0%    { width: 200px;}
+  80%    { width: 200px;}
+  100%      { }
 }
 
-.spill { 
-  animation: spill 1s both ease-in-out; 
+.nav-in { 
+  animation: nav-in 3s both ease-in-out; 
 }
 
+@keyframes first-drop {
+  0%    { transform: translateY(-60px);}
+  50%    {  transform: translateY(-60px);}
+  60%    {}
+  100%      { }
+}
+
+.first-drop { 
+  animation: first-drop 1.5s both ease-in-out; 
+}
+
+@keyframes second-drop {
+  0%    { transform: translateY(-60px);}
+  65%    {  transform: translateY(-60px);}
+  75%    {}
+  100%      { }
+}
+
+.second-drop { 
+  animation: second-drop 1.75s both ease-in-out; 
+}
+
+@keyframes third-drop {
+  0%    { transform: translateY(-60px);}
+  85%    {  transform: translateY(-60px);}
+  95%    {}
+  100%      { }
+}
+
+.third-drop { 
+  animation: third-drop 2s both ease-in-out; 
+}
 
 .initial-refresh{
   position: fixed;
@@ -183,23 +208,20 @@ h1, h2, h3, h4, h5, p {
   align-items: center !important;
 }
 @keyframes nav-in {
-  from    { opacity: 0;
-            width: 0px;}
-  to      { opacity: 1;
-             }
+  0%    { opacity : 0;
+    width: 10px;}
+  100%      { }
 }
 
 .nav-in { 
-  animation: nav-in 1.5s both ease-in-out; 
+  animation: nav-in 1s both ease-in-out; 
 }
 
 @keyframes drop-in {
   0%{
-    opacity: 0;
     width: 10%;
   }
   100%{
-    opacity: 1;
     width: 100%;
   }
 }
@@ -405,23 +427,23 @@ background-color: black !important;
   cursor: pointer;
 }
 @keyframes me-in {
-  from    { opacity: 0;
+  0%    { opacity: 0;
             }
-  to      { opacity: 1; }
+  100%      { opacity: 1; }
 }
 
 .me-in { 
-  animation: me-in 2s both ease-in-out; 
+  animation: me-in 1.5s both ease-in-out; 
 }
 .intro-wrapper {
   display: flex;
   justify-content: center;
   align-items: center !important;
-  margin-top: 40px;
+  margin-top: auto !important;
 }
 @media only screen and (max-width: 600px) {
   .intro-wrapper{
-    min-height: 50px !important; 
+    min-height: 350px !important; 
   }
 }
 

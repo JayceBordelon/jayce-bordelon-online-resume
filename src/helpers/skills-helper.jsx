@@ -39,7 +39,7 @@ export function SkillsHelper() {
     const languages=[
         {name: 'CSS', comp: <DiCss3 size={skillSize}/>, rel: titles.mag, yrs: ' 3 years', prof:80},
         {name: 'Node.js', comp: <DiNodejs size={skillSize}/>, rel: titles.mag, yrs: ' 1 year', prof:70},
-        {name: 'Python', comp: <DiPython size={skillSize}/>, rel: titles.iti, yrs: ' 3 years', prof:60},
+        {name: 'Python', comp: <DiPython size={skillSize}/>, rel: titles.iti, yrs: ' 3 years', prof:91},
         {name: 'React.js', comp: <DiReact size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:98},
         {name: 'HTML', comp: <DiHtml5 size={skillSize}/>, rel: titles.tut, yrs: ' 4 years', prof:90},
         {name: 'Java', comp: <DiJava size={skillSize}/>, rel: titles.ass, yrs: ' 4 years', prof:97},
@@ -47,7 +47,7 @@ export function SkillsHelper() {
         {name: 'C++', comp: <TbBrandCpp size={skillSize}/>, rel: titles.edu, yrs: ' 1 year', prof:70},
         {name: 'Assembly', comp: <SiAssemblyscript size={skillSize}/>, rel: titles.edu, yrs: ' 1 year', prof:50},
         {name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
-        {name: 'Docker', comp: <SiDocker size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:45},
+        {name: 'Docker', comp: <SiDocker size={skillSize}/>, rel: titles.iti, yrs: ' 1 year', prof:40},
         {name: 'Svelte', comp: <SiSvelte size={skillSize}/>, rel: titles.own, yrs: ' 1 year', prof:55},
         {name: 'Ruby on Rails', comp: <SiRubyonrails size={skillSize}/>, rel: titles.ful, yrs: ' 3 years', prof:99},
         {name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, rel: titles.mag, yrs: ' 1 year', prof:90},

@@ -96,7 +96,7 @@ export function SkillsHelper() {
                       transition: inView ? 'width 1.5s ease-in-out' : 'none',
                     }}
                   >
-                  <p>{lang.prof}%</p>
+                  <p>{lang.prof}</p>
                 </div>
               </div>
               </span>

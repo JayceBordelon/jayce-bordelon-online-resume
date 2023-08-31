@@ -138,7 +138,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   
     return (
       <div>
-      {generateHeader("Real world software experiences")}
+      {generateHeader("Real world software experience")}
       <div className="work-wrap">
 
       {experiences.map((exp, index) => (

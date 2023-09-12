@@ -72,7 +72,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       long: "Full Stack Software Engineering Intern",
       accomplishments: [
         'Automated accounting processes through generation of 37 dynamic CSV exports',
-        'Reworked frontend pages to add new functionality in settings console.',
+        'Reworked frontend pages to add new functionality in settings console',
         'Implemented novel features to allow for data synchronization on over 4,000 user accounts',
       ], 
       company: 'Command Alkon', 
@@ -101,7 +101,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       accomplishments: [
         'Collaborated with International data entry team',
         'Handled data degradation on over 1,764 entries',
-        'gained exposure to PostgreSQL queries to resolve data deprecation issues '
+        'Gained exposure to PostgreSQL queries while resolving data degradation issues '
       ], 
       company: 'Ruckit', 
       learned: 'PostgreSQL|GitHub|Data Validation|Data Analysis',

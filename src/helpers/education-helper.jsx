@@ -3,32 +3,31 @@ import LOGO from "../styles/washu-logo.png"
 
 
 export const washu = {
-    description: `Beyond the classroom and my role as a teacher's assistant, I pursue a plethora of interests.`, // index 0
 
 
     thingz: [
         {
-            title: `I am a teacher's assistant`,
+            title: `Teacher's assistant`,
             desc: `Teaching both an introductory Java course and an advanced C++ course throughout school session`,
             icon: `book`
         },
         {
-            title: `I am a bodybuilder`,
+            title: `Bodybuilding`,
             desc: `Writing and following my own workout and nutrition plans for competition`,
             icon: `dna`
         },
         {
-            title: `I am a stock & options trader`,
+            title: `Stock & Options Trading`,
             desc: `Learning financial markets by researching and trading options`,
             icon: `line graph`
         },
         {
-            title: `I am a pianist`,
-            desc: `Interested in composition and music theory`,
+            title: `Piano`,
+            desc: `Self-taught pianist interested in composition and music theory`,
             icon: `music`
         },
         {
-            title: `I am a chess player`,
+            title: `Chess`,
             desc: `Fascinated by the limitless strategy and improvisation that goes into a chess game`,
             icon: `chess`
         },

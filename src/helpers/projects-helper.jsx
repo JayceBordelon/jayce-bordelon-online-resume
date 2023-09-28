@@ -1,8 +1,9 @@
 import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
+import {BsNewspaper} from 'react-icons/bs';
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
-import { Button, Icon } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 
 
@@ -21,10 +22,11 @@ export const hackWashu = {
     src: 'https://youtu.be/omSyXatmo7s',
   }
 
-  export const familyTree = {
-    title: 'Family Tree',
-    desc: `I am developing a user-friendly family tree application using the NEXT.js Stack to address concerns about the physical nature of our lineage documentation.`,
-    comp: <span><Icon name="cog loading" clasName="loader-icon" size="big"/> </span>,
+  export const newsSharing = {
+    title: 'News Site',
+    desc: `I built out a simple news sharing site using PHP, HTML, and CSS. This was produced as part of my Rapid Prototype Development course. It is deployed on an EC2 instance (AWS)`,
+    comp: <BsNewspaper size={50}/>,
+    src: 'http://ec2-18-223-115-187.us-east-2.compute.amazonaws.com/module3-group-module3-498908-498977/php/instantiate_app.php'
   }
 
 
@@ -35,7 +37,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [hackWashu , magnifi , familyTree]
+    const allProjects = [hackWashu , magnifi , newsSharing]
     return (
       <>
       {generateHeader("Some of my work")}
@@ -46,7 +48,6 @@ export const hackWashu = {
             <h2>{project.title}</h2>
             <h3>{project.desc}</h3>
             <Button onClick={()=>redirectTo(project.src)} className="send-mail cool-button project-button">{project.comp}</Button>
-            {project.title === 'Family Tree' && (<p>Coming soon...</p>)}
           </div>
           <div className="burrer"/>
           </>

@@ -17,7 +17,7 @@ export const hackWashu = {
 
   export const magnifi = {
     title: 'Magnifi Talent',
-    desc: `I spearheaded the software architecture and development for an AI-driven, job matching platform. Ask me for a live demo!`,
+    desc: `I spearheaded the software architecture and development for an AI-driven, job matching platform. It is built on the MERN stack and is yet to be deployed. See the demo on youtube below.`,
     comp: <SiOpenstreetmap size={50}/>,
     src: 'https://youtu.be/omSyXatmo7s',
   }

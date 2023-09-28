@@ -6,7 +6,7 @@ import Typer from '../components/typer.component';
 //icons
 import { DiCss3, DiNodejs, DiPython, DiReact, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
-import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails} from 'react-icons/si'
+import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails, SiPhp} from 'react-icons/si'
 import {FaLinux, FaGit} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 import {BiLogoFlask} from 'react-icons/bi'
@@ -29,6 +29,7 @@ export function SkillsHelper() {
   const skillSize=80
   const languages = [
     { name: 'CSS', comp: <DiCss3 size={skillSize}/>, yrs: ' 3 years', prof: 80 },
+    { name: 'PHP', comp: <SiPhp size={skillSize}/>, yrs: ' 1 years', prof: 83 },
     { name: 'Flask', comp: <BiLogoFlask size={skillSize}/>, yrs: ' 1 year', prof: 68 },
     { name: 'Node.js', comp: <DiNodejs size={skillSize}/>, yrs: ' 1 year', prof: 70 },
     { name: 'Python', comp: <DiPython size={skillSize}/>, yrs: ' 3 years', prof: 91 },

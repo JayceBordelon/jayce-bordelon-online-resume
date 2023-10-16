@@ -25,7 +25,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
 
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
-      {when: 'June 2023 - Present', 
+      {when: 'June 2023 - August 2023', 
       title: 'Software Engineering Intern', 
       long: "Core Infrastructure Software Engineering Intern",
       accomplishments: [

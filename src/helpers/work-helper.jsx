@@ -2,21 +2,20 @@ import React, { useState } from 'react'
 import { Icon, Image } from 'semantic-ui-react'
 
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
-import { TbMathFunction } from 'react-icons/tb'
 import { SiRubyonrails} from 'react-icons/si'
 import { GiServerRack, GiTeacher} from 'react-icons/gi'
-import {MdArchitecture} from 'react-icons/md'
+import {MdArchitecture, MdPayment} from 'react-icons/md'
 import { DiRuby } from 'react-icons/di'
 
 import '../styles/wrapper.css'
 import { generateHeader } from './skills-helper'
 
 //imgs
+import MasterCardLogo from "../styles/master.png"
 import WashuLogo from "../styles/washu-logo-work.png"
 import SynopsysLogo from "../styles/synopsys-logo.jpeg"
 import CommandLogo from "../styles/command-logo.jpeg"
 import RuckitLogo from "../styles/ruckit-logo.png"
-import TutorLogo from "../styles/tutor-logo.jpeg"
 import MagnifiLogo from "../styles/mgfi-logo.webp"
 
 
@@ -25,6 +24,18 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
 
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
+      {when: 'January 2024 - Present', 
+      title: 'Software Engineering Intern', 
+      long: "Software Engineering Intern Spring 2024 Co-Op",
+      accomplishments: [
+        
+      ], 
+      company: 'Mastercard', 
+      learned: 'Java|Springboot',
+      src: <MdPayment size={100}/>,
+      show: false,
+      logo: MasterCardLogo
+    },
       {when: 'June 2023 - August 2023', 
       title: 'Software Engineering Intern', 
       long: "Core Infrastructure Software Engineering Intern",
@@ -109,18 +120,6 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       show: false,
       logo: RuckitLogo},
   
-      {when: 'May 2019 - August 2021', 
-      title: 'Calculus Tutor', 
-      long: "High School Calculus Tutor",
-      accomplishments: [
-        'Developed website to advertize and schedule tutoring sessions (HTML / CSS)',
-        'Credited with raising four students grades in calculus from a "C" or lower to an "A-" or higher',
-      ], 
-      company: 'Self Employed', 
-      learned: 'Calculus|Advanced Algebra|Geometry|Teaching|HTML|CSS',
-      src: <TbMathFunction size={100}/>,
-      show: false,
-      logo: TutorLogo}
     ])
     const toSingleLearning = (learnings) => {
       return learnings.split("|");
@@ -148,7 +147,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
               <h2><strong>@{exp.company}</strong></h2>
               <h3>{exp.when}</h3>
               <Image className="company-logo" src={exp.logo} />
-              <h1><Icon name="sort up" size="small"/></h1>
+              <h1><Icon name="sort up" size="large"/></h1>
               </span>)}
             {exp.show && (
               <div className="exp-in" key={exp.title}>

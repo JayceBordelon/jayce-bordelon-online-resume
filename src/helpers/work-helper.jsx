@@ -4,14 +4,15 @@ import { Icon, Image } from 'semantic-ui-react'
 import { BsDatabaseUp } from 'react-icons/bs' // from devicons
 import { SiRubyonrails} from 'react-icons/si'
 import { GiServerRack, GiTeacher} from 'react-icons/gi'
-import {MdArchitecture, MdPayment} from 'react-icons/md'
+import {MdArchitecture} from 'react-icons/md'
 import { DiRuby } from 'react-icons/di'
+import {FaCcMastercard} from 'react-icons/fa6'
 
 import '../styles/wrapper.css'
 import { generateHeader } from './skills-helper'
 
 //imgs
-import MasterCardLogo from "../styles/master.png"
+import MasterCardLogo from "../styles/mc.png"
 import WashuLogo from "../styles/washu-logo-work.png"
 import SynopsysLogo from "../styles/synopsys-logo.jpeg"
 import CommandLogo from "../styles/command-logo.jpeg"
@@ -32,7 +33,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       ], 
       company: 'Mastercard', 
       learned: 'Java|Springboot',
-      src: <MdPayment size={100}/>,
+      src: <FaCcMastercard size={100}/>,
       show: false,
       logo: MasterCardLogo
     },

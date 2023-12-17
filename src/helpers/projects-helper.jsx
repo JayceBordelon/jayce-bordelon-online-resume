@@ -1,5 +1,6 @@
 import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
+import { CgCardSpades } from "react-icons/cg";
 import {BsNewspaper} from 'react-icons/bs';
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
@@ -22,6 +23,13 @@ export const hackWashu = {
     src: 'https://youtu.be/omSyXatmo7s',
   }
 
+  export const blackJack = {
+    title: 'Gamblers Ruin',
+    desc: `I used React/Firestore to create a gambling application. Given that this was built for a rapid prototype development course, I didn't get a chance to make it mobile friendly :(`,
+    comp: <CgCardSpades size={50}/>,
+    src: 'https://cards-fa60d.web.app/',
+  }
+
   export const newsSharing = {
     title: 'News Site',
     desc: `I built out a simple news sharing site using PHP, HTML, and CSS. This was produced as part of my Rapid Prototype Development course. It is deployed on an EC2 instance (AWS)`,
@@ -37,7 +45,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [hackWashu , magnifi , newsSharing]
+    const allProjects = [hackWashu , magnifi, blackJack , newsSharing]
     return (
       <>
       {generateHeader("Some of my work")}

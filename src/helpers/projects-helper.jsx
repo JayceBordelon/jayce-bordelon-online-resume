@@ -4,7 +4,7 @@ import { CgCardSpades } from "react-icons/cg";
 import {BsNewspaper} from 'react-icons/bs';
 import { generateHeader } from './skills-helper'
 import '../styles/wrapper.css';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 
 
@@ -37,6 +37,13 @@ export const hackWashu = {
     src: 'http://ec2-18-216-183-236.us-east-2.compute.amazonaws.com/module3-group-module3-498908-498977/php/instantiate_app.php'
   }
 
+  export const dbDesign = {
+    title: 'DBDesign',
+    desc: `A site for designing and planning database usage before building out applications. The ultimate goal is to reduce overhead of poor DB design. Work in progress.`,
+    comp: <p><Icon size="huge" loading name="database" /></p>,
+    src: ''
+  }
+
 
   export function ProjectsHelper(){
     const redirectTo = (projSrc) => {
@@ -45,7 +52,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [hackWashu , magnifi, blackJack , newsSharing]
+    const allProjects = [hackWashu , magnifi, blackJack , newsSharing, dbDesign]
     return (
       <>
       {generateHeader("Some of my work")}

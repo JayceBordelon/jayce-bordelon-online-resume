@@ -30,7 +30,7 @@ export default class Wrapper extends Component {
   }
   getResume = () => {
     try{
-      fetch(`JayceBordelon'sResume.pdf`).then(response => {
+      fetch(`Jayce's_Resume.pdf`).then(response => {
         response.blob().then(blob => {
             // Creating new object of PDF file
             const fileURL = window.URL.createObjectURL(blob);

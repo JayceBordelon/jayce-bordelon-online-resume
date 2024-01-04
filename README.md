@@ -1,6 +1,6 @@
 # Online Resume
 
-# [View My Resume as a PDF](./public/JayceBordelon'sResume.pdf)
+# [View My Resume as a PDF](./public/Jayce's_Resume.pdf)
 
 ## Built entirely in React with JSX elements
 

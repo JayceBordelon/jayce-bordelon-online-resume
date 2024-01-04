@@ -6,7 +6,7 @@ import Typer from '../components/typer.component';
 //icons
 import { DiCss3, DiNodejs, DiPython, DiReact, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' // from devicons
 import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
-import {SiAssemblyscript, SiAwslambda, SiKubernetes, SiDocker, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails, SiPhp} from 'react-icons/si'
+import {SiAwslambda, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails, SiPhp} from 'react-icons/si'
 import {FaLinux, FaGit} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 import {BiLogoFlask} from 'react-icons/bi'
@@ -31,25 +31,25 @@ export function SkillsHelper() {
     { name: 'CSS', comp: <DiCss3 size={skillSize}/>, yrs: ' 3 years', prof: 80 },
     { name: 'PHP', comp: <SiPhp size={skillSize}/>, yrs: ' 1 years', prof: 83 },
     { name: 'Flask', comp: <BiLogoFlask size={skillSize}/>, yrs: ' 1 year', prof: 68 },
-    { name: 'Node.js', comp: <DiNodejs size={skillSize}/>, yrs: ' 1 year', prof: 70 },
+    { name: 'Node.js', comp: <DiNodejs size={skillSize}/>, yrs: ' 2 year', prof: 90 },
     { name: 'Python', comp: <DiPython size={skillSize}/>, yrs: ' 3 years', prof: 91 },
-    { name: 'React.js', comp: <DiReact size={skillSize}/>, yrs: ' 1 year', prof: 98 },
+    { name: 'React.js', comp: <DiReact size={skillSize}/>, yrs: ' 2 year', prof: 99 },
     { name: 'HTML', comp: <DiHtml5 size={skillSize}/>, yrs: ' 4 years', prof: 90 },
     { name: 'Java', comp: <DiJava size={skillSize}/>, yrs: ' 4 years', prof: 97 },
-    { name: 'JavaScript', comp: <DiJavascript1 size={skillSize}/>, yrs: ' 4 years', prof: 85 },
+    { name: 'JavaScript', comp: <DiJavascript1 size={skillSize}/>, yrs: ' 4 years', prof: 92 },
     { name: 'C++', comp: <TbBrandCpp size={skillSize}/>, yrs: ' 1 year', prof: 70 },
-    { name: 'Assembly', comp: <SiAssemblyscript size={skillSize}/>, yrs: ' 1 year', prof: 50 },
-    { name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, yrs: ' 1 year', prof: 45 },
-    { name: 'Docker', comp: <SiDocker size={skillSize}/>, yrs: ' 1 year', prof: 40 },
-    { name: 'Svelte', comp: <SiSvelte size={skillSize}/>, yrs: ' 1 year', prof: 55 },
+    // { name: 'Assembly', comp: <SiAssemblyscript size={skillSize}/>, yrs: ' 1 year', prof: 50 },
+    // { name: 'Kubernetes', comp: <SiKubernetes size={skillSize}/>, yrs: ' 1 year', prof: 45 },
+    // { name: 'Docker', comp: <SiDocker size={skillSize}/>, yrs: ' 1 year', prof: 40 },
+    { name: 'Svelte', comp: <SiSvelte size={skillSize}/>, yrs: ' 1 year', prof: 65 },
     { name: 'Ruby on Rails', comp: <SiRubyonrails size={skillSize}/>, yrs: ' 3 years', prof: 99 },
-    { name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, yrs: ' 1 year', prof: 90 },
-    { name: 'Django', comp: <TbBrandDjango size={skillSize}/>, yrs: ' 1 year', prof: 66 },
+    { name: 'MongoDB', comp: <SiMongodb size={skillSize}/>, yrs: ' 3 year', prof: 98 },
+    { name: 'Django', comp: <TbBrandDjango size={skillSize}/>, yrs: ' 1 year', prof: 71 },
     { name: 'Git', comp: <FaGit size={skillSize}/>, yrs: ' 2 years', prof: 92 },
-    { name: 'API', comp: <TbApi size={skillSize}/>, yrs: ' 2 years', prof: 95 },
+    { name: 'API', comp: <TbApi size={skillSize}/>, yrs: ' 2 years', prof: 96 },
     { name: 'OCR', comp: <GiArtificialHive size={skillSize}/>, yrs: ' 2 years', prof: 84 },
     { name: 'Linux', comp: <FaLinux size={skillSize}/>, yrs: ' 1 year', prof: 75 },
-    { name: 'PostgreSQL', comp: <SiPostgresql size={skillSize}/>, yrs: ' 3 years', prof: 78 },
+    { name: 'PostgreSQL', comp: <SiPostgresql size={skillSize}/>, yrs: ' 3 years', prof: 83 },
     { name: 'AWS Lambda', comp: <SiAwslambda size={skillSize}/>, yrs: ' 1 year', prof: 64 },
     { name: 'SQL', comp: <SiMysql size={skillSize}/>, yrs: ' 2 years', prof: 88 },
 ];

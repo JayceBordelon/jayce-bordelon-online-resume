@@ -417,10 +417,11 @@ background-color: black !important;
   padding: 2px;
   /* border-radius: 50%; */
   /* width: 200px; Adjust this value as needed */
-  height: 200px; /* Adjust this value as needed */
+  height: 250px; /* Adjust this value as needed */
   margin: 0 auto; /* Center horizontally */
   margin-top: 40px;
   transition: transform 0.2s ease-in-out;
+  border-radius: 15px;
 
 }
 
@@ -472,6 +473,7 @@ background-color: black !important;
 .work-exp{
   background: var(--secondary) !important;
   padding: 20px;
+  border-radius: 5px;
   min-height: 650px;
 }
 .center-stuffs{

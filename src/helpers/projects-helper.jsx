@@ -40,7 +40,7 @@ export const hackWashu = {
   export const dbDesign = {
     title: 'DBDesign',
     desc: `A site for designing and planning database usage before building out applications. The ultimate goal is to reduce overhead of poor DB design. Work in progress.`,
-    comp: <p><Icon size="huge" loading name="database" /></p>,
+    comp: <p style={{'color': "#41666a"}}><Icon size="huge" loading name="database" /></p>,
     src: 'https://dbdesigns.netlify.app/'
   }
 

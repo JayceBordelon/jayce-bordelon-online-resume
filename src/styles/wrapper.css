@@ -563,6 +563,7 @@ background-color: black !important;
 }
 .super-logo{
   filter: contrast(200%) brightness(90%);
+  width: 60%;
   border-radius: 10px;
 }
 

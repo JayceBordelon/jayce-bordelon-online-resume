@@ -1,35 +1,20 @@
-import { Icon, Image } from "semantic-ui-react";
-import LOGO from "../styles/washu-logo.png"
+import { Icon, Image, Button } from "semantic-ui-react";
+import LOGO from "../styles/washu-logo.jpeg"
 
 
-export const washu = {
+export const recs = {
 
 
     thingz: [
         {
-            title: `Teacher's assistant`,
-            desc: `Teaching both an introductory Java course and an advanced C++ course throughout school session`,
-            icon: `book`
+            title: `Supervisor`,
+            path: '/LOR_JUN.pdf',
+            icon: `location arrow`
         },
         {
-            title: `Bodybuilding`,
-            desc: `Writing and following my own workout and nutrition plans for competition`,
-            icon: `dna`
-        },
-        {
-            title: `Stock & Options Trading`,
-            desc: `Learning financial markets by researching and trading options`,
-            icon: `line graph`
-        },
-        {
-            title: `Piano`,
-            desc: `Self-taught pianist interested in composition and music theory`,
-            icon: `music`
-        },
-        {
-            title: `Chess`,
-            desc: `Fascinated by the limitless strategy and improvisation that goes into a chess game`,
-            icon: `chess`
+            title: `Coworker`,
+            path: '/LOR_KRISSI.pdf',
+            icon: `location arrow`
         },
     ],
 
@@ -38,14 +23,20 @@ export const washu = {
 };
 
 export function EducationHelper(){
+
+    const openPdfInNewTab = (path) => {
+        const pdfUrl = path;
+        // Open the PDF in a new tab
+        window.open(pdfUrl, '_blank');
+      };
+
     return(
         <div className="edu-wrap">
-        <Image src={washu.src} className="super-logo"/>
-            {washu.thingz.map(thing=>(
-                <div className="thing fancy-boxen">
-                <h2><Icon name={thing.icon} size="large"/></h2>
-                <h2>{thing.title}</h2>
-                <h3>{thing.desc} </h3>
+        <Image src={recs.src} className="super-logo"/>
+            {recs.thingz.map(thing=>(
+                <div className="thing">
+                <h1>{thing.title}</h1>
+                <Button onClick={() => openPdfInNewTab(thing.path)}  className="send-mail cool-button project-button"><h2 style={{'color': "#41666a"}}><Icon name={thing.icon} size="large"/></h2></Button>
                 </div>
 
             ))}

@@ -9,12 +9,16 @@ export const recs = {
         {
             title: `Supervisor`,
             path: '/LOR_JUN.pdf',
-            icon: `location arrow`
+            icon: `file pdf`,
+            person: 'Jun Li',
+            role: 'Director of IT - Synopsys Inc.'
         },
         {
             title: `Coworker`,
             path: '/LOR_KRISSI.pdf',
-            icon: `location arrow`
+            icon: `file pdf`,
+            person: 'Krissi Yan',
+            role: 'Senior IT Archtect - Synopsys Inc.'
         },
     ],
 
@@ -36,6 +40,8 @@ export function EducationHelper(){
             {recs.thingz.map(thing=>(
                 <div className="thing">
                 <h1>{thing.title}</h1>
+                <h2>{thing.person}</h2>
+                <h3>{thing.role}</h3>
                 <Button onClick={() => openPdfInNewTab(thing.path)}  className="send-mail cool-button project-button"><h2 style={{'color': "#41666a"}}><Icon name={thing.icon} size="large"/></h2></Button>
                 </div>
 

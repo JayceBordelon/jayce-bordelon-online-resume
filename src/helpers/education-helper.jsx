@@ -7,6 +7,12 @@ export const recs = {
 
     thingz: [
         {
+            path: '/LOR_KONDAIAH.pdf',
+            icon: `file pdf`,
+            person: `Kondaiah Vasuwandla's Letter of Recommendation`,
+            role: 'Director of IT - Synopsys Inc.'
+        },
+        {
             path: '/LOR_JUN.pdf',
             icon: `file pdf`,
             person: `Jun Li's Letter of Recommendation`,

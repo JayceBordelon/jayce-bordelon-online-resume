@@ -1,6 +1,7 @@
 // dependencies
 import React, { Component } from 'react';
 import { Button, Container, Icon, Segment } from 'semantic-ui-react';
+import { openPdfInNewTab } from '../helpers/education-helper';
 
 // components
 import Education from '../components/education.component';
@@ -28,24 +29,6 @@ export default class Wrapper extends Component {
     this.contactRef = React.createRef();
     
   }
-  getResume = () => {
-    try{
-      fetch(`Jayce's_Resume.pdf`).then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'JayceBordelonResume.pdf';
-            alink.click();
-        })
-      })
-    } catch (err){
-      console.log(err)
-    }
-
-  };
   scrollToElement = (refer) => {
     // Access the DOM node using the ref and scroll it into view
     if (refer.current) {
@@ -118,7 +101,7 @@ export default class Wrapper extends Component {
       <>
       <div ref={this.introRef}/>
       <div className="banner nav-in">
-        <h2 className="initial-refresh first-drop" onClick={()=>this.getResume()}><Icon name="cloud download" size="large"/></h2>
+        <h2 className="initial-refresh first-drop" onClick={()=> openPdfInNewTab("/Jayce's_Resume.pdf")}><Icon name="cloud download" size="large"/></h2>
         <Button onClick={()=>this.toggleMode()} className="light-dark second-drop" circular icon={this.state.mode==="light" ? "sun": "moon"}></Button>
         <span className="third-drop nav-icon" onClick={()=>this.setState({show_menu: !this.state.show_menu})}>
             {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }

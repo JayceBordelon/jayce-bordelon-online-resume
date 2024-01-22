@@ -30,13 +30,15 @@ export const recs = {
     src: LOGO // index 3
 };
 
+export const  openPdfInNewTab = (path) => {
+    const pdfUrl = path;
+    // Open the PDF in a new tab
+    window.open(pdfUrl, '_blank');
+  };
+
 export function EducationHelper(){
 
-    const openPdfInNewTab = (path) => {
-        const pdfUrl = path;
-        // Open the PDF in a new tab
-        window.open(pdfUrl, '_blank');
-      };
+    
 
     return(
         <div className="edu-wrap">

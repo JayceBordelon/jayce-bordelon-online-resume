@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {  Icon, Button } from 'semantic-ui-react';
+
+import { openPdfInNewTab } from '../helpers/education-helper';
 import '../styles/wrapper.css';
 
 
@@ -21,26 +23,6 @@ export default class Footer extends Component {
       getGit = () =>{
         window.open("https://github.com/JayceBordelon/jayce-bordelon-online-resume", "_blank");
       }
-      getResume = () => {
-        try{
-          fetch(`JayceBordelon'sResume.pdf`).then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'JayceBordelonResume.pdf';
-                alink.click();
-            })
-          })
-        } catch (err){
-          const message = "Something went wrong with downloading my resume. Please send me an email and I will get it to you as soon as possible! "
-          this.setState({emailRes : message})
-          console.log(err)
-        }
-  
-      };
 
     render() {
   
@@ -63,7 +45,7 @@ export default class Footer extends Component {
               </Button>
               </div>
               <div>
-              <Button className='cool-button' onClick={() => this.getResume()}>
+              <Button className='cool-button' onClick={() => openPdfInNewTab("/Jayce's_Resume.pdf")}>
                 <p><Icon name='file pdf' size='large'/> Resume </p>
               </Button>
               </div>

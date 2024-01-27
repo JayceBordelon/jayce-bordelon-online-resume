@@ -1,5 +1,6 @@
 import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
+import { FaCogs } from "react-icons/fa";
 import { CgCardSpades } from "react-icons/cg";
 import {BsNewspaper} from 'react-icons/bs';
 import { generateHeader } from './skills-helper'
@@ -44,6 +45,13 @@ export const hackWashu = {
     src: 'https://dbdesigns.netlify.app/'
   }
 
+  export const flome = {
+    title: 'FLOME official site',
+    desc: `I built this site for "The Future Leaders of McKelvey Engineering", an organization which I am currently the vice president of. The site was built using React+Vite with a Tailwind plugin.`,
+    comp: <p style={{'color': "#41666a"}}><FaCogs size={50}/></p>,
+    src: 'https://flome-washu.netlify.app'
+  }
+
 
   export function ProjectsHelper(){
     const redirectTo = (projSrc) => {
@@ -52,7 +60,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [dbDesign, magnifi, hackWashu, blackJack , newsSharing]
+    const allProjects = [flome, dbDesign, blackJack , newsSharing, magnifi, hackWashu]
     return (
       <>
       {generateHeader("Some of my work")}

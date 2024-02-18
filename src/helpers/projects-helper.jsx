@@ -31,12 +31,6 @@ export const hackWashu = {
     src: 'https://cards-fa60d.web.app/',
   }
 
-  export const newsSharing = {
-    title: 'News Site',
-    desc: `I built out a simple news sharing site using PHP, HTML, and CSS. This was produced as part of my Rapid Prototype Development course. It is deployed on an EC2 instance (AWS)`,
-    comp: <BsNewspaper size={50}/>,
-    src: 'http://ec2-18-216-183-236.us-east-2.compute.amazonaws.com/module3-group-module3-498908-498977/php/instantiate_app.php'
-  }
 
   export const dbDesign = {
     title: 'DBDesign',
@@ -60,7 +54,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [flome, dbDesign, blackJack , newsSharing, magnifi, hackWashu]
+    const allProjects = [flome, dbDesign, blackJack, magnifi, hackWashu]
     return (
       <>
       {generateHeader("Some of my work")}

@@ -3,7 +3,8 @@ import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
 import { FaCogs } from "react-icons/fa";
 import { CgCardSpades } from "react-icons/cg";
 import { generateHeader } from './skills-helper';
-import { RiStockFill } from "react-icons/ri";
+import { FcBullish } from "react-icons/fc";
+
 
 import '../styles/wrapper.css';
 import { Button } from 'semantic-ui-react';
@@ -36,7 +37,7 @@ export const hackWashu = {
   export const bearsAndBulls = {
     title: 'Bears & Bulls (B&B)',
     desc: `A webscraping, Node.JS API paired with a React+Vite+Tailwind client, B&B is a tool for spotting and tracking the most volatile and heavily traded stocks. This is still in progress.`,
-    comp: <p style={{'color': "#41666a"}}><RiStockFill size={50} /></p>,
+    comp: <p style={{'color': "#41666a"}}><FcBullish size={50} /></p>,
     src: 'https://bearsandbulls.netlify.app/volatile'
   }
 

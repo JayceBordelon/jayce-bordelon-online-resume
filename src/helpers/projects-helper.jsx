@@ -2,10 +2,11 @@ import React from 'react'
 import {SiMajorleaguehacking, SiOpenstreetmap} from 'react-icons/si'
 import { FaCogs } from "react-icons/fa";
 import { CgCardSpades } from "react-icons/cg";
-import {BsNewspaper} from 'react-icons/bs';
-import { generateHeader } from './skills-helper'
+import { generateHeader } from './skills-helper';
+import { RiStockFill } from "react-icons/ri";
+
 import '../styles/wrapper.css';
-import { Button, Icon } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 
 
@@ -32,11 +33,11 @@ export const hackWashu = {
   }
 
 
-  export const dbDesign = {
-    title: 'DBDesign',
-    desc: `A site for designing and planning database usage before building out applications. The ultimate goal is to reduce overhead of poor DB design. Work in progress.`,
-    comp: <p style={{'color': "#41666a"}}><Icon size="huge" loading name="database" /></p>,
-    src: 'https://dbdesigns.netlify.app/'
+  export const bearsAndBulls = {
+    title: 'Bears & Bulls (B&B)',
+    desc: `A webscraping, Node.JS API paired with a React+Vite+Tailwind client, B&B is a tool for spotting and tracking the most volatile and heavily traded stocks. This is still in progress.`,
+    comp: <p style={{'color': "#41666a"}}><RiStockFill size={50} /></p>,
+    src: 'https://bearsandbulls.netlify.app/volatile'
   }
 
   export const flome = {
@@ -54,7 +55,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [flome, dbDesign, blackJack, magnifi, hackWashu]
+    const allProjects = [flome, bearsAndBulls, blackJack, magnifi, hackWashu]
     return (
       <>
       {generateHeader("Some of my work")}

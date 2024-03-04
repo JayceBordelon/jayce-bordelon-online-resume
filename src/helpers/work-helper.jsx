@@ -25,14 +25,17 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
 
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
-      {when: 'Incoming Spring 2024', 
+      {when: 'Spring 2024', 
       title: 'Software Engineering Co-Op Intern', 
       long: "Software Engineering Intern Spring 2024 Co-Op",
       accomplishments: [
-        
+        'Created custom deep health check common library to monitor and support the health of six universal services across our applications',
+        'Built a spring boot REST controller to validate the accuracy and consistency of the health probes',
+        'Implemented an overridden api configuration for spring boot health actuation: /actuator/health',
+        'Updated and maintained deployment configurations for Jenkins pipelines and SSL certificates'
       ], 
       company: 'Mastercard', 
-      learned: 'Java|Springboot',
+      learned: 'Java|Springboot|Jenkins|Pivotal Cloud Foundry (PCF)',
       src: <FaCcMastercard size={100}/>,
       show: false,
       logo: MasterCardLogo

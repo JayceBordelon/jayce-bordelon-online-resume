@@ -26,12 +26,12 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
       {when: 'Spring 2024 - Present', 
-      title: 'Software Engineering Co-Op Intern', 
-      long: "Software Engineering Intern Spring 2024 Co-Op",
+      title: 'Software Engineering Intern', 
+      long: "Software Engineering Intern",
       accomplishments: [
-        'Created custom deep health check common library to monitor and support the health of six universal services across our applications',
-        `Redesigned and built our test repo to validate transaction's PIN validation`,
-        'Enhanced retry mechanism for various api states'
+        'Created a health check common library to monitor and support the health of six universal services across our applications',
+        `Redesigned and built our test repo to support PIN validation in transactions. Established a ~10X faster run time for test processes`,
+        'Enhanced retry mechanism for transaction failures',
       ], 
       company: 'Mastercard', 
       learned: 'Java|Springboot|Jenkins|Pivotal Cloud Foundry (PCF)',

@@ -31,7 +31,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       accomplishments: [
         'Created custom deep health check common library to monitor and support the health of six universal services across our applications',
         `Redesigned and built our test repo to validate transaction's PIN validation`,
-        'Implemented an overridden api configuration for spring boot health actuation: /actuator/health'
+        'Enhanced retry mechanism for various api states'
       ], 
       company: 'Mastercard', 
       learned: 'Java|Springboot|Jenkins|Pivotal Cloud Foundry (PCF)',

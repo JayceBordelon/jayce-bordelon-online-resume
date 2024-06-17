@@ -35,7 +35,7 @@ export function SkillsHelper() {
     { name: 'Python', comp: <DiPython size={skillSize} />, yrs: '3 years', prof: 89 },
     { name: 'React.js', comp: <DiReact size={skillSize} />, yrs: '3 year', prof: 92 },
     { name: 'HTML', comp: <DiHtml5 size={skillSize} />, yrs: '4 years', prof: 86 },
-    { name: 'Java', comp: <DiJava size={skillSize} />, yrs: '4 years', prof: 93 },
+    { name: 'Java', comp: <DiJava size={skillSize} />, yrs: '4 years', prof: 99 },
     { name: 'JavaScript', comp: <DiJavascript1 size={skillSize} />, yrs: '4 years', prof: 90 },
     { name: 'C++', comp: <TbBrandCpp size={skillSize} />, yrs: '1 year', prof: 72 },
     { name: 'Svelte', comp: <SiSvelte size={skillSize} />, yrs: '1 year', prof: 65 },
@@ -45,12 +45,12 @@ export function SkillsHelper() {
     { name: 'Git', comp: <FaGit size={skillSize} />, yrs: '4 years', prof: 88 },
     { name: 'API', comp: <TbApi size={skillSize} />, yrs: '4 years', prof: 91 },
     { name: 'OCR', comp: <GiArtificialHive size={skillSize} />, yrs: '2 years', prof: 76 },
-    { name: 'Linux', comp: <FaLinux size={skillSize} />, yrs: '1 year', prof: 68 },
+    { name: 'Linux', comp: <FaLinux size={skillSize} />, yrs: '1 year', prof: 73 },
     { name: 'PostgreSQL', comp: <SiPostgresql size={skillSize} />, yrs: '3 years', prof: 80 },
     { name: 'AWS Lambda', comp: <SiAwslambda size={skillSize} />, yrs: '1 year', prof: 60 },
     { name: 'SQL', comp: <SiMysql size={skillSize} />, yrs: '3 years', prof: 82 },
-    { name: 'Spring Boot', comp: <BiLogoSpringBoot size={skillSize} />, yrs: '1 years', prof: 70 },
-    { name: 'Jenkins', comp: <FaJenkins size={skillSize} />, yrs: '1 years', prof: 65 },
+    { name: 'Spring Boot', comp: <BiLogoSpringBoot size={skillSize} />, yrs: '1 years', prof: 86 },
+    { name: 'Jenkins', comp: <FaJenkins size={skillSize} />, yrs: '1 years', prof: 78 },
 ];
 
 

@@ -29,12 +29,13 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       title: 'Software Engineering Intern', 
       long: "Software Engineering Intern",
       accomplishments: [
-        'Created a health check common library to monitor and support the health of six universal services across our applications',
-        `Redesigned and built our test repo to support PIN validation in transactions. Established a ~10X faster run time for test processes`,
+        'Created a health check common library to monitor and support the health of six universal services used throughout Mastercard',
+        `Redesigned and built our test repo to support PIN validation in transactions`,
+        `Established a ~10X faster run time for test processes`,
         'Enhanced retry mechanism for transaction failures',
       ], 
       company: 'Mastercard', 
-      learned: 'Java|Springboot|Jenkins|Pivotal Cloud Foundry (PCF)',
+      learned: 'Java|Springboot|Reactive Java (WebFlux)|Jenkins|Pivotal Cloud Foundry (PCF)',
       src: <FaCcMastercard size={100}/>,
       show: false,
       logo: MasterCardLogo

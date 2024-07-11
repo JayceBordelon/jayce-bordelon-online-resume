@@ -13,7 +13,7 @@ import { Button } from 'semantic-ui-react';
 
 export const jayceBlogs = {
   title: 'Jayce Blogs',
-  desc: `My personal blog where I write about software development insights through personal experience. `,
+  desc: `My personal blog where I write about software development insights through personal experience. It doesn't have many entries as of now, but I hope to be adding posts weekly.`,
   comp: <TfiWrite style={{ color: '#5195a6' }} size={50}/>,
   src: 'https://jayceblog.netlify.app',
 }

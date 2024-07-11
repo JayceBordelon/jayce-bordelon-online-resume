@@ -4,11 +4,19 @@ import { FaCogs } from "react-icons/fa";
 import { CgCardSpades } from "react-icons/cg";
 import { generateHeader } from './skills-helper';
 import { FcBullish } from "react-icons/fc";
+import { TfiWrite } from "react-icons/tfi";
 
 
 import '../styles/wrapper.css';
 import { Button } from 'semantic-ui-react';
 
+
+export const jayceBlogs = {
+  title: 'Jayce Blogs',
+  desc: `My personal blog where I write about software development insights through personal experience. `,
+  comp: <TfiWrite style={{ color: '#5195a6' }} size={50}/>,
+  src: 'https://jayceblog.netlify.app',
+}
 
 
 export const hackWashu = {
@@ -56,7 +64,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [flome, bearsAndBulls, blackJack, magnifi, hackWashu]
+    const allProjects = [jayceBlogs, flome, bearsAndBulls, blackJack, magnifi, hackWashu]
     return (
       <>
       {generateHeader("Some of my work")}

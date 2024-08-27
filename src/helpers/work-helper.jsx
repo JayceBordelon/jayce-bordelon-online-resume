@@ -25,14 +25,13 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
 
   export function WorkHelper() {
     const [experiences, setExperiences] = useState([
-      {when: 'January 2024 - Present', 
+      {when: 'January 2024 - August 2024', 
       title: 'Software Engineering Intern', 
       long: "Software Engineering Intern",
       accomplishments: [
-        'Created a health check common library to monitor and support the health of six universal services used throughout Mastercard',
-        `Redesigned and built our test repo to support PIN validation in transactions`,
-        `Established a ~10X faster run time for test processes`,
-        'Enhanced retry mechanism for transaction failures',
+        'Created a deep health check common library to support the automation of spring boot health actuation for services used across the company',
+        `Removed vestigial functionality from one of our critical OBS (On behalf of service) services resulting in an overall faster transaction processing for PIN based transactions`,
+        `Redesigned and rewrote our test repository to support automation testing resulting in a 20X faster runtime and consistent test results. 7K+ lines of code changed`,
       ], 
       company: 'Mastercard', 
       learned: 'Java|Springboot|Reactive Java (WebFlux)|Jenkins|Pivotal Cloud Foundry (PCF)',

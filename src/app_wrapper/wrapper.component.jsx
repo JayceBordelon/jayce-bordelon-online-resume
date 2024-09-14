@@ -47,20 +47,30 @@ export default class Wrapper extends Component {
       mode: "dark"
     };
     setLight = (rooty) => {
-      rooty.style.setProperty('--primary', '#c5c6c7');
-      rooty.style.setProperty('--secondary', '#41666a');
-      rooty.style.setProperty('--tertiary', '#0b0c10');
-    }
+      const primary = getComputedStyle(rooty).getPropertyValue('--primary');
+      const tertiary = getComputedStyle(rooty).getPropertyValue('--tertiary');
+      rooty.style.setProperty('--primary', tertiary);
+      rooty.style.setProperty('--tertiary', primary);
+    };
+    
     setDark = (rooty) => {
-      rooty.style.setProperty('--primary', '#0b0c10');
-      rooty.style.setProperty('--secondary', '#41666a');
-      rooty.style.setProperty('--tertiary', '#c5c6c7');
-    }
-    toggleMode = () =>{
+      const primary = getComputedStyle(rooty).getPropertyValue('--primary');
+      const tertiary = getComputedStyle(rooty).getPropertyValue('--tertiary');
+      rooty.style.setProperty('--primary', tertiary);
+      rooty.style.setProperty('--tertiary', primary);
+    };
+    
+    toggleMode = () => {
       let r = document.querySelector(':root');
-      this.state.mode === "light" ? this.setDark(r) : this.setLight(r);
-      this.state.mode === "light" ? this.setState({mode: "dark"}): this.setState({mode:"light"});
-    }
+      if (this.state.mode === "light") {
+        this.setDark(r);
+        this.setState({ mode: "dark" });
+      } else {
+        this.setLight(r);
+        this.setState({ mode: "light" });
+      }
+    };
+    
 
 
 
@@ -101,10 +111,10 @@ export default class Wrapper extends Component {
       <>
       <div ref={this.introRef}/>
       <div className="banner nav-in">
-        <h2 className="initial-refresh first-drop" onClick={()=> openPdfInNewTab("/Jayce's_Resume.pdf")}><Icon name="cloud download" size="large"/></h2>
+        <h2 className="initial-refresh first-drop" onClick={()=> openPdfInNewTab("/Jayce's_Resume.pdf")}><Icon className='primary-color' name="cloud download" size="large"/></h2>
         <Button onClick={()=>this.toggleMode()} className="light-dark second-drop" circular icon={this.state.mode==="light" ? "sun": "moon"}></Button>
         <span className="third-drop nav-icon" onClick={()=>this.setState({show_menu: !this.state.show_menu})}>
-            {this.state.show_menu ? (<PiCoffee size={40}/>) : (<PiCoffeeFill size={40}/>) }
+            {this.state.show_menu ? (<PiCoffee className='primary-color' size={40}/>) : (<PiCoffeeFill className='primary-color' size={40}/>) }
         </span>
       </div>
         <Container textAlign="center" className="super-container super-fade">

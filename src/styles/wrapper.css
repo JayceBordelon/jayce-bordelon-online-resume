@@ -1,7 +1,7 @@
 /*global vars/themes */
 :root {
   --primary: #0b0c10; /*background*/
-  --secondary: #41666a;
+  --secondary: #6d8597;
   --tertiary:  #c5c6c7;
 }
 
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, p {
 
 
 .fancy-boxen:hover{
-  box-shadow: #41666a 0px 54px 55px, #41666ac4 0px -12px 30px, #41666a  0px 4px 6px, #41666a8c 0px 12px 13px, #41666a31 0px -3px 5px;
+  box-shadow: var(--secondary) 0px 54px 55px, var(--secondary) 0px -12px 30px, var(--secondary)  0px 4px 6px, var(--secondary) 0px 12px 13px, var(--secondary) 0px -3px 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -98,6 +98,10 @@ h1, h2, h3, h4, h5, p {
     color: var(--text-center);
     margin: 10px;
     max-height: 100% !important;
+}
+
+.primary-color{
+  color: var(--primary);
 }
 
 
@@ -333,7 +337,6 @@ h1, h2, h3, h4, h5, p {
   border-radius: 15px;
   border: solid var(--tertiary);
   margin-bottom: 10px;
-  height: 190px;
 }
 @media only screen and (max-width: 600px) {
   .skills-spacer{
@@ -362,7 +365,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .prof-bar{
-  margin-top: 5px;
+  margin-top: 15px;
   min-width: 90%;
   height: 20px;
   background: var(--secondary);
@@ -471,16 +474,21 @@ background-color: black !important;
 }
 
 .work-exp{
-  background: var(--secondary) !important;
   padding: 20px;
   min-height: 650px;
 }
+
 .center-stuffs{
   text-align: center !important;
 }
 
 .work-exp:hover{
   cursor: pointer;
+}
+
+.show-work {
+  background-color: var(--secondary);
+  color: var(--tertiary);
 }
 
 @keyframes glow {
@@ -511,6 +519,7 @@ background-color: black !important;
 }
 .company-logo{
   width: 150px !important;
+  border-radius: 5px;
   margin: auto !important;
 }
 @media only screen and (min-width: 600px) {
@@ -614,6 +623,9 @@ background-color: black !important;
   }
 }
 
+.lor-icon{
+  color: var(--secondary);
+}
 
 .project-button{
   background: var(--primary) !important;

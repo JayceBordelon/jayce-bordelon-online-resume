@@ -59,10 +59,10 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       long: "Computer Science Lead Teacher's Assistant",
       accomplishments: [
         `Organized over 100 other Teacher's Assistants to create student led instruction periods`,
-        'Tailored personalized instruction for students of all levels of understanding in Java and C++',
+        'Tailored personalized instruction for students of all levels of understanding in various languages',
       ], 
       company: 'WashU', 
-      learned: 'Java|C++|Object Oriented Programming|Teaching|Managing',
+      learned: 'Java|C++|Node.js|PHP|SQL|MongoDB|Firebase|React.js|Object Oriented Programming',
       src:<GiTeacher size={100} />,
       show: false,
       logo: WashuLogo},
@@ -139,7 +139,7 @@ import MagnifiLogo from "../styles/mgfi-logo.webp"
       <div className="work-wrap">
 
       {experiences.map((exp, index) => (
-        <div className={!exp.show ? "force-dimension work-exp fancy-boxen exp-in":"work-exp"} onClick={()=>updateExp(index)}>
+        <div className={!exp.show ? "force-dimension work-exp fancy-boxen exp-in":"work-exp show-work"} onClick={()=>updateExp(index)}>
             {exp.show ? (<>
             <h2>{exp.src}</h2>
             <h2>{exp.long}</h2>

@@ -47,7 +47,7 @@ export function EducationHelper(){
                 <div className="thing">
                 <h2>{thing.person}</h2>
                 <h3>{thing.role}</h3>
-                <Button onClick={() => openPdfInNewTab(thing.path)}  className="send-mail cool-button project-button"><h2 style={{'color': "#41666a"}}><Icon name={thing.icon} size="large"/></h2></Button>
+                <Button onClick={() => openPdfInNewTab(thing.path)}  className="send-mail cool-button project-button"><h2 className="lor-icon"><Icon name={thing.icon} size="large"/></h2></Button>
                 </div>
 
             ))}

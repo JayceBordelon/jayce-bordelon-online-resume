@@ -12,7 +12,7 @@ export default class Footer extends Component {
     fetchFact = () => {
       this.setState({ foot: "Getting fun quote for you :) ..." });
       
-      fetch('https://api.quotable.io/quotes/random')
+      fetch('http://api.quotable.io/quotes/random')
         .then(res => res.json())
         .then(jsey => this.setState({ foot: `"${jsey[0].content}" - ${jsey[0].author}` }))
         .catch(error => this.setState({ foot: "Failed message request :(" }));

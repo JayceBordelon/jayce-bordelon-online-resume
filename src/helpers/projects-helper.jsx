@@ -64,7 +64,7 @@ export const hackWashu = {
       }
       
     }
-    const allProjects = [jayceBlogs, flome, bearsAndBulls, blackJack, magnifi, hackWashu]
+    const allProjects = [jayceBlogs, flome, bearsAndBulls]
     return (
       <>
       {generateHeader("Some of my work")}
